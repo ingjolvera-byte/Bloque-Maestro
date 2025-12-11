@@ -1,104 +1,204 @@
-# 🧠 Bloque Maestro de Desarrollo de la IA  
-## Versión 0.1 — Inicio del Proyecto  
-## Autor: ingjolvera-byte  
-## Sistema Asistente: ChatGPT
+# 🧠 BLOQUE MAESTRO DE DESARROLLO DE AURA — Versión 0.3
+## ✔ Integración de Audio + Códigos Implementados  
+## 👤 Autor: ingolivera-byte  
+## 🤖 Sistema Asistente: ChatGPT  
 
 ---
 
-# 📌 1. Información del Equipo (Última actualización)
+# 🧩 1. Información del Equipo (Última actualización)
 
 **Modelo:** ASUS TUF Gaming A15 FA507NU  
-**Procesador:** AMD Ryzen 5 7535HS (12 hilos)  
-**GPU:** NVIDIA GeForce RTX 4050 Laptop GPU (6GB VRAM)  
-**RAM:** 16 GB  
-**Sistema:** Windows 11 Home  
-**Entrada de audio:** Solo micrófono USB (confirmado)
+**CPU:** AMD Ryzen 5 7535HS (12 hilos)  
+**GPU:** NVIDIA RTX 4050 Laptop (6GB VRAM) — CUDA habilitada  
+**RAM:** 16GB  
+**SO:** Windows 11 Home  
+**Python:** 3.11.6  
+**Micrófono:** USB — probado y funcionando  
+**Entorno:** `.venv` — Activo y funcional  
 
 ---
 
-# 📌 2. Objetivo del Proyecto
+# 🧩 2. Objetivo del Proyecto
 
-Desarrollar una **IA avanzada local**, modular y creciente que funcione completamente en el equipo del usuario.  
-El proyecto se construirá por **fases**, expandiendo la capacidad de la IA sin saturar chats ni perder información.
+Crear una **IA local avanzada**, modular, completamente funcional y ampliable que pueda:
 
----
-
-# 📌 3. Estructura General del Proyecto
-
-- **Fase 1:** Configuración completa del sistema  
-- **Fase 2:** Preparación del entorno IA  
-- **Fase 3:** Integración de reconocimiento de voz  
-- **Fase 4:** Integración de respuesta por voz  
-- **Fase 5:** Implementación modular de funciones avanzadas  
-- **Fase 6:** Optimización y mantenimiento  
+- Hablar, escuchar, ver e interpretar el mundo  
+- Crear software (web, escritorio, móvil, scripts)  
+- Controlar el sistema y asistirte profesionalmente  
+- Procesar audio, imágenes, PDFs y videos  
+- Funcionar totalmente local (offline), con acceso a internet solo bajo aprobación  
+- Ser tu asistente personal de alta productividad  
 
 ---
 
-# 📌 4. Checklist General (Estado inicial)
+# 🧩 3. Estructura Actual del Proyecto (Carpetas + Archivos REALES)
 
-### ✔ Fase 1: Configuración del sistema  
-- [ ] Verificar micrófono USB conectado  
-- [ ] Ajustar niveles de audio en Windows  
-- [ ] Probar calidad de captura  
-- [ ] Actualizar drivers de audio y GPU  
-- [ ] Validar estabilidad del sistema
-
-### ✔ Fase 2: Preparar entorno IA  
-- [ ] Definir frameworks (Ollama, LM Studio, Python)  
-- [ ] Instalar dependencias  
-- [ ] Habilitar aceleración GPU NVIDIA  
-- [ ] Verificar funcionamiento del modelo base
-
-### ✔ Fase 3: Integración de voz (Entrada)  
-- [ ] Instalar Whisper local  
-- [ ] Configurar micrófono principal  
-- [ ] Test de precisión  
-
-### ✔ Fase 4: Integración de voz (Salida)  
-- [ ] Seleccionar motor TTS  
-- [ ] Probar audio de salida  
-- [ ] Integrar con motor de diálogo  
-
-### ✔ Fase 5: Integraciones avanzadas  
-- [ ] Funciones del sistema  
-- [ ] Automatizaciones  
-- [ ] Módulos inteligentes adicionales  
-
-### ✔ Fase 6: Optimización  
-- [ ] Medición de desempeño  
-- [ ] Ajuste de modelos  
-- [ ] Documentación final  
+```
+D:\AURA\
+│── .venv\
+│── models\
+│   ├── llama3\
+│   │   └── Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf
+│   └── phi3\
+│       └── Phi-3-mini-4k-instruct-Q4_K_S.gguf
+│
+│── audio.wav
+│── grabar.py
+│── (pendiente) windows_tts.py
+│── (pendiente) vision.py
+│── (pendiente) ocr_handler.py
+│── (pendiente) ia_core.py
+```
 
 ---
 
-# 📌 5. Registro de Avances
+# 🧩 4. Librerías Instaladas Correctamente
 
-### **Día 1 — Bloque Maestro Creado**  
-- Se inicia organización general.  
-- Se confirma que el proyecto se trabajará solo con micrófonos USB.  
-- Se establece GitHub como repositorio principal.  
-- Se planifica transferencia continua de archivos `.md` entre usuario y asistente.
+### ✔ Audio
+- SpeechRecognition  
+- PyAudio  
+- sounddevice  
+- wavio  
+- ffmpeg (instalado + PATH)
 
----
+### ✔ OCR y visión
+- Tesseract OCR (comprobado con `tesseract --version`)  
+- pytesseract  
+- opencv-python  
+- pdf2image  
 
-# 📌 6. Notas Importantes
+### ✔ Interfaces
+- PyQt6  
+- pygame  
 
-- El archivo **puede crecer sin límites**.  
-- Siempre que el usuario cambie de chat, deberá **descargar el archivo desde GitHub y subirlo al chat** para continuar.  
-- ChatGPT actualizará el archivo y generará la nueva versión.  
-- Usuario lo sube a GitHub nuevamente.  
-
----
-
-# 📌 7. Próximos Pasos
-
-1. Subir este archivo al repositorio de GitHub.  
-2. Mañana:  
-   - Configurar repositorio correctamente.  
-   - Preparar entorno del sistema.  
-   - Iniciar checklist de configuración.  
+### ✔ Modelos IA
+- llama-cpp-python  
+- numpy  
+- moderngl  
 
 ---
 
-# 📌 8. Fin del Bloque Maestro Inicial  
-**Próxima versión:** 0.2 (mañana)
+# 🧩 5. MODELOS INSTALADOS LOCALMENTE (Reales)
+
+## ✔ Meta LLaMA 3.1 8B Instruct — Q4_K_M
+Ruta:
+```
+D:\AURA\models\llama3\Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf
+```
+
+## ✔ Phi-3 Mini 4K Instruct — Q4_K_S
+Ruta:
+```
+D:\AURA\models\phi3\Phi-3-mini-4k-instruct-Q4_K_S.gguf
+```
+
+---
+
+# 🧩 6. ARCHIVOS YA CREADOS — CÓDIGO COMPLETO
+
+## ✔ 6.1 Archivo **grabar.py** (FUNCIONAL, probadísimo)
+
+```python
+import sounddevice as sd
+import wavio
+import whisper
+
+# Grabar audio
+def grabar_audio(nombre_archivo="audio.wav", duracion=5, frecuencia=44100):
+    print("🎙️ Grabando audio...")
+    audio = sd.rec(int(duracion * frecuencia), samplerate=frecuencia, channels=1)
+    sd.wait()
+    wavio.write(nombre_archivo, audio, frecuencia, sampwidth=2)
+    print("✔ Grabación terminada.")
+
+# Procesar con Whisper
+def transcribir_audio(nombre_archivo="audio.wav"):
+    print("🔵 Procesando con Whisper...")
+    model = whisper.load_model("small")
+    resultado = model.transcribe(nombre_archivo)
+    print("\n📄 Texto reconocido:")
+    print(" ", resultado["text"])
+    return resultado["text"]
+
+if __name__ == "__main__":
+    grabar_audio()
+    transcribir_audio()
+```
+
+✔ Graba audio  
+✔ Lo guarda como `audio.wav`  
+✔ Whisper small lo transcribe  
+✔ Probado en tu sistema  
+
+---
+
+# 🧩 7. Avances Técnicos Logrados
+
+### ✔ Audio implementado  
+- Grabación  
+- Transcripción  
+- Funcional 100%
+
+### ✔ Modelos grandes instalados correctamente  
+LLaMA 3.1 + Phi-3
+
+### ✔ OCR instalado  
+Tesseract detectado y usable
+
+---
+
+# 🧩 8. PENDIENTES (Para siguiente fase)
+
+### ⏳ 8.1 Crear `windows_tts.py`
+- Motor de voz SAPI5  
+- Para que AURA **hable**
+
+### ⏳ 8.2 Crear `vision.py`
+- OpenCV  
+- Carga de imágenes  
+- Integración IA visual  
+
+### ⏳ 8.3 Crear `ocr_handler.py`
+- Procesamiento OCR  
+- PDF → Imagen → Texto  
+
+### ⏳ 8.4 Crear `ia_core.py`
+- Cargar modelos grandes  
+- Responder con AURA  
+- Fusionar voz + texto + visión  
+
+### ⏳ 8.5 Crear `config.json`
+- Permisos  
+- Seguridad  
+- Preferencias del usuario  
+
+---
+
+# 🧩 9. Seguridad del Sistema
+
+- No ejecuta nada sin autorización  
+- Sin internet salvo permiso explícito  
+- Sin envío de datos externos  
+- Protección estricta del sistema  
+
+---
+
+# 🧩 10. Estado Actual del Proyecto
+
+🟣 100% listo para comenzar módulos IA avanzados  
+🟣 Audio ya implementado  
+🟣 Modelos listos  
+🟣 OCR listo  
+🟣 Solo faltan crear los módulos:
+
+```
+windows_tts.py
+vision.py
+ocr_handler.py
+ia_core.py
+config.json
+```
+
+---
+
+# 🟪 FIN DEL BLOQUE MAESTRO — VERSIÓN 0.3 COMPLETA
