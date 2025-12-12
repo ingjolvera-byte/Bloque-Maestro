@@ -42,7 +42,7 @@ D:\AURA\
 ├── .venv
 ├── models
 │   ├── llama3
-│   │   └── Meta-LLama-3.1-8B-Instruct-Q4_K_M.gguf
+│   │   └── Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf
 │   └── phi3
 │       └── Phi-3-mini-4k-instruct-Q4_K_S.gguf
 ├── grabar.py
