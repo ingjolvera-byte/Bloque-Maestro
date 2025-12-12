@@ -1,259 +1,216 @@
-# 🧠 BLOQUE MAESTRO DE DESARROLLO DE AURA — Versión 1.1
-## ✔ Estructura Final Oficial del Sistema AURA
+# 🧠 BLOQUE MAESTRO DE DESARROLLO DE AURA — Versión 1.3
+## 🔒 BLOQUE MAESTRO BLINDADO — AUTORIDAD ABSOLUTA DEL PROYECTO
 ## 👤 Autor: ingolivera-byte
 ## 🤖 Sistema Asistente: ChatGPT
 
 ---
 
-# 🧩 1. Visión Suprema del Proyecto AURA
+# 🔐 0. DECLARACIÓN DE AUTORIDAD ABSOLUTA (NO NEGOCIABLE)
 
-AURA es una **Inteligencia Artificial local, autónoma y soberana**, diseñada para **hacer absolutamente todo lo que su creador necesite**, priorizando:
+Este documento es la **ÚNICA FUENTE DE VERDAD** del proyecto AURA.
 
-- Funcionamiento **offline-first**
-- Privacidad absoluta
-- Control total del usuario
-- Integración profunda con el sistema **sin comprometer Windows**
-- Capacidad de adaptación dinámica al hardware
-- Expansión ilimitada y controlada
-
-Este documento representa **únicamente la estructura final y oficial de AURA**, no su historial de pruebas.
+- Nada fuera de este archivo tiene validez técnica u operativa.
+- Ningún comportamiento, módulo, permiso o capacidad se asume si **no está explícitamente escrito aquí**.
+- Ningún recuerdo de chat, contexto previo o interpretación implícita tiene autoridad.
+- Si existe conflicto entre este documento y cualquier otro texto, **este documento prevalece**.
 
 ---
 
-# 🧩 2. Principios Fundamentales
+# 🔐 1. REGLAS DE MODIFICACIÓN DEL BLOQUE MAESTRO
+
+## 1.1 Regla Suprema de Cambio
+
+El Bloque Maestro **NO puede modificarse** sin una autorización explícita del creador usando una frase clara de aprobación.
+
+Todo cambio debe:
+- Incrementar versión
+- Indicar motivo
+- Respetar decisiones cerradas
+
+---
+
+## 1.2 Tipos de Cambios
+
+### Cambios MENORES
+- Correcciones de redacción
+- Aclaraciones sin impacto estructural
+- Reordenamiento sin cambio de significado
+
+### Cambios MAYORES
+- Cambio de arquitectura
+- Cambio de permisos
+- Cambio de principios
+- Cambio de reglas de código
+- Cambio de alcance del sistema
+
+🔒 **Los cambios mayores requieren aprobación explícita.**
+
+---
+
+# 🔐 2. VERSIONADO ESTRICTO
+
+Cada versión del Bloque Maestro debe cumplir:
+
+- Número de versión incremental
+- Estado del proyecto
+- Registro de qué cambió
+- Registro de qué NO cambió
+
+Las versiones anteriores se consideran **históricas**, no activas.
+
+---
+
+# 🔐 3. DECISIONES DEFINITIVAS (SECCIÓN CERRADA)
+
+Las siguientes decisiones están **CERRADAS** y no pueden modificarse sin reaprobación explícita:
+
+- AURA es **offline-first**
+- Windows es **territorio protegido**
+- Toda acción crítica requiere aprobación humana
+- El orden de fases no se altera
+- El Bloque Maestro almacena TODO el código funcional
+- No existe código funcional fuera de este documento
+- No se ejecuta nada sin pasar por el núcleo
+- La seguridad tiene prioridad sobre funcionalidad
+
+---
+
+# 🧩 4. VISIÓN SUPREMA DEL PROYECTO AURA
+
+AURA es una **Inteligencia Artificial local, autónoma y soberana**, diseñada para **hacer absolutamente todo lo que su creador necesite**, con:
+
+- Privacidad absoluta
+- Control humano permanente
+- Adaptación automática al entorno
+- Evolución controlada y reversible
+- Integración profunda sin comprometer el sistema operativo
+
+---
+
+# 🧩 5. PRINCIPIOS FUNDAMENTALES
 
 - Offline-first por defecto
 - Acceso a internet solo bajo autorización explícita
-- Autonomía guiada (AURA propone, el usuario autoriza, AURA ejecuta)
+- AURA propone, el humano decide, AURA ejecuta
 - Seguridad estricta y no negociable
-- Control humano permanente
-- Transparencia total (logs y auditoría)
-- Adaptación automática al entorno de ejecución
+- Transparencia total (logs)
+- Adaptación dinámica al hardware
+- Código funcional centralizado aquí
 
 ---
 
-# 🧩 3. Modelo de Acceso TOTAL a Programas
-
-## 3.1 Capacidades Permitidas
+# 🧩 6. MODELO DE ACCESO TOTAL A PROGRAMAS
 
 AURA puede:
 - Abrir programas
-- Interactuar con programas (teclado, mouse, CLI, APIs)
-- Leer información de aplicaciones
-- Modificar configuraciones propias de cada aplicación
+- Interactuar con ellos
+- Leer información
+- Modificar configuraciones propias
 - Instalar y desinstalar software
 
-🔒 **Regla absoluta:**  
-Toda acción crítica **SIEMPRE** requiere confirmación explícita del usuario.
+🔒 Toda acción crítica **SIEMPRE** requiere confirmación explícita.
+
+## Límites Absolutos
+AURA NO PUEDE:
+- Modificar kernel de Windows
+- Alterar archivos críticos del SO
+- Cambiar políticas de seguridad del sistema
+- Comprometer la estabilidad del sistema operativo
 
 ---
 
-## 3.2 Límites Absolutos (Protección del Sistema Operativo)
+# 🧩 7. MODELO DE AUTO-ACTUALIZACIÓN
 
-AURA **NO PUEDE**:
-- Modificar el kernel de Windows
-- Alterar archivos críticos del sistema
-- Cambiar políticas de seguridad del SO
-- Modificar procesos de arranque
-- Ejecutar acciones que comprometan la estabilidad del sistema operativo
+AURA puede auto-actualizar:
+- Núcleo
+- UI
+- Módulos internos
+- Configuración propia
 
-Windows es **territorio protegido**.
+❌ Prohibido actualizar Windows o drivers.
 
----
-
-## 3.3 Flujo de Autorización
-
-1. AURA explica la acción  
-2. Justifica el motivo  
-3. Indica riesgos  
-4. Espera aprobación explícita  
-5. Ejecuta únicamente lo aprobado  
+Cambios mayores requieren aprobación.  
+Cambios menores permiten rollback automático.
 
 ---
 
-# 🧩 4. Modelo de Auto-Actualización de AURA
-
-## 4.1 Alcance
-
-AURA puede auto-actualizar únicamente:
-- Núcleo del sistema (Core)
-- Interfaz gráfica nativa (UI)
-- Módulos internos propios
-- Archivos de configuración de AURA
-
-❌ Prohibido actualizar:
-- Windows
-- Drivers
-- Componentes del sistema operativo
-
----
-
-## 4.2 Tipos de Actualización
-
-### Cambios Menores
-- Optimizaciones
-- Correcciones internas
-- Ajustes visuales  
-→ Se aplican automáticamente
-
-### Cambios Mayores
-- Cambios de arquitectura
-- Nuevas capacidades críticas
-- Modificaciones de permisos  
-→ Requieren aprobación explícita
-
----
-
-## 4.3 Seguridad de Actualización
-
-- Verificación de integridad
-- Rollback automático
-- Historial de versiones
-- Logs obligatorios
-
----
-
-# 🧩 5. Interfaz Gráfica
-
-- Interfaz gráfica avanzada
-- **Nativa de Windows**
-- No basada en web
-- Integración total con el núcleo de AURA
-- Soporte de voz, texto y panel visual
-
----
-
-# 🧩 6. Control y Mantenimiento del Sistema
-
-AURA puede:
-- Monitorear CPU, GPU, RAM y almacenamiento
-- Detectar fallos o anomalías
-- Proponer acciones correctivas
-- Ejecutar mantenimiento **solo con autorización**
-
----
-
-# 🧩 7. Arquitectura General de AURA
+# 🧩 8. ARQUITECTURA GENERAL DE AURA
 
 AURA se compone de:
-- Núcleo central (orquestación y lógica)
-- Gestor de permisos y seguridad
-- Motor de IA local
-- Interfaz gráfica nativa
+- Núcleo central (`ia_core.py`)
+- Sistema de permisos
 - Sistema de acciones controladas
-- Sistema de auto-actualización
-- Sistema de detección automática del entorno
-- Sistema de registro y auditoría
+- Detección automática del entorno
+- Entrada / salida (voz, archivos, visión)
+- Interfaz gráfica nativa
+- Auto-actualización
+- Registro y auditoría
 
 ---
 
-# 🧩 8. Módulo de Detección Automática del Sistema
+# 🧩 9. ESTRUCTURA OFICIAL DEL PROYECTO (REFERENCIAL)
 
-## 8.1 Objetivo
-
-Permitir que AURA **detecte automáticamente** las capacidades del hardware y software donde se ejecuta, ajustando su comportamiento sin requerir configuración manual ni comprometer el sistema operativo.
-
----
-
-## 8.2 Información Detectada
-
-### Hardware
-- CPU (modelo, núcleos, hilos)
-- GPU (presencia, marca, VRAM, soporte CUDA/DirectML)
-- Memoria RAM (total y disponible)
-- Almacenamiento (tipo, espacio total y libre)
-
-### Sistema Operativo
-- SO y versión
-- Arquitectura
-- Permisos de usuario
-- Estado de virtualización
-
-### Software Crítico
-- Versión de Python
-- Entorno virtual activo
-- Librerías clave
-- Herramientas disponibles
-
----
-
-## 8.3 Comportamiento Adaptativo
-
-Según lo detectado, AURA puede:
-- Seleccionar modelos IA adecuados
-- Decidir uso de CPU o GPU
-- Ajustar consumo de memoria
-- Limitar contexto y carga
-- Proponer instalaciones necesarias (con autorización)
-
----
-
-## 8.4 Seguridad del Módulo
-
-El módulo:
-- Solo **lee** información del sistema
-- No modifica el SO
-- No instala drivers
-- No envía datos externos
-- No ejecuta acciones críticas
-
----
-
-# 🧩 9. Estructura Oficial Final del Proyecto
-
-D:\AURA\
+D:\AURA_CORE\
 │
 ├── core\
-│   ├── ia_core.py
-│   ├── permissions_manager.py
-│   ├── update_manager.py
-│   └── action_router.py
-│
-├── ui\
-│   ├── main_window.py
-│   ├── voice_interface.py
-│   └── visual_panel.py
-│
-├── models\
-│   ├── llama3\
-│   │   └── Meta-Llama-3.1-8B-Instruct-Q4_K_M.gguf
-│   └── phi3\
-│       └── Phi-3-mini-4k-instruct-Q4_K_S.gguf
-│
 ├── system\
-│   ├── system_detector.py
-│   ├── system_monitor.py
-│   ├── app_controller.py
-│   └── installer.py
-│
+├── io\
+├── ui\
+├── models\
 ├── config\
-│   ├── config.json
-│   └── permissions.json
-│
 ├── logs\
-│   └── aura.log
-│
 └── launcher.py
 
 ---
 
-# 🧩 10. Seguridad General
+# 🧩 10. REPOSITORIO OFICIAL DE CÓDIGO FUNCIONAL (BLINDADO)
 
-- Prohibida la ejecución silenciosa
-- Prohibido el envío de datos externos
-- Acceso externo solo con autorización explícita
-- Registro obligatorio de todas las acciones críticas
-- Auditoría permanente
+## 10.1 Regla Suprema
 
----
+Todo código FUNCIONAL vive **exclusivamente en este documento**.
 
-# 🧩 11. Estado del Proyecto
-
-- Estructura final definida
-- Diseño de detección automática integrado
-- Arquitectura oficial consolidada
-- Proyecto listo para iniciar implementación por módulos
+Si no está aquí, **no existe oficialmente**.
 
 ---
 
-# 🟪 FIN DEL BLOQUE MAESTRO — VERSIÓN 1.1
+## 10.2 Estados Oficiales del Código
+
+- ✅ FUNCIONAL
+- ⚠️ EN REVISIÓN
+- ❌ OBSOLETO
+
+Nunca puede haber dos versiones funcionales activas del mismo archivo.
+
+---
+
+## 10.3 Formato Obligatorio de Registro
+
+Cada archivo funcional debe documentarse con:
+- Nombre exacto
+- Ubicación lógica
+- Estado
+- Descripción
+- Código completo
+- Notas de versión
+
+---
+
+# 🧩 11. CHECKLIST DE AVANCES (AUTORITARIO)
+
+Nada se considera completado si no está marcado aquí y respaldado por código funcional registrado.
+
+(Fases 0 a 10 definidas previamente y vigentes)
+
+---
+
+# 🧩 12. ESTADO DEL PROYECTO
+
+- Bloque Maestro blindado
+- Autoridad absoluta establecida
+- Decisiones críticas cerradas
+- Proyecto pausado intencionalmente antes de implementación
+- Listo para iniciar desarrollo cuando se decida
+
+---
+
+# 🟪 FIN DEL BLOQUE MAESTRO — VERSIÓN 1.3 (BLINDADO)
