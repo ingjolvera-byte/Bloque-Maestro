@@ -1,4 +1,4 @@
-# 🧠 BLOQUE MAESTRO DE DESARROLLO DE AURA — Versión 0.3
+# 🧠 BLOQUE MAESTRO DE DESARROLLO DE AURA — Versión 0.4
 ## ✔ Integración de Audio + Códigos Implementados  
 ## 👤 Autor: ingolivera-byte  
 ## 🤖 Sistema Asistente: ChatGPT  
@@ -44,7 +44,7 @@ D:\AURA\
 │
 │── audio.wav
 │── grabar.py
-│── (pendiente) windows_tts.py
+│── windows_tts.py
 │── (pendiente) vision.py
 │── (pendiente) ocr_handler.py
 │── (pendiente) ia_core.py
@@ -127,8 +127,39 @@ if __name__ == "__main__":
 
 ✔ Graba audio  
 ✔ Lo guarda como `audio.wav`  
-✔ Whisper small lo transcribe  
+✔ Whisper small lo interpreta  
 ✔ Probado en tu sistema  
+
+---
+
+## ✔ 6.2 Archivo **windows_tts.py** (FUNCIONAL)
+
+```python
+import pyttsx3
+
+def inicializar_voz(voz_id=None, velocidad=180, volumen=1.0):
+    engine = pyttsx3.init()
+
+    if voz_id is not None:
+        engine.setProperty('voice', voz_id)
+
+    engine.setProperty('rate', velocidad)
+    engine.setProperty('volume', volumen)
+
+    return engine
+
+def hablar(texto, voz_id=None, velocidad=180, volumen=1.0):
+    engine = inicializar_voz(voz_id, velocidad, volumen)
+    engine.say(texto)
+    engine.runAndWait()
+
+if __name__ == '__main__':
+    hablar("Hola, soy AURA. El módulo de texto a voz está funcionando correctamente.")
+```
+
+✔ AURA ya **puede hablar**  
+✔ Usa motor SAPI5 nativo de Windows  
+✔ 100% funcional  
 
 ---
 
@@ -137,6 +168,7 @@ if __name__ == "__main__":
 ### ✔ Audio implementado  
 - Grabación  
 - Transcripción  
+- Voz por TTS  
 - Funcional 100%
 
 ### ✔ Modelos grandes instalados correctamente  
@@ -149,25 +181,21 @@ Tesseract detectado y usable
 
 # 🧩 8. PENDIENTES (Para siguiente fase)
 
-### ⏳ 8.1 Crear `windows_tts.py`
-- Motor de voz SAPI5  
-- Para que AURA **hable**
-
-### ⏳ 8.2 Crear `vision.py`
+### ⏳ 8.1 Crear `vision.py`
 - OpenCV  
 - Carga de imágenes  
 - Integración IA visual  
 
-### ⏳ 8.3 Crear `ocr_handler.py`
+### ⏳ 8.2 Crear `ocr_handler.py`
 - Procesamiento OCR  
 - PDF → Imagen → Texto  
 
-### ⏳ 8.4 Crear `ia_core.py`
+### ⏳ 8.3 Crear `ia_core.py`
 - Cargar modelos grandes  
 - Responder con AURA  
 - Fusionar voz + texto + visión  
 
-### ⏳ 8.5 Crear `config.json`
+### ⏳ 8.4 Crear `config.json`
 - Permisos  
 - Seguridad  
 - Preferencias del usuario  
@@ -186,19 +214,11 @@ Tesseract detectado y usable
 # 🧩 10. Estado Actual del Proyecto
 
 🟣 100% listo para comenzar módulos IA avanzados  
-🟣 Audio ya implementado  
+🟣 Audio (STT + TTS) funcionando  
 🟣 Modelos listos  
 🟣 OCR listo  
-🟣 Solo faltan crear los módulos:
-
-```
-windows_tts.py
-vision.py
-ocr_handler.py
-ia_core.py
-config.json
-```
+🟣 Pendiente integrar visión y núcleo IA  
 
 ---
 
-# 🟪 FIN DEL BLOQUE MAESTRO — VERSIÓN 0.3 COMPLETA
+# 🟪 FIN DEL BLOQUE MAESTRO — Versión 0.4 COMPLETA
