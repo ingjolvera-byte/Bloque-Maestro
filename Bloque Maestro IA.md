@@ -1,4 +1,4 @@
-# 🧠 BLOQUE MAESTRO DE DESARROLLO DE AURA — Versión 1.4
+# 🧠 BLOQUE MAESTRO DE DESARROLLO DE AURA — Versión 1.5
 ## 🔒 BLOQUE MAESTRO BLINDADO — AUTORIDAD ABSOLUTA DEL PROYECTO
 ## 👤 Autor: ingolivera-byte
 ## 🤖 Sistema Asistente: ChatGPT
@@ -18,137 +18,127 @@ Este documento es la **ÚNICA FUENTE DE VERDAD** del proyecto AURA.
 
 # 🔐 1. REGLAS DE MODIFICACIÓN DEL BLOQUE MAESTRO
 
-## 1.1 Regla Suprema de Cambio
-
-El Bloque Maestro **NO puede modificarse** sin una autorización explícita del creador usando una frase clara de aprobación.
+El Bloque Maestro **NO puede modificarse** sin autorización explícita del creador.
 
 Todo cambio debe:
 - Incrementar versión
-- Indicar motivo
+- Quedar documentado
 - Respetar decisiones cerradas
 
 ---
 
-## 1.2 Tipos de Cambios
+# 🔐 2. DECISIONES DEFINITIVAS (SECCIÓN CERRADA)
 
-### Cambios MENORES
-- Correcciones de redacción
-- Aclaraciones sin impacto estructural
-- Reordenamiento sin cambio de significado
-
-### Cambios MAYORES
-- Cambio de arquitectura
-- Cambio de permisos
-- Cambio de principios
-- Cambio de reglas de código
-- Cambio de alcance del sistema
-
-🔒 **Los cambios mayores requieren aprobación explícita.**
-
----
-
-# 🔐 2. VERSIONADO ESTRICTO
-
-Cada versión del Bloque Maestro debe cumplir:
-
-- Número de versión incremental
-- Estado del proyecto
-- Registro de qué cambió
-- Registro de qué NO cambió
-
-Las versiones anteriores se consideran **históricas**, no activas.
-
----
-
-# 🔐 3. DECISIONES DEFINITIVAS (SECCIÓN CERRADA)
-
-Las siguientes decisiones están **CERRADAS** y no pueden modificarse sin reaprobación explícita:
+Las siguientes decisiones son **irreversibles sin reaprobación explícita**:
 
 - AURA es **offline-first**
 - Windows es **territorio protegido**
-- Toda acción crítica requiere aprobación humana
-- El orden de fases no se altera
-- El Bloque Maestro almacena TODO el código funcional
-- No existe código funcional fuera de este documento
-- No se ejecuta nada sin pasar por el núcleo
-- La seguridad tiene prioridad sobre funcionalidad
+- AURA actúa como **sistema guardián de acceso**
+- Autenticación biométrica **voz + rostro** es obligatoria
+- Si la autenticación falla → **cierre inmediato de sesión**
+- No existe modo invitado, bypass ni degradado
+- AURA inicia automáticamente con Windows
+- La seguridad tiene prioridad absoluta sobre usabilidad
+- Todo código funcional vive en este documento
 
 ---
 
-# 🧩 4. VISIÓN SUPREMA DEL PROYECTO AURA
+# 🧩 3. VISIÓN SUPREMA DEL PROYECTO AURA
 
-AURA es una **Inteligencia Artificial local, autónoma y soberana**, diseñada para **hacer absolutamente todo lo que su creador necesite**, con:
-
-- Privacidad absoluta
-- Control humano permanente
-- Adaptación automática al entorno
-- Evolución controlada y reversible
-- Integración profunda sin comprometer el sistema operativo
+AURA es una **Inteligencia Artificial local, autónoma y soberana**, diseñada no solo como asistente, sino como **sistema de control, seguridad e interacción total**, integrándose profundamente al entorno del usuario **sin comprometer la estabilidad del sistema operativo**.
 
 ---
 
-# 🧩 5. PRINCIPIOS FUNDAMENTALES
+# 🧩 4. PRINCIPIOS FUNDAMENTALES
 
 - Offline-first por defecto
-- Acceso a internet solo bajo autorización explícita
-- AURA propone, el humano decide, AURA ejecuta
-- Seguridad estricta y no negociable
-- Transparencia total (logs)
-- Adaptación dinámica al hardware
-- Código funcional centralizado aquí
+- Control humano absoluto
+- Seguridad > funcionalidad
+- Sin dependencia externa
+- Transparencia total
+- Adaptación dinámica al entorno
+- Interacción natural (voz, visión, archivos)
 
 ---
 
-# 🧩 6. MODELO DE ACCESO TOTAL A PROGRAMAS
+# 🧩 5. AUTENTICACIÓN BIOMÉTRICA OBLIGATORIA (NIVEL SISTEMA)
 
-AURA puede:
-- Abrir programas
-- Interactuar con ellos
-- Leer información
-- Modificar configuraciones propias
-- Instalar y desinstalar software
+## 5.1 Flujo de Inicio del Sistema (DEFINITIVO)
 
-🔒 Toda acción crítica **SIEMPRE** requiere confirmación explícita.
+1. Windows inicia.
+2. AURA inicia automáticamente en segundo plano.
+3. **ANTES de permitir cualquier uso del sistema**, AURA solicita:
+   - Reconocimiento de **voz**
+   - Reconocimiento **facial**
+4. Ambas validaciones deben ser exitosas.
+5. Si **NO se valida la identidad**:
+   - AURA **CIERRA INMEDIATAMENTE la sesión de Windows**.
+6. No existe acceso parcial, invitado ni excepción.
 
-## Límites Absolutos
-AURA NO PUEDE:
-- Modificar kernel de Windows
-- Alterar archivos críticos del SO
-- Cambiar políticas de seguridad del sistema
-- Comprometer la estabilidad del sistema operativo
+Este flujo **reemplaza cualquier definición anterior**.
 
 ---
 
-# 🧩 7. MODELO DE AUTO-ACTUALIZACIÓN
+## 5.2 Reglas Críticas
 
-AURA puede auto-actualizar:
-- Núcleo
-- UI
-- Módulos internos
-- Configuración propia
-
-❌ Prohibido actualizar Windows o drivers.
-
-Cambios mayores requieren aprobación.  
-Cambios menores permiten rollback automático.
+- La autenticación es **local y offline**.
+- Los datos biométricos están cifrados.
+- La autenticación tiene prioridad absoluta.
+- AURA no permite interacción previa a la validación.
 
 ---
 
-# 🧩 8. ARQUITECTURA GENERAL DE AURA
+# 🧩 6. INICIO AUTOMÁTICO DE AURA
 
-AURA se compone de:
-- Núcleo central (`ia_core.py`)
-- Sistema de permisos
-- Sistema de acciones controladas
-- Detección automática del entorno
-- Entrada / salida (voz, archivos, visión)
-- Interfaz gráfica nativa
-- Auto-actualización
-- Registro y auditoría
+- AURA **DEBE iniciar con el arranque de Windows**.
+- No requiere interacción manual.
+- No puede ser deshabilitada sin autorización explícita.
+- El inicio no debe comprometer la estabilidad del SO.
 
 ---
 
-# 🧩 9. ESTRUCTURA OFICIAL DEL PROYECTO (REFERENCIAL)
+# 🧩 7. INTERACCIÓN POR VOZ (MANOS LIBRES)
+
+- AURA permite interacción **exclusivamente por voz**.
+- No requiere botones para hablar.
+- Implementa escucha continua o palabra clave.
+- La voz es el canal primario de interacción.
+- La interfaz gráfica es complementaria.
+
+---
+
+# 🧩 8. INTERFAZ DE CHAT CON ADJUNTOS
+
+- La interfaz incluye un área de chat.
+- Incluye botón **“Adjuntar”**.
+- Permite adjuntar **cualquier tipo de archivo**.
+- Los archivos pueden ser:
+  - Leídos
+  - Analizados
+  - Interpretados
+- Todo procesamiento es local.
+
+---
+
+# 🧩 9. IDENTIDAD VISUAL DEL SISTEMA
+
+La interfaz de AURA adopta una identidad híbrida:
+
+- **IRON MAN** → HUD, hologramas, paneles flotantes
+- **MATRIX** → flujos de datos, profundidad, estética oscura
+- **TRON** → neón, geometría, líneas de energía
+
+Esta identidad aplica a:
+- Estética
+- Animaciones
+- Navegación
+- Forma de interacción
+
+La interfaz es parte del sistema, **no decorativa**.
+
+---
+
+# 🧩 10. ARQUITECTURA GENERAL (REFERENCIAL)
 
 D:\AURA_CORE\
 │
@@ -163,102 +153,26 @@ D:\AURA_CORE\
 
 ---
 
-# 🧩 10. REPOSITORIO OFICIAL DE CÓDIGO FUNCIONAL (BLINDADO)
-
-## 10.1 Regla Suprema
-
-Todo código FUNCIONAL vive **exclusivamente en este documento**.
-
-Si no está aquí, **no existe oficialmente**.
-
----
-
-## 10.2 Estados Oficiales del Código
-
-- ✅ FUNCIONAL
-- ⚠️ EN REVISIÓN
-- ❌ OBSOLETO
-
-Nunca puede haber dos versiones funcionales activas del mismo archivo.
-
----
-
-## 10.3 Formato Obligatorio de Registro
-
-Cada archivo funcional debe documentarse con:
-- Nombre exacto
-- Ubicación lógica
-- Estado
-- Descripción
-- Código completo
-- Notas de versión
-
----
-
 # 🧩 11. CONOCIMIENTO VALIDADO POR PRUEBAS PREVIAS
 
-⚠️ **Esta sección NO contiene código funcional.**  
-⚠️ **No habilita ejecución ni implementación directa.**  
-⚠️ **Su función es preservar conocimiento técnico validado antes del blindaje.**
+Esta sección conserva aprendizajes técnicos validados, **sin contener código ejecutable**.
+
+- STT local viable y estable
+- TTS local viable
+- Separación estricta núcleo / IO
+- Detección del sistema previa al core
+- UI posterior al core
 
 ---
 
-## 🧠 Alcance
+# 🧩 12. ESTADO DEL PROYECTO
 
-Esta sección conserva aprendizajes técnicos reales obtenidos por pruebas previas, con el fin de:
-- Evitar repetir experimentos
-- Reducir incertidumbre
-- Guiar decisiones futuras
-
----
-
-## 🔒 Reglas de la Sección
-
-- ❌ No contiene código ejecutable
-- ❌ No sustituye módulos oficiales
-- ❌ No se considera implementación
-- ✅ Solo documenta conocimiento validado
+- Gobernanza cerrada
+- Seguridad de nivel sistema definida
+- Requisitos críticos consolidados
+- Sin código funcional aún
+- Proyecto listo para iniciar implementación controlada
 
 ---
 
-## 🧪 Conocimientos Técnicos Validados
-
-### 🎧 Audio / Voz
-- La transcripción de voz a texto funcionó correctamente en local con modelos tipo **Whisper small**.
-- La captura de audio en Windows fue estable usando librerías dedicadas.
-- Separar captura de audio del núcleo evita bloqueos del sistema.
-
-### 🗣️ Texto a Voz (TTS)
-- Los motores TTS locales son viables sin conexión a internet.
-- El TTS debe tratarse como salida, no como lógica central.
-
-### 📄 Lectura de Archivos
-- Separar lectura física de interpretación semántica reduce complejidad.
-- PDFs escaneados requieren OCR previo.
-- El núcleo no debe leer archivos directamente.
-
-### 🧠 Arquitectura
-- Detectar el sistema antes de inicializar el núcleo reduce errores.
-- El núcleo debe pensar, no ejecutar.
-- Ejecutar acciones sin permisos genera inestabilidad.
-- La UI nunca debe iniciar antes que el núcleo.
-
----
-
-# 🧩 12. CHECKLIST DE AVANCES (AUTORITARIO)
-
-Nada se considera completado si no está marcado aquí y respaldado por código funcional registrado.
-
----
-
-# 🧩 13. ESTADO DEL PROYECTO
-
-- Bloque Maestro blindado
-- Gobernanza definida
-- Conocimiento técnico preservado
-- Sin código funcional activo registrado
-- Proyecto listo para retomarse en cualquier momento
-
----
-
-# 🟪 FIN DEL BLOQUE MAESTRO — VERSIÓN 1.4
+# 🟪 FIN DEL BLOQUE MAESTRO — VERSIÓN 1.5
