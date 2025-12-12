@@ -1,4 +1,4 @@
-# 🧠 BLOQUE MAESTRO DE DESARROLLO DE AURA — Versión 1.3
+# 🧠 BLOQUE MAESTRO DE DESARROLLO DE AURA — Versión 1.4
 ## 🔒 BLOQUE MAESTRO BLINDADO — AUTORIDAD ABSOLUTA DEL PROYECTO
 ## 👤 Autor: ingolivera-byte
 ## 🤖 Sistema Asistente: ChatGPT
@@ -195,22 +195,70 @@ Cada archivo funcional debe documentarse con:
 
 ---
 
-# 🧩 11. CHECKLIST DE AVANCES (AUTORITARIO)
+# 🧩 11. CONOCIMIENTO VALIDADO POR PRUEBAS PREVIAS
+
+⚠️ **Esta sección NO contiene código funcional.**  
+⚠️ **No habilita ejecución ni implementación directa.**  
+⚠️ **Su función es preservar conocimiento técnico validado antes del blindaje.**
+
+---
+
+## 🧠 Alcance
+
+Esta sección conserva aprendizajes técnicos reales obtenidos por pruebas previas, con el fin de:
+- Evitar repetir experimentos
+- Reducir incertidumbre
+- Guiar decisiones futuras
+
+---
+
+## 🔒 Reglas de la Sección
+
+- ❌ No contiene código ejecutable
+- ❌ No sustituye módulos oficiales
+- ❌ No se considera implementación
+- ✅ Solo documenta conocimiento validado
+
+---
+
+## 🧪 Conocimientos Técnicos Validados
+
+### 🎧 Audio / Voz
+- La transcripción de voz a texto funcionó correctamente en local con modelos tipo **Whisper small**.
+- La captura de audio en Windows fue estable usando librerías dedicadas.
+- Separar captura de audio del núcleo evita bloqueos del sistema.
+
+### 🗣️ Texto a Voz (TTS)
+- Los motores TTS locales son viables sin conexión a internet.
+- El TTS debe tratarse como salida, no como lógica central.
+
+### 📄 Lectura de Archivos
+- Separar lectura física de interpretación semántica reduce complejidad.
+- PDFs escaneados requieren OCR previo.
+- El núcleo no debe leer archivos directamente.
+
+### 🧠 Arquitectura
+- Detectar el sistema antes de inicializar el núcleo reduce errores.
+- El núcleo debe pensar, no ejecutar.
+- Ejecutar acciones sin permisos genera inestabilidad.
+- La UI nunca debe iniciar antes que el núcleo.
+
+---
+
+# 🧩 12. CHECKLIST DE AVANCES (AUTORITARIO)
 
 Nada se considera completado si no está marcado aquí y respaldado por código funcional registrado.
 
-(Fases 0 a 10 definidas previamente y vigentes)
-
 ---
 
-# 🧩 12. ESTADO DEL PROYECTO
+# 🧩 13. ESTADO DEL PROYECTO
 
 - Bloque Maestro blindado
-- Autoridad absoluta establecida
-- Decisiones críticas cerradas
-- Proyecto pausado intencionalmente antes de implementación
-- Listo para iniciar desarrollo cuando se decida
+- Gobernanza definida
+- Conocimiento técnico preservado
+- Sin código funcional activo registrado
+- Proyecto listo para retomarse en cualquier momento
 
 ---
 
-# 🟪 FIN DEL BLOQUE MAESTRO — VERSIÓN 1.3 (BLINDADO)
+# 🟪 FIN DEL BLOQUE MAESTRO — VERSIÓN 1.4
