@@ -662,3 +662,240 @@ FIN DEL BLOQUE 3
 
 ---
 
+# BLOQUE 4 — FLUJOS Y OPERACIÓN DEL SISTEMA
+# PROYECTO: AURA_CORE
+# ESTADO: OPERATIVO Y CANÓNICO
+
+---
+
+## 4.1 PROPÓSITO DEL BLOQUE
+
+Este bloque define **cómo opera AURA en ejecución real**.  
+Describe los **flujos válidos**, el **orden obligatorio de los módulos** y la
+forma en que el sistema se mueve desde una entrada hasta un resultado.
+
+Este bloque **NO define arquitectura nueva**  
+Este bloque **NO redefine capacidades**  
+Este bloque **SOLO operacionaliza lo ya definido en BLOQUES 1 y 2**
+
+---
+
+## 4.2 FLUJO OPERATIVO GENERAL (OBLIGATORIO)
+
+Toda acción en AURA sigue estrictamente el siguiente flujo:
+
+Entrada  
+→ Security  
+→ Interaction  
+→ Core  
+→ (Models / IO / Supervision)  
+→ Audit  
+→ Resultado  
+
+No existen atajos.  
+No existen saltos.  
+No existen excepciones.
+
+---
+
+## 4.3 DESCRIPCIÓN DEL FLUJO POR ETAPAS
+
+### 4.3.1 Entrada
+
+Origen posible:
+- Voz
+- Texto
+- UI
+- Evento del sistema
+- Archivo
+- Señal interna
+
+Reglas:
+- Toda entrada es tratada como **no confiable**
+- Ninguna entrada ejecuta acciones directas
+
+---
+
+### 4.3.2 Security
+
+Funciones:
+- Autenticación
+- Autorización
+- Validación de permisos
+- Validación de sesión
+
+Decisiones posibles:
+- Permitir flujo
+- Bloquear flujo
+- Solicitar confirmación adicional
+
+Security **puede detener el sistema**
+
+---
+
+### 4.3.3 Interaction
+
+Funciones:
+- Interpretación de intención
+- Normalización de comandos
+- Traducción humano → evento interno
+
+Reglas:
+- No decide
+- No ejecuta
+- No valida permisos
+
+Interaction **solo convierte entradas en eventos**
+
+---
+
+### 4.3.4 Core
+
+Funciones:
+- Evaluación del evento
+- Aplicación de reglas
+- Decisión central
+- Orquestación de módulos
+
+Reglas:
+- Punto único de decisión
+- Ningún módulo decide fuera del Core
+- Puede cancelar, modificar o aprobar acciones
+
+---
+
+### 4.3.5 Ejecución (Models / IO / Supervision)
+
+Según decisión del Core:
+
+**Models**
+- Procesamiento inteligente
+- Generación de contenido
+- Inferencia
+
+**IO**
+- Lectura / escritura de datos
+- Manejo de archivos
+- Streams
+
+**Supervision**
+- Observación del estado
+- Detección de anomalías
+- Recomendaciones al Core
+
+Estos módulos **NO deciden**, solo ejecutan tareas asignadas.
+
+---
+
+### 4.3.6 Audit
+
+Funciones:
+- Registro completo del flujo
+- Registro de decisiones
+- Registro de errores
+- Registro de resultados
+
+Audit **no modifica nada**, solo observa.
+
+---
+
+## 4.4 FLUJOS PROHIBIDOS
+
+Quedan explícitamente prohibidos:
+
+- Entrada → Core (sin Security)
+- Models → IO directo
+- Interaction → ejecución
+- Supervision → acción directa
+- Cualquier módulo → otro del mismo nivel
+- Cualquier acción sin Audit
+
+---
+
+## 4.5 PRINCIPIO DE CONTROL OPERATIVO
+
+Si un flujo:
+- No está descrito aquí
+- Viola el orden
+- Omite módulos
+- Salta validaciones
+
+Entonces:
+**Ese flujo no existe y no se implementa**
+
+---
+
+FIN DEL BLOQUE 4
+
+---
+
+# BLOQUE 5 — ESTADO Y AVANCE DEL PROYECTO
+# PROYECTO: AURA_CORE
+# ESTADO: VIVO Y ACTUALIZABLE
+
+---
+
+## 5.1 PROPÓSITO DEL BLOQUE
+
+Este bloque registra el **estado real del proyecto**, su avance,
+sus hitos y **todas las modificaciones realizadas a los bloques**.
+
+Es el **único lugar válido** para registrar cambios.
+
+---
+
+## 5.2 ESTADO GENERAL DEL PROYECTO
+
+- Arquitectura base: DEFINIDA
+- Comportamiento funcional: DEFINIDO
+- Estructura modular: IMPLEMENTADA
+- Flujos operativos: DEFINIDOS
+- Código base: EN PROCESO DE REGISTRO
+- Sistema: EN DESARROLLO ACTIVO
+
+---
+
+## 5.3 HITOS PRINCIPALES
+
+- BLOQUE 1 aprobado
+- BLOQUE 2 aprobado
+- BLOQUE 3 definido
+- BLOQUE 4 definido
+- Estructura real del proyecto creada en repositorio local
+- Integración progresiva con GitHub
+
+---
+
+## 5.4 REGISTRO DE CAMBIOS
+
+Formato obligatorio:
+
+FECHA:  
+BLOQUE MODIFICADO:  
+DESCRIPCIÓN DEL CAMBIO:  
+RESPONSABLE:  
+
+---
+
+### REGISTROS
+
+FECHA: 2025-12-12  
+BLOQUE MODIFICADO: BLOQUE 4  
+DESCRIPCIÓN DEL CAMBIO: Definición completa de flujos y operación del sistema  
+RESPONSABLE: ingolivera-byte  
+
+---
+
+## 5.5 REGLA DE CONTROL
+
+- Todo cambio debe registrarse aquí
+- Lo no registrado se considera inexistente
+- Este bloque **SIEMPRE es editable**
+- No altera arquitectura ni comportamiento
+
+---
+
+FIN DEL BLOQUE 5
+
+---
+
