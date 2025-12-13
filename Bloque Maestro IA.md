@@ -163,6 +163,97 @@ nunca para alterar arquitectura, comportamiento o lógica del sistema.
 
 ---
 
+# BLOQUE MAESTRO — CORRECCIÓN OPERATIVA Y CLARIFICACIONES
+(Actualización obligatoria)
+
+## 1. Principio de no-suposición
+Ningún elemento crítico del sistema AURA puede:
+- Darse por implícito
+- Inferirse por contexto
+- Ser deducido por el lector o implementador
+
+Todo rol, módulo, punto de arranque y jerarquía debe estar
+**explícitamente nombrado y descrito** en este Bloque Maestro.
+
+---
+
+## 2. Punto de arranque del sistema
+AURA tiene **un único punto de arranque lógico y técnico**.
+
+- El sistema se inicia desde un archivo ejecutor (`main` o equivalente)
+- Dicho ejecutor **no toma decisiones**
+- Su única función es **delegar el control al sistema interno**
+
+No se permite arranque distribuido ni implícito.
+
+---
+
+## 3. Jerarquía mínima obligatoria (runtime)
+
+La jerarquía correcta y no ambigua es:
+
+1. **Sistema AURA (runtime activo)**
+2. **Orquestación central**
+3. **Core (decisión lógica)**
+4. **Módulos funcionales**
+   - Interaction
+   - Security
+   - Models
+   - IO
+   - Audit
+   - Supervision (cuando exista)
+
+Ningún módulo funcional puede:
+- Inicializar a otro módulo
+- Gobernar el ciclo de vida del sistema
+- Autodefinirse como centro
+
+---
+
+## 4. Core: alcance real
+El Core:
+- Decide sobre eventos
+- No es el sistema completo
+- No gobierna el ciclo de vida
+- No inicializa la arquitectura
+
+El Core **solo opera dentro de los límites definidos por el sistema AURA**.
+
+---
+
+## 5. Prohibición de invención estructural
+Durante el desarrollo:
+
+- ChatGPT no puede introducir:
+  - nuevos nodos estructurales
+  - nombres jerárquicos
+  - capas superiores
+sin solicitud explícita del usuario.
+
+Toda ampliación estructural debe:
+- Ser pedida
+- Ser entregada como bloque
+- Ser validada por el usuario
+
+---
+
+## 6. Estado actual del sistema
+En el estado presente del proyecto:
+
+- La arquitectura global está **incompleta**
+- El Core existe como componente
+- La orquestación superior **no está aún definida**
+- Ninguna entidad tiene autoridad total declarada
+
+Este estado es válido y reconocido.
+No se asume completitud.
+
+---
+
+FIN DEL BLOQUE MAESTRO — CORRECCIÓN OPERATIVA
+
+---
+
 **Fin del BLOQUE 0**
 # BLOQUE 1 — FUNDAMENTOS Y ARQUITECTURA GLOBAL
 # PROYECTO: AURA_CORE
