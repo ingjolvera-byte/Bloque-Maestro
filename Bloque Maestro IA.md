@@ -55,147 +55,42 @@ Se divide en **bloques internos claramente delimitados**.
 **Fin de la carátula**
 ---
 
-## BLOQUE 0 — METADATOS Y REGLAS DEL DOCUMENTO
+# BLOQUE 0 — CORRECCIONES OPERATIVAS, PRINCIPIO DE NO-SUPOSICIÓN Y ARMONIZACIÓN GENERAL
 
-**Documento:** BLOQUE_MAESTRO_AURA.md  
-**Proyecto:** AURA  
-**Autor:** ingolivera-byte  
-
----
-
-### 0.1 Propósito del Bloque
-
-Este bloque define las reglas de control, versionado y modificación del  
-**Bloque Maestro AURA**.
-
-Su objetivo es garantizar:
-- Orden
-- Trazabilidad
-- Control de cambios
-- Prevención de modificaciones accidentales o arbitrarias
-
-Este bloque **no define arquitectura ni comportamiento**, solo gobierna el documento.
-
----
-
-### 0.2 Regla de Documento Único
-
-- Existe **un solo Bloque Maestro** para el proyecto AURA.
-- Este archivo es la **fuente única de verdad**.
-- No se permiten copias paralelas con autoridad propia.
-- Cualquier derivado es solo de consulta.
-
----
-
-### 0.3 Estructura por Bloques
-
-El documento se divide en **bloques numerados**:
-
-- Cada bloque tiene un propósito claro.
-- Cada bloque es **autocontenido**.
-- Un bloque puede modificarse sin afectar a los demás,
-  **siempre que respete los bloques superiores**.
-
----
-
-### 0.4 Regla de Modificación por Bloque
-
-- Solo se modifica **el bloque que cambia**.
-- Está prohibido reescribir el documento completo sin causa mayor.
-- Los bloques no afectados deben permanecer intactos.
-- Toda modificación debe indicar:
-  - Bloque modificado
-  - Fecha
-  - Motivo
-
----
-
-### 0.5 Jerarquía de Bloques
-
-La jerarquía de autoridad entre bloques es:
-
-1. BLOQUE 1 — Arquitectura Base  
-2. BLOQUE 2 — Comportamiento de la IA  
-3. BLOQUE 3 — Códigos Base Funcionales  
-4. BLOQUE 4 — Flujos y Operación  
-5. BLOQUE 5 — Estado y Avance  
-
-Un bloque **nunca puede contradecir** a uno superior.
-
----
-
-### 0.6 Versionado del Documento
-
-- El documento usa versionado incremental simple:
-  - v1.0, v1.1, v1.2, etc.
-- El incremento de versión ocurre cuando:
-  - Se modifica el BLOQUE 1 (caso excepcional)
-  - Se congela una nueva versión del BLOQUE 2
-- Cambios menores en BLOQUES 3, 4 o 5 no requieren cambio de versión mayor.
-
----
-
-### 0.7 Registro de Cambios (Obligatorio)
-
-Cada modificación debe registrarse en el **BLOQUE 5** indicando:
-- Bloque afectado
-- Qué cambió
-- Fecha
-- Responsable
-
-Sin registro, el cambio se considera inválido.
-
----
-
-### 0.8 Regla de Interpretación
-
-- Lo escrito prevalece sobre lo supuesto.
-- En caso de ambigüedad, se detiene el avance.
-- Ningún comportamiento se asume si no está documentado.
-- Ninguna implementación puede “interpretar libremente” un bloque.
-
----
-
-### 0.9 Cierre del Bloque
-
-Este bloque puede ajustarse **solo para mejorar control documental**,  
-nunca para alterar arquitectura, comportamiento o lógica del sistema.
-
----
-
-# BLOQUE MAESTRO — CORRECCIÓN OPERATIVA Y CLARIFICACIONES
-(Actualización obligatoria)
-
-## 1. Principio de no-suposición
+## 0.1 Principio de no-suposición
 Ningún elemento crítico del sistema AURA puede:
 - Darse por implícito
 - Inferirse por contexto
 - Ser deducido por el lector o implementador
 
-Todo rol, módulo, punto de arranque y jerarquía debe estar
-**explícitamente nombrado y descrito** en este Bloque Maestro.
+Todo rol, módulo, jerarquía, punto de arranque o autoridad debe estar
+**explícitamente nombrado y descrito** en el Bloque Maestro.
+
+La ausencia de definición implica **no existencia**.
 
 ---
 
-## 2. Punto de arranque del sistema
+## 0.2 Punto de arranque del sistema
 AURA tiene **un único punto de arranque lógico y técnico**.
 
-- El sistema se inicia desde un archivo ejecutor (`main` o equivalente)
+- El sistema se inicia desde un ejecutor (`main` o equivalente)
 - Dicho ejecutor **no toma decisiones**
 - Su única función es **delegar el control al sistema interno**
 
-No se permite arranque distribuido ni implícito.
+No se permite:
+- Arranque distribuido
+- Arranque implícito
+- Inicialización encubierta desde módulos
 
 ---
 
-## 3. Jerarquía mínima obligatoria (runtime)
+## 0.3 Jerarquía mínima obligatoria (runtime)
+Mientras no se defina otra explícitamente, la jerarquía válida es:
 
-La jerarquía correcta y no ambigua es:
-
-1. **Sistema AURA (runtime activo)**
-2. **Orquestación central**
-3. **Core (decisión lógica)**
-4. **Módulos funcionales**
+1. Sistema AURA (runtime activo)
+2. Orquestación central (aún no formalizada)
+3. Core (decisión lógica)
+4. Módulos funcionales
    - Interaction
    - Security
    - Models
@@ -206,55 +101,116 @@ La jerarquía correcta y no ambigua es:
 Ningún módulo funcional puede:
 - Inicializar a otro módulo
 - Gobernar el ciclo de vida del sistema
-- Autodefinirse como centro
+- Autodefinirse como centro del sistema
 
 ---
 
-## 4. Core: alcance real
+## 0.4 Alcance real del Core
 El Core:
 - Decide sobre eventos
 - No es el sistema completo
+- No es el punto de arranque
 - No gobierna el ciclo de vida
-- No inicializa la arquitectura
+- No define la arquitectura
 
-El Core **solo opera dentro de los límites definidos por el sistema AURA**.
+El Core **opera dentro de un sistema mayor aún no cerrado**.
 
 ---
 
-## 5. Prohibición de invención estructural
-Durante el desarrollo:
+## 0.5 Prohibición de invención estructural
+Durante el desarrollo de AURA:
 
-- ChatGPT no puede introducir:
+- No se permite introducir:
   - nuevos nodos estructurales
-  - nombres jerárquicos
-  - capas superiores
+  - capas jerárquicas
+  - autoridades superiores
 sin solicitud explícita del usuario.
 
 Toda ampliación estructural debe:
-- Ser pedida
-- Ser entregada como bloque
+- Ser pedida explícitamente
+- Entregarse como bloque independiente
 - Ser validada por el usuario
 
 ---
 
-## 6. Estado actual del sistema
-En el estado presente del proyecto:
+## 0.6 Estado real del sistema
+En el estado actual del proyecto:
 
 - La arquitectura global está **incompleta**
-- El Core existe como componente
-- La orquestación superior **no está aún definida**
-- Ninguna entidad tiene autoridad total declarada
+- El Core existe como componente funcional
+- La orquestación superior **no está definida**
+- No existe autoridad total declarada
 
-Este estado es válido y reconocido.
+Este estado es **válido, explícito y aceptado**.
 No se asume completitud.
 
 ---
 
-FIN DEL BLOQUE MAESTRO — CORRECCIÓN OPERATIVA
+## 0.7 Armonización del contenido existente
+Todo el contenido previo del Bloque Maestro debe leerse bajo este bloque.
+
+Reglas de armonización:
+
+- Si un rol o jerarquía **no está definida explícitamente**, se considera inexistente.
+- Si una relación de autoridad **no está declarada**, no existe.
+- Si un módulo parece central pero no tiene autoridad asignada, **no la tiene**.
+
+El lector **no debe completar huecos por interpretación**.
 
 ---
 
-**Fin del BLOQUE 0**
+## 0.8 Interpretación correcta de módulos existentes
+Las descripciones actuales de módulos:
+
+- Definen **función**, no **autoridad**
+- Definen **responsabilidad**, no **control jerárquico**
+
+Ningún módulo:
+- gobierna el sistema
+- inicializa a otros
+- controla el ciclo de vida
+
+Cualquier lectura contraria queda invalidada por este bloque.
+
+---
+
+## 0.9 Diagramas y esquemas previos
+Todo diagrama existente debe entenderse como:
+
+- Flujo lógico ideal
+- Arquitectura objetivo
+- Mapa conceptual
+
+Los diagramas **no tienen autoridad normativa**
+si contradicen este Bloque 0.
+
+---
+
+## 0.10 Regla de evolución a partir de este punto
+Desde ahora:
+
+- Toda definición nueva debe indicar:
+  - nivel jerárquico
+  - alcance de autoridad
+  - límites explícitos
+- Toda ampliación estructural:
+  - se añade como bloque nuevo
+  - nunca por reinterpretación de texto antiguo
+
+---
+
+## 0.11 Estado tras la aplicación de este bloque
+Después de aplicar este Bloque 0:
+
+- El Bloque Maestro es coherente
+- No hay contradicciones implícitas
+- El estado incompleto es explícito
+- No se exige al lector adivinar nada crítico
+
+FIN DEL BLOQUE 0
+
+---
+
 # BLOQUE 1 — FUNDAMENTOS Y ARQUITECTURA GLOBAL
 # PROYECTO: AURA_CORE
 # ESTADO: NO MODIFICABLE (BASE ESTRUCTURAL)
