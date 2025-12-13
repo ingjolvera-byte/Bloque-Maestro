@@ -435,6 +435,25 @@ COMPORTAMIENTO:
 ESTADO:
 Regla de seguridad obligatoria.
 
+[FECHA: 2025-12-13]
+
+ACUERDO DE TRABAJO — COMPLETAR ESTRUCTURA DE CARPETAS
+
+Se establece que:
+
+- El día LUNES se realizará la revisión final de la estructura del proyecto AURA.
+- En esa fecha se agregarán únicamente las carpetas y subcarpetas que hagan falta.
+- No se moverán ni renombrarán carpetas existentes.
+- No se eliminará ningún archivo.
+- No se agregará código en esta fase.
+- Las carpetas nuevas se crearán vacías, solo como estructura base.
+
+OBJETIVO:
+Dejar la estructura del proyecto completa y alineada antes de iniciar el desarrollo de código.
+
+ESTADO:
+Acuerdo activo y obligatorio.
+
 ----------------------------------------------------------------
 ANEXO — REGLA DE NOMBRADO Y ENTREGA DE CÓDIGO
 ----------------------------------------------------------------
