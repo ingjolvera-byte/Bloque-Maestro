@@ -249,7 +249,7 @@ Nuevo | Modificado
 NOTA:
 Restricciones si aplican.
 
-[FECHA: 2025-12-13
+[FECHA: 2025-12-13]
 
 INVENTARIO DEL EQUIPO — HARDWARE Y SISTEMA
 
@@ -278,7 +278,7 @@ Base válida para el desarrollo de AURA.
 NOTA:
 Este inventario se considera definitivo. No volver a solicitar datos del equipo.
 
-[FECHA: 2025-12-13
+[FECHA: 2025-12-13]
 
 INVENTARIO DEL EQUIPO — GPU
 
@@ -306,7 +306,7 @@ NOTA:
 Este inventario de GPU se considera definitivo.
 No volver a solicitar datos de GPU.
 
-[FECHA: 2025-12-13
+[FECHA: 2025-12-13]
 
 INVENTARIO DEL ENTORNO — PYTHON Y EDITOR
 
@@ -326,7 +326,7 @@ ESTADO GENERAL:
 Entorno de desarrollo completo y funcional.
 No volver a solicitar verificación de Python ni editor.
 
-[FECHA: 2025-12-13
+[FECHA: 2025-12-13]
 
 CAPACIDAD ADICIONAL — DETECCIÓN DE CAMBIOS DE HARDWARE O EQUIPO
 
@@ -349,7 +349,7 @@ COMPORTAMIENTO:
 ESTADO:
 Capacidad definida para implementación futura.
 
-[FECHA: 2025-12-13
+[FECHA: 2025-12-13]
 
 CAPACIDAD FINAL — EMPAQUETADO, INSTALACIÓN Y DETECCIÓN DE USUARIO
 
@@ -375,7 +375,7 @@ COMPORTAMIENTO:
 ESTADO:
 Capacidad definida para implementación en fase final del proyecto.
 
-[FECHA: 2025-12-13
+[FECHA: 2025-12-13]
 
 REFUERZO DE ESTRUCTURA — ALINEACIÓN DE CARPETAS Y ARCHIVOS
 
@@ -404,6 +404,36 @@ REGLAS:
 
 ESTADO:
 Estructura reforzada y lista para iniciar desarrollo de código.
+
+[FECHA: 2025-12-13]
+
+REGLA DE CONECTIVIDAD — ACCESO A INTERNET CON AISLAMIENTO LOCAL
+
+AURA PUEDE:
+- Acceder a internet.
+- Consultar APIs externas.
+- Descargar información pública.
+- Verificar actualizaciones y versiones.
+- Consumir servicios online necesarios para su funcionamiento.
+
+AURA NO PUEDE:
+- Enviar información del equipo al exterior.
+- Transmitir archivos locales.
+- Transmitir documentos del usuario.
+- Transmitir audio, imágenes o capturas.
+- Transmitir datos personales o del sistema.
+- Compartir inventarios, configuraciones o estados internos.
+
+PRINCIPIO:
+El acceso a internet es solo para ENTRADA de información.
+La información del equipo es estrictamente LOCAL.
+
+COMPORTAMIENTO:
+- Cualquier intento de salida de datos debe ser bloqueado.
+- El usuario debe ser notificado si se detecta una violación.
+
+ESTADO:
+Regla de seguridad obligatoria.
 
 ----------------------------------------------------------------
 ANEXO — REGLA DE NOMBRADO Y ENTREGA DE CÓDIGO
