@@ -1,300 +1,664 @@
-BLOQUE MAESTRO DE DESARROLLO DE AURA
-VERSIÓN 1.7
-AUTOR: ingolivera-byte
+# BLOQUE MAESTRO AURA
+## Documento Único de Arquitectura, Comportamiento y Control
 
-==================================================
+**Proyecto:** AURA  
+**Tipo:** Inteligencia Artificial Local / Asistente del Sistema  
+**Autor:** ingolivera-byte  
+**Repositorio:** AURA_CORE  
+**Documento:** BLOQUE_MAESTRO_AURA.md  
 
-0. DECLARACIÓN DE AUTORIDAD ABSOLUTA (NO NEGOCIABLE)
+---
 
-Este documento es la ÚNICA FUENTE DE VERDAD del proyecto AURA.
+### ESTADO DEL DOCUMENTO
+- Documento activo
+- Estructura modular por bloques
+- Actualización controlada
+- Fuente única de verdad del proyecto
 
-Nada fuera de este archivo tiene validez técnica, conceptual u operativa.
-Ningún comportamiento, módulo, permiso o capacidad existe si no está
-explícitamente definido aquí.
+---
 
-Ningún recuerdo de chat, interpretación implícita, sugerencia externa
-o contexto previo tiene autoridad sobre este documento.
+### REGLA FUNDAMENTAL
+Este archivo contiene la definición completa del sistema AURA.  
+Se divide en **bloques internos claramente delimitados**.
 
-En caso de conflicto entre este archivo y cualquier otro texto,
-este documento prevalece sin excepción.
+👉 **Solo se modifica el bloque que cambia**  
+👉 **Los demás bloques permanecen intactos**  
+👉 **Nunca se reescribe el documento completo**
 
-==================================================
+---
 
-1. GOBERNANZA DEL BLOQUE MAESTRO
+### BLOQUES DEL DOCUMENTO
 
-El Bloque Maestro es un documento blindado.
+1. **BLOQUE 1 — Arquitectura Base (Intocable)**  
+2. **BLOQUE 2 — Comportamiento de la IA**  
+3. **BLOQUE 3 — Códigos Base Funcionales**  
+4. **BLOQUE 4 — Flujos y Operación**  
+5. **BLOQUE 5 — Estado y Avance del Proyecto**
 
-Reglas obligatorias:
+---
 
-- No puede modificarse sin autorización explícita del autor.
-- Toda modificación debe:
-  - Incrementar la versión
-  - Quedar documentada
-  - Respetar decisiones cerradas
+### PRINCIPIO DE CONTROL
+- Si no está escrito aquí, no existe.
+- Si viola la arquitectura base, no se implementa.
+- Si no respeta el comportamiento definido, se rechaza.
+- Si no tiene referencia funcional, no se modifica.
 
-La única frase válida para autorizar cambios es:
+---
 
-Apruebo, actualiza el Bloque Maestro.
+### USO DEL DOCUMENTO
+- Referencia permanente del proyecto
+- Control de cambios por bloque
+- Base para implementación y evolución
 
-Sin esa frase, no existe modificación válida.
+---
 
-==================================================
+**Fin de la carátula**
+---
 
-2. DECISIONES DEFINITIVAS DEL PROYECTO (SECCIÓN CERRADA)
+## BLOQUE 0 — METADATOS Y REGLAS DEL DOCUMENTO
 
-Las siguientes decisiones son irreversibles sin reaprobación explícita:
+**Documento:** BLOQUE_MAESTRO_AURA.md  
+**Proyecto:** AURA  
+**Autor:** ingolivera-byte  
 
-- AURA es offline-first
-- El sistema operativo Windows es territorio protegido
-- AURA actúa como sistema guardián de acceso
-- La autenticación biométrica voz + rostro es obligatoria
-- Si la autenticación falla, la sesión se cierra inmediatamente
-- No existe modo invitado
-- No existe bypass
-- No existe acceso parcial
-- AURA inicia automáticamente con Windows
-- La seguridad tiene prioridad absoluta sobre la usabilidad
-- Todo código funcional vive bajo gobernanza estricta
+---
 
-==================================================
+### 0.1 Propósito del Bloque
 
-3. VISIÓN SUPREMA DEL PROYECTO AURA
+Este bloque define las reglas de control, versionado y modificación del  
+**Bloque Maestro AURA**.
 
-AURA es una Inteligencia Artificial local, autónoma y soberana,
-diseñada como:
+Su objetivo es garantizar:
+- Orden
+- Trazabilidad
+- Control de cambios
+- Prevención de modificaciones accidentales o arbitrarias
 
-- Sistema de control
-- Sistema de seguridad
-- Sistema de interacción total
+Este bloque **no define arquitectura ni comportamiento**, solo gobierna el documento.
 
-Se integra profundamente en el entorno del usuario sin comprometer
-la estabilidad del sistema operativo.
+---
 
-==================================================
-==================================================
+### 0.2 Regla de Documento Único
 
-4. PRINCIPIOS FUNDAMENTALES DE AURA
+- Existe **un solo Bloque Maestro** para el proyecto AURA.
+- Este archivo es la **fuente única de verdad**.
+- No se permiten copias paralelas con autoridad propia.
+- Cualquier derivado es solo de consulta.
 
-AURA se rige por principios inquebrantables que gobiernan
-toda decisión técnica, conceptual y operativa:
+---
 
-- Offline-first por defecto
-- Control humano absoluto
-- Seguridad por encima de funcionalidad
-- Sin dependencia de servicios externos
-- Transparencia total del sistema
-- Adaptación dinámica al entorno del usuario
-- Interacción natural mediante voz, visión y archivos
+### 0.3 Estructura por Bloques
 
-Estos principios no pueden ser debilitados ni reinterpretados.
+El documento se divide en **bloques numerados**:
 
-==================================================
+- Cada bloque tiene un propósito claro.
+- Cada bloque es **autocontenido**.
+- Un bloque puede modificarse sin afectar a los demás,
+  **siempre que respete los bloques superiores**.
 
-5. SEGURIDAD Y AUTENTICACIÓN BIOMÉTRICA (NIVEL SISTEMA)
+---
 
-5.1 Flujo de inicio del sistema (DEFINITIVO)
+### 0.4 Regla de Modificación por Bloque
 
-1. El sistema operativo Windows inicia.
-2. AURA inicia automáticamente en segundo plano.
-3. Antes de permitir cualquier uso del sistema,
-   AURA solicita autenticación biométrica:
-   - Reconocimiento de voz
-   - Reconocimiento facial
-4. Ambas validaciones deben ser exitosas.
-5. Si la autenticación falla:
-   - AURA cierra inmediatamente la sesión de Windows.
-6. No existe acceso parcial, modo invitado ni excepción.
+- Solo se modifica **el bloque que cambia**.
+- Está prohibido reescribir el documento completo sin causa mayor.
+- Los bloques no afectados deben permanecer intactos.
+- Toda modificación debe indicar:
+  - Bloque modificado
+  - Fecha
+  - Motivo
 
-==================================================
+---
 
-5.2 Reglas críticas de seguridad
+### 0.5 Jerarquía de Bloques
 
-- Toda autenticación es local y completamente offline.
-- Los datos biométricos están cifrados.
-- La autenticación tiene prioridad absoluta
-  sobre cualquier otro proceso.
-- No se permite interacción con el sistema
-  antes de la validación exitosa.
-- Ningún módulo puede omitir este flujo.
+La jerarquía de autoridad entre bloques es:
 
-==================================================
+1. BLOQUE 1 — Arquitectura Base  
+2. BLOQUE 2 — Comportamiento de la IA  
+3. BLOQUE 3 — Códigos Base Funcionales  
+4. BLOQUE 4 — Flujos y Operación  
+5. BLOQUE 5 — Estado y Avance  
 
-6. INICIO AUTOMÁTICO DE AURA
+Un bloque **nunca puede contradecir** a uno superior.
 
-- AURA debe iniciar automáticamente con Windows.
-- No requiere intervención manual del usuario.
-- No puede ser deshabilitada sin autorización explícita.
-- El inicio no debe comprometer la estabilidad
-  ni el rendimiento del sistema operativo.
+---
 
-==================================================
+### 0.6 Versionado del Documento
 
-7. INTERACCIÓN DEL SISTEMA
+- El documento usa versionado incremental simple:
+  - v1.0, v1.1, v1.2, etc.
+- El incremento de versión ocurre cuando:
+  - Se modifica el BLOQUE 1 (caso excepcional)
+  - Se congela una nueva versión del BLOQUE 2
+- Cambios menores en BLOQUES 3, 4 o 5 no requieren cambio de versión mayor.
 
-7.1 Interacción por voz (canal primario)
+---
 
-- La voz es el canal principal de interacción con AURA.
-- El sistema puede operar en escucha continua
-  o mediante palabra clave.
-- No se requieren botones físicos para hablar.
-- Las decisiones críticas requieren confirmación verbal.
+### 0.7 Registro de Cambios (Obligatorio)
 
-7.2 Interfaz gráfica (canal secundario)
+Cada modificación debe registrarse en el **BLOQUE 5** indicando:
+- Bloque afectado
+- Qué cambió
+- Fecha
+- Responsable
 
-- La interfaz gráfica es solo soporte visual.
-- No reemplaza ni sustituye la interacción por voz.
-- Su función es mostrar estados, alertas y contexto.
+Sin registro, el cambio se considera inválido.
 
-==================================================
-==================================================
+---
 
-8. ARQUITECTURA GENERAL DEL SISTEMA AURA
+### 0.8 Regla de Interpretación
 
-La arquitectura de AURA es modular, jerárquica y controlada.
+- Lo escrito prevalece sobre lo supuesto.
+- En caso de ambigüedad, se detiene el avance.
+- Ningún comportamiento se asume si no está documentado.
+- Ninguna implementación puede “interpretar libremente” un bloque.
 
-Estructura general de referencia:
+---
 
-AURA_CORE/
-├── core/
-├── security/
-├── supervision/
-├── interaction/
-│   ├── voice/
-│   └── ui/
-├── io/
-│   └── manager/
-├── audit/
-│   └── logs/
-├── config/
-├── launcher/
-├── models/
-└── README_AURA.txt
+### 0.9 Cierre del Bloque
 
-Cada bloque tiene responsabilidades únicas
-y no puede invadir funciones de otros bloques.
+Este bloque puede ajustarse **solo para mejorar control documental**,  
+nunca para alterar arquitectura, comportamiento o lógica del sistema.
 
-==================================================
+---
 
-9. MOTORES DE INTELIGENCIA ARTIFICIAL OFFLINE (DECISIÓN CERRADA)
+**Fin del BLOQUE 0**
+# BLOQUE 1 — FUNDAMENTOS Y ARQUITECTURA GLOBAL
+# PROYECTO: AURA_CORE
+# ESTADO: NO MODIFICABLE (BASE ESTRUCTURAL)
 
-AURA integra motores de lenguaje locales y 100 % offline.
+---
 
-Motores definidos oficialmente:
+## 1. PROPÓSITO DEL BLOQUE
 
-- Llama 3
-- Phi 3
+Este bloque define los **fundamentos inmutables** del sistema AURA_CORE.
+Todo el desarrollo presente y futuro **DEBE respetar estrictamente** este bloque.
 
-Reglas obligatorias:
+Cualquier implementación que contradiga este documento se considera:
+- Arquitectónicamente inválida
+- Técnicamente incorrecta
+- Rechazada por diseño
 
-- No existe dependencia de servicios en la nube.
-- Ningún motor se ejecuta directamente desde el Launcher.
-- Los motores están bajo control exclusivo del Core.
-- El uso de motores es auditable y supervisado.
-- Los motores no mantienen memoria persistente
-  fuera del control del sistema.
+Este bloque **no se modifica**, solo se referencia.
 
-==================================================
+---
 
-9.1 BLOQUE TÉCNICO DE MOTORES IA
+## 2. PRINCIPIOS NO NEGOCIABLES
 
-Los motores IA residen en un bloque técnico dedicado:
+- Separación estricta de responsabilidades
+- Jerarquía de dependencias inmutable
+- Ningún módulo bypassa al Core
+- Seguridad antes de interacción
+- Los modelos NO toman decisiones finales
+- Todo es auditable
+- No existen dependencias laterales entre módulos
+- Un solo punto de control por nivel
 
-models/
+---
 
-Subestructura definida:
+## 3. JERARQUÍA GLOBAL (NO ROMPIBLE)
 
-models/
-├── engine_controller/
-├── llama3/
-├── phi3/
-└── model_registry/
+La jerarquía del sistema es estricta y obligatoria:
 
-Responsabilidades:
+Launcher  
+↓  
+Core  
+↓  
+Security / Supervision / Interaction / IO / Models / Audit  
 
-- engine_controller:
-  Controla la carga, activación y ciclo de vida de motores IA.
+---
 
-- llama3:
-  Contenedor lógico del motor Llama 3 (offline).
+## 4. REGLAS DE DEPENDENCIA (INQUEBRANTABLES)
 
-- phi3:
-  Contenedor lógico del motor Phi 3 (offline).
+- Ningún módulo puede saltar niveles
+- No existen dependencias laterales
+- Los módulos de un mismo nivel NO se comunican entre sí
+- Toda comunicación pasa por su controller correspondiente
+- El Core nunca es llamado directamente
+- El Launcher solo inicializa, nunca decide
 
-- model_registry:
-  Registro interno de modelos disponibles y autorizados.
+---
 
-==================================================
+## 5. DESCRIPCIÓN DE MÓDULOS PRINCIPALES
 
-10. REGLAS DE AISLAMIENTO DE LOS MOTORES IA
+### 5.1 Launcher
+Responsabilidad:
+- Arranque del sistema
+- Carga de configuración inicial
+- Secuencia de inicio y apagado
 
-- Los motores IA no controlan seguridad.
-- Los motores IA no deciden accesos.
-- Los motores IA no interactúan directamente con hardware.
-- Los motores IA solo operan bajo órdenes explícitas del Core.
-- Todo uso de recursos es controlado y supervisado.
+Restricciones:
+- No contiene lógica de negocio
+- No decide flujos
+- No interactúa con usuarios
 
-==================================================
-==================================================
+---
 
-11. FASES TÉCNICAS DEL PROYECTO AURA
+### 5.2 Core
+Responsabilidad:
+- Orquestación central del sistema
+- Gestión de estados
+- Aplicación de reglas
+- Control del flujo global
 
-El desarrollo técnico de AURA se organiza en fases
-claramente definidas y gobernadas.
+Restricciones:
+- Punto único de decisión
+- No interactúa directamente con el exterior
+- No ejecuta modelos de IA
 
-Fases completadas:
+---
 
-- T1 a T9:
-  Estructura base del sistema, Core, Seguridad,
-  Supervisión, Interacción por Voz, UI, IO y Auditoría.
+### 5.3 Security
+Responsabilidad:
+- Autenticación
+- Autorización
+- Control de sesiones
+- Protección del sistema
 
-- T11:
-  Motores de IA Offline.
-  Bloque models/ creado con su subestructura validada.
+Restricciones:
+- Se ejecuta antes de cualquier interacción
+- Puede bloquear flujos
+- No interpreta intención
 
-==================================================
+---
 
-11.1 FASES DEFINIDAS Y PENDIENTES
+### 5.4 Supervision
+Responsabilidad:
+- Monitoreo del sistema
+- Detección de anomalías
+- Supervisión de estados
+- Recomendación de acciones al Core
 
-- T12 — Control de Motores IA:
-  - Definida conceptualmente.
-  - No iniciada técnicamente.
-  - Prioridad máxima al retomar el proyecto.
-  - Se implementará en:
-    models/engine_controller/
+Restricciones:
+- No ejecuta acciones directas
+- No interactúa con el usuario
 
-- T10 — Launcher del sistema:
-  - Pendiente.
-  - Debe adaptarse a la existencia de motores IA offline.
-  - Se retomará únicamente después de cerrar T12.
+---
 
-==================================================
+### 5.5 Interaction
+Responsabilidad:
+- Traducción de acciones humanas a eventos del sistema
+- Manejo de UI y Voz
 
-12. ESTADO ACTUAL DEL PROYECTO
+Submódulos:
+- UI
+- Voice
 
-- Bloque Maestro: versión 1.7
-- Diseño conceptual: COMPLETO Y CONGELADO
-- Fase técnica: PAUSA CONTROLADA
-- Última fase ejecutada: T11
-- Punto exacto de reanudación: T12
+Restricciones:
+- No toma decisiones
+- No ejecuta reglas
+- Solo enruta eventos al Core
 
-==================================================
+---
 
-13. REGLA DE CONTINUIDAD DEL PROYECTO
+### 5.6 IO
+Responsabilidad:
+- Entrada y salida de datos
+- Manejo de archivos
+- Streams y buses internos
 
-Cualquier continuación del proyecto AURA debe:
+Restricciones:
+- No interpreta datos
+- No decide flujos
 
-- Partir desde el Bloque Maestro vigente.
-- Respetar la versión registrada.
-- Retomar exactamente desde la fase pendiente indicada.
-- No reinterpretar decisiones cerradas.
+---
 
-Frase recomendada para reanudar el proyecto:
+### 5.7 Models
+Responsabilidad:
+- Ejecución de modelos de IA
+- Generación de respuestas
+- Procesamiento inteligente
 
-Continuar AURA desde la Fase T12 según Bloque Maestro v1.7
+Restricciones:
+- No decide acciones
+- No accede directamente a IO
+- Solo opera bajo autorización del Core
 
-==================================================
+---
 
-FIN DEL BLOQUE MAESTRO DE AURA — VERSIÓN 1.7
-DOCUMENTO OFICIAL — AUTORIDAD ABSOLUTA DEL PROYECTO
+### 5.8 Audit
+Responsabilidad:
+- Registro completo del sistema
+- Trazabilidad de decisiones
+- Logs de seguridad y eventos
 
-==================================================
+Restricciones:
+- No altera el sistema
+- Solo observa y registra
+
+---
+
+## 6. CONSECUENCIA DE VIOLACIÓN
+
+Cualquier violación a este bloque implica:
+- Revisión obligatoria de arquitectura
+- Rechazo de implementación
+- Corrección antes de continuar desarrollo
+
+---
+
+FIN DEL BLOQUE 1
+
+---
+
+# BLOQUE 2 — DEFINICIÓN FUNCIONAL DE AURA
+# PROYECTO: AURA_CORE
+# ESTADO: DEFINITIVO TRAS APROBACIÓN
+
+---
+
+## 1. OBJETIVO GENERAL DE AURA
+
+AURA es un sistema de inteligencia artificial personal, autónomo y modular,
+diseñado para **asistir, crear, automatizar, supervisar y ejecutar tareas digitales**
+bajo control estricto del Core, con seguridad, auditoría y control total del usuario.
+
+AURA **no es un chatbot**.  
+AURA es un **sistema operativo cognitivo productivo**.
+
+---
+
+## 2. CAPACIDADES GENERALES
+
+AURA es capaz de:
+
+- Comprender lenguaje humano (texto y voz)
+- Generar contenido digital complejo
+- Ejecutar acciones sobre el sistema
+- Crear, modificar y administrar software
+- Automatizar flujos empresariales
+- Supervisar su propio estado operativo
+- Mantenerse actualizada bajo reglas definidas
+- Centralizar operaciones digitales del usuario
+- Generar identidad audiovisual propia
+
+---
+
+## 3. INTERACCIÓN HUMANA
+
+### 3.1 Entrada (Input)
+
+AURA recibe instrucciones mediante:
+
+- Voz (micrófono)
+- Texto (UI, consola, chat interno)
+- Correos electrónicos
+- Mensajes (WhatsApp y canales autorizados)
+- Archivos
+- Eventos del sistema
+- Señales internas
+
+Toda entrada:
+- Pasa por validación de seguridad
+- Es interpretada por Interaction
+- Es evaluada por el Core
+
+---
+
+### 3.2 Salida (Output)
+
+AURA puede responder mediante:
+
+- Voz sintetizada
+- Texto estructurado
+- Documentos generados
+- Imágenes y material gráfico
+- Avatares visuales
+- Publicaciones listas para uso
+- Ejecución directa de acciones
+- Notificaciones y reportes
+
+---
+
+## 4. CREACIÓN DE CONTENIDO
+
+AURA puede crear y gestionar:
+
+- Documentos (Word, PDF, presentaciones, hojas de cálculo)
+- Imágenes gráficas
+- Folletos
+- Trípticos
+- Publicaciones digitales
+- Páginas web
+- Aplicaciones
+- Software interno
+- Scripts y automatizaciones
+- Ejecutables
+- Material empresarial
+- Identidad visual y multimedia
+
+Toda creación:
+- Es registrada
+- Es versionada
+- Es auditable
+
+---
+
+## 5. CONTROL DE APLICACIONES Y SISTEMA
+
+Bajo autorización del Core, AURA puede:
+
+- Abrir, cerrar y controlar aplicaciones
+- Interactuar con software instalado
+- Ejecutar programas empresariales
+- Gestionar inventarios
+- Administrar chatbots
+- Operar páginas web
+- Ejecutar scripts
+- Crear y modificar ejecutables
+- Acceder al sistema de archivos
+- Leer y escribir datos
+
+---
+
+## 6. VOZ Y AVATARES
+
+### 6.1 Clonado de Voz
+
+AURA puede:
+
+- Clonar voces a partir de muestras autorizadas
+- Generar voces sintéticas personalizadas
+- Utilizar múltiples perfiles de voz
+- Cambiar tono, estilo y emoción
+- Asociar voces a identidades o avatares
+
+Restricciones:
+- Solo con autorización explícita
+- Uso registrado y auditable
+- Prohibido clonar voces sin permiso del propietario
+
+---
+
+### 6.2 Avatares
+
+AURA puede:
+
+- Crear avatares visuales (2D y 3D)
+- Generar representaciones humanas o estilizadas
+- Sincronizar voz y expresión
+- Usar avatares en interfaces, presentaciones y comunicación
+- Tener uno o varios avatares propios
+
+Los avatares:
+- No representan personas reales sin autorización
+- Están ligados a perfiles definidos
+- Son controlados por el Core
+
+---
+
+## 7. AUTONOMÍA CONTROLADA
+
+AURA puede:
+
+- Actualizarse a sí misma
+- Mantener versiones internas
+- Cargar nuevos módulos
+- Optimizar flujos
+
+Siempre bajo:
+- Reglas del Core
+- Validación de Security
+- Registro de Audit
+
+AURA **no se auto-modifica sin control**.
+
+---
+
+## 8. COMUNICACIÓN EXTERNA
+
+AURA puede:
+
+- Leer correos electrónicos
+- Redactar y responder correos
+- Acceder a WhatsApp (y servicios similares autorizados)
+- Enviar y recibir mensajes
+- Gestionar notificaciones
+
+Toda comunicación:
+- Es registrada
+- Es supervisada
+- Puede requerir confirmación humana
+
+---
+
+## 9. ACCIONES PROHIBIDAS
+
+AURA **NO PUEDE**:
+
+- Tomar decisiones críticas sin aprobación
+- Modificar reglas base
+- Saltar seguridad
+- Ocultar acciones
+- Operar sin auditoría
+- Autorizase a sí misma
+- Ejecutar acciones fuera del alcance definido
+- Usar voces o avatares sin autorización
+
+---
+
+## 10. MODELO DE CONTROL OPERATIVO
+
+Toda acción sigue el flujo:
+
+Entrada  
+→ Security  
+→ Interaction  
+→ Core  
+→ (Models / IO / Supervision)  
+→ Audit  
+→ Resultado  
+
+No existen atajos.
+
+---
+
+## 11. COMPORTAMIENTO ESPERADO
+
+AURA debe ser:
+
+- Productiva
+- Segura
+- Transparente
+- Explicable
+- Modular
+- Escalable
+- Auditada
+- Controlable
+
+---
+
+## 12. CIERRE DEL BLOQUE
+
+Este bloque define **qué puede y qué no puede hacer AURA**.  
+No describe implementación, solo **alcance funcional definitivo**.
+
+Una vez aprobado:
+- No se modifica
+- Solo se extiende con nuevos bloques
+
+---
+
+FIN DEL BLOQUE 2
+
+---
+
+## BLOQUE 3 — REGISTRO DE CÓDIGOS BASE (INMUTABLE)
+
+Este bloque define el **único formato válido** para registrar código funcional dentro del sistema AURA_CORE.
+
+Ningún código se considera “base”, “estable” o “aprobado” si **no está registrado aquí** bajo este formato exacto.
+
+---
+
+### 3.1 FORMATO DE REGISTRO OBLIGATORIO
+
+Cada código base debe documentarse usando **exactamente** la siguiente estructura:
+
+MÓDULO:
+RUTA REAL:
+ARCHIVO:
+VERSIÓN:
+ESTADO:
+FECHA DE REGISTRO:
+
+DESCRIPCIÓN BREVE:
+
+CÓDIGO BASE:
+(código funcional completo, sin omisiones)
+
+---
+
+Sin este formato:
+- El código **no existe oficialmente**
+- El código **no puede ser reutilizado**
+- El código **no puede ser modificado**
+- El código **no puede ser considerado estable**
+
+---
+
+### 3.2 CRITERIOS PARA CONSIDERAR UN CÓDIGO “BASE”
+
+Un código solo puede registrarse en este bloque si cumple **TODAS** las siguientes condiciones:
+
+- Cumple la jerarquía definida en el BLOQUE 1
+- No rompe dependencias ni niveles
+- No contiene lógica provisional
+- No contiene mocks, stubs o simulaciones
+- No depende de código externo no registrado
+- Es funcional por sí mismo
+- Ha sido probado manualmente
+- No delega decisiones al modelo de IA
+- No accede directamente a módulos prohibidos
+
+---
+
+### 3.3 REGLAS DE MODIFICACIÓN
+
+- Un código base **NO se edita**
+- Las modificaciones generan **una nueva versión**
+- Las versiones antiguas **no se eliminan**
+- Cada versión debe registrarse por separado
+- El historial es obligatorio
+
+---
+
+### 3.4 AUTORIDAD DEL BLOQUE
+
+Este bloque es **referencial**, no ejecutable.
+
+Su función es:
+- Preservar código funcional
+- Evitar regresiones
+- Mantener trazabilidad
+- Servir como base segura para futuras modificaciones
+
+Nada fuera de este bloque puede declararse “estable” sin estar aquí registrado.
+
+---
+
+FIN DEL BLOQUE 3
+
+---
+
