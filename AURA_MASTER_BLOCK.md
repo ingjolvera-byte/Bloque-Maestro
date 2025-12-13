@@ -172,18 +172,50 @@ PROHIBIDO:
 ================================================================
 ESTRUCTURA DEFINITIVA (NOMBRES FIJOS)
 ================================================================
+
 AURA/
-├─ main.py
-├─ core/core.py
-├─ ui/ui.py
-├─ voice/voice.py
-├─ files/files.py
-├─ documents/documents.py
-├─ agenda/agenda.py
-├─ system/system.py
-├─ avatars/avatars.py
-├─ updates/updates.py
-├─ memory/memory.py
+├─ main.py                  # Punto único de arranque (aún puede existir como stub)
+│
+├─ core/
+│  └─ core.py               # Orquestación lógica (no UI, no voz)
+│
+├─ ui/
+│  └─ ui.py                 # Interfaz gráfica local (ventana principal)
+│
+├─ voice/
+│  ├─ grabar.py             # Captura de audio (ya existe)
+│  ├─ windows_tts.py        # TTS nativo Windows (ya existe)
+│  └─ voice.py              # Coordinador de voz (a crear después)
+│
+├─ files/
+│  └─ files.py              # Adjuntar/buscar archivos del usuario
+│
+├─ documents/
+│  └─ documents.py          # Generación de documentos empresariales
+│
+├─ agenda/
+│  └─ agenda.py             # Correos, contactos, recordatorios
+│
+├─ system/
+│  ├─ system.py             # Monitoreo HW/SO, detección upgrades
+│  └─ installer.py          # Lógica de instalación final (fase final)
+│
+├─ avatars/
+│  └─ avatars.py            # Avatar e identidad visual
+│
+├─ updates/
+│  └─ updates.py            # Actualizaciones y empaquetado (fase final)
+│
+├─ memory/
+│  └─ memory.py             # Memoria, inventarios, eventos
+│
+├─ models/
+│  ├─ llama3/               # Modelos LLaMA (ya existen)
+│  └─ phi3/                 # Modelos Phi-3 (ya existen)
+│
+└─ config/
+   └─ config.json           # Configuración general (ya existe)
+
 
 Los nombres no se cambian.
 
@@ -216,6 +248,162 @@ Nuevo | Modificado
 
 NOTA:
 Restricciones si aplican.
+
+[FECHA: 2025-12-13
+
+INVENTARIO DEL EQUIPO — HARDWARE Y SISTEMA
+
+NOMBRE DEL EQUIPO:
+JARVIS
+
+FABRICANTE / MODELO:
+ASUS TUF Gaming A15 FA507NU
+
+SISTEMA OPERATIVO:
+Microsoft Windows 11 Home (x64)
+
+CPU:
+AMD Ryzen (AMD64 Family 25) ~2.5 GHz
+
+MEMORIA RAM:
+16 GB (15.6 GB)
+
+VIRTUALIZACIÓN:
+Habilitada (hipervisor detectado)
+
+ESTADO GENERAL:
+Equipo apto para IA local, voz continua, OCR e interfaz gráfica.
+Base válida para el desarrollo de AURA.
+
+NOTA:
+Este inventario se considera definitivo. No volver a solicitar datos del equipo.
+
+[FECHA: 2025-12-13
+
+INVENTARIO DEL EQUIPO — GPU
+
+GPU:
+NVIDIA GeForce RTX 4050 (Laptop)
+
+VRAM:
+6 GB (6141 MiB)
+
+DRIVER NVIDIA:
+555.97
+
+CUDA:
+Versión 12.5
+
+ESTADO:
+Operativa, sin procesos activos al momento del registro.
+
+USO PREVISTO:
+- Aceleración de modelos LLM locales (GGUF).
+- Aceleración de Whisper (STT).
+- Procesamiento de visión y tareas de IA.
+
+NOTA:
+Este inventario de GPU se considera definitivo.
+No volver a solicitar datos de GPU.
+
+[FECHA: 2025-12-13
+
+INVENTARIO DEL ENTORNO — PYTHON Y EDITOR
+
+PYTHON:
+Versión instalada: Python 3.11.6
+Estado: Operativo y en uso
+
+EDITOR DE CÓDIGO:
+Visual Studio Code (VS Code)
+Versión: 1.107.0
+Arquitectura: x64
+
+CONSOLA DE TRABAJO:
+Windows PowerShell
+
+ESTADO GENERAL:
+Entorno de desarrollo completo y funcional.
+No volver a solicitar verificación de Python ni editor.
+
+[FECHA: 2025-12-13
+
+CAPACIDAD ADICIONAL — DETECCIÓN DE CAMBIOS DE HARDWARE O EQUIPO
+
+AURA DEBE:
+- Detectar cambios en el hardware del equipo:
+  CPU, RAM, GPU, VRAM, disco y sistema operativo.
+- Comparar el estado actual contra el inventario base registrado.
+- Detectar si se ejecuta en un equipo diferente al original.
+
+AURA NO DEBE:
+- Reconfigurarse automáticamente.
+- Tomar decisiones sin autorización.
+- Modificar parámetros internos por sí sola.
+
+COMPORTAMIENTO:
+- Notificar claramente al usuario cualquier cambio detectado.
+- Registrar el evento como aviso informativo.
+- Esperar instrucciones del usuario.
+
+ESTADO:
+Capacidad definida para implementación futura.
+
+[FECHA: 2025-12-13
+
+CAPACIDAD FINAL — EMPAQUETADO, INSTALACIÓN Y DETECCIÓN DE USUARIO
+
+AURA DEBE:
+- Empaquetarse como aplicación instalable final.
+- Instalarse por defecto en:
+  C:\Archivos de Programa\AURA\
+- Ejecutarse con permisos adecuados del sistema.
+- Detectar automáticamente el perfil del usuario activo.
+- Detectar rutas estándar del usuario:
+  Documentos, Escritorio, Descargas.
+
+AURA NO DEBE:
+- Solicitar rutas manuales al usuario.
+- Asumir nombres fijos de usuario.
+- Acceder a carpetas del sistema no autorizadas.
+
+COMPORTAMIENTO:
+- Adaptarse automáticamente al entorno del usuario.
+- Mantener compatibilidad al cambiar de equipo.
+- Notificar cualquier problema de permisos.
+
+ESTADO:
+Capacidad definida para implementación en fase final del proyecto.
+
+[FECHA: 2025-12-13
+
+REFUERZO DE ESTRUCTURA — ALINEACIÓN DE CARPETAS Y ARCHIVOS
+
+OBJETIVO:
+Confirmar y alinear la estructura del proyecto AURA sin modificar código existente.
+
+ESTRUCTURA CONFIRMADA:
+- main.py: punto único de arranque.
+- core/: orquestación lógica.
+- ui/: interfaz gráfica local.
+- voice/: captura de audio y TTS (incluye archivos existentes).
+- files/: manejo de archivos del usuario.
+- documents/: generación de documentos empresariales.
+- agenda/: correos, contactos y recordatorios.
+- system/: monitoreo del sistema, detección de upgrades y lógica de instalación.
+- avatars/: identidad visual y avatar.
+- updates/: actualizaciones y empaquetado final.
+- memory/: memoria e inventarios.
+- models/: almacenamiento de modelos LLM existentes.
+- config/: configuración general del sistema.
+
+REGLAS:
+- No mover ni renombrar archivos existentes.
+- Crear carpetas vacías solo si no existen.
+- No agregar código en esta fase.
+
+ESTADO:
+Estructura reforzada y lista para iniciar desarrollo de código.
 
 ----------------------------------------------------------------
 ANEXO — REGLA DE NOMBRADO Y ENTREGA DE CÓDIGO
