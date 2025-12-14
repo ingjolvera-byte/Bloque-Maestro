@@ -478,6 +478,80 @@ Reducir el tiempo total del proyecto sin perder estabilidad ni calidad.
 ESTADO:
 Acuerdo activo y obligatorio para todo el desarrollo de AURA.
 
+[FECHA: 2025-12-13]
+
+CRITERIO DE TERMINACIÓN — DEFINICIÓN DE AURA TERMINADA
+
+AURA se considera TERMINADA cuando cumple:
+
+- Arranca automáticamente con el sistema.
+- Responde a texto y voz de forma estable.
+- Tiene interfaz gráfica local funcional.
+- Puede trabajar con archivos del usuario.
+- Puede generar documentos empresariales.
+- Tiene agenda básica operativa.
+- Detecta cambios de hardware o equipo.
+- Tiene acceso a internet con aislamiento local.
+- Está empaquetada e instalada en:
+  C:\Archivos de Programa\AURA\
+
+Una vez cumplidos estos puntos:
+- El proyecto AURA se considera FINALIZADO.
+- Todo desarrollo posterior se considera MEJORA, no requisito.
+
+ESTADO:
+Criterio de cierre definitivo.
+
+[FECHA: 2025-12-13]
+
+PROTOCOLO DE BLOQUEO — MANEJO DE ERRORES
+
+Si durante una meta diaria ocurre un bloqueo técnico:
+
+- Se permite usar hasta el 30% del tiempo del día para corregir.
+- Si el bloqueo persiste:
+  - Se documenta brevemente.
+  - Se redefine la meta para el día siguiente.
+- No se cancela el proyecto por un solo bloqueo.
+
+OBJETIVO:
+Evitar estancamiento y frustración.
+
+ESTADO:
+Protocolo activo.
+
+[FECHA: 2025-12-13]
+
+CONGELACIÓN DE ALCANCE — CONTROL DE NUEVAS IDEAS
+
+Se establece que:
+
+- No se agregan nuevas capacidades al alcance base durante la construcción.
+- Las ideas nuevas se anotan pero no se implementan.
+- Las nuevas ideas se evalúan solo después de declarar AURA TERMINADA.
+
+OBJETIVO:
+Garantizar finalización del proyecto sin retrasos.
+
+ESTADO:
+Congelación activa hasta cierre del proyecto.
+
+[FECHA: 2025-12-13]
+
+REGLA DE CONTINUIDAD — PAUSAS Y REANUDACIÓN
+
+- El proyecto puede pausarse sin perder validez.
+- Al reanudar:
+  - Se continúa desde la última meta completada.
+  - No se reinicia el proyecto.
+  - No se rehacen inventarios.
+
+OBJETIVO:
+Garantizar continuidad sin reprocesos.
+
+ESTADO:
+Regla activa.
+
 ----------------------------------------------------------------
 ANEXO — REGLA DE NOMBRADO Y ENTREGA DE CÓDIGO
 ----------------------------------------------------------------
