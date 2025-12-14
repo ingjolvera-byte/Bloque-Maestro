@@ -454,6 +454,30 @@ Dejar la estructura del proyecto completa y alineada antes de iniciar el desarro
 ESTADO:
 Acuerdo activo y obligatorio.
 
+[FECHA: 2025-12-13]
+
+ACUERDO OPERATIVO — TRABAJO DIARIO POR METAS (8 HORAS)
+
+Se establece que el desarrollo de AURA se realizará bajo el siguiente esquema:
+
+- El trabajo se divide en METAS DIARIAS.
+- Cada meta diaria corresponde a aproximadamente 8 horas de trabajo.
+- Cada día tiene UNA sola meta clara y medible.
+- Cada meta diaria debe producir un resultado funcional y visible.
+- El resultado del día se entrega como archivos finales descargables.
+- El usuario no edita ni modifica código entregado.
+
+CRITERIO DE AVANCE:
+- Un día cuenta como completado solo si la meta diaria se cumple.
+- Si la meta se completa antes de tiempo, se puede avanzar parcialmente en la meta del día siguiente.
+- Si la meta no se cumple, no se avanza al siguiente día hasta corregir.
+
+OBJETIVO:
+Reducir el tiempo total del proyecto sin perder estabilidad ni calidad.
+
+ESTADO:
+Acuerdo activo y obligatorio para todo el desarrollo de AURA.
+
 ----------------------------------------------------------------
 ANEXO — REGLA DE NOMBRADO Y ENTREGA DE CÓDIGO
 ----------------------------------------------------------------
