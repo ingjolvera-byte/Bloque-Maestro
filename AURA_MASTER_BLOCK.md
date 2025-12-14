@@ -775,6 +775,142 @@ IMPACTO:
 NOTA:
 Este cierre habilita el inicio de metas de desarrollo funcional.
 
+META DIARIA — DÍA 2
+FECHA: 2025-12-14
+
+OBJETIVO ÚNICO:
+Activar main.py como punto real de arranque del sistema AURA.
+
+ALCANCE:
+
+* main.py debe ejecutar AURA.
+* Conectar main.py con core/core.py.
+* Conectar main.py con ui/ui.py.
+* Mostrar ventana gráfica local funcional.
+
+REGLAS:
+
+* Sin voz.
+* Sin modelos LLM.
+* Sin lógica avanzada.
+* Sin agenda.
+* Sin archivos.
+* Sin cambios de estructura.
+
+ENTREGABLE:
+
+* main.py funcional.
+* ui/ui.py funcional.
+* core/core.py funcional.
+
+CRITERIO DE ÉXITO:
+
+* Ejecutar `python main.py` abre una ventana local.
+* No hay errores en consola.
+* Flujo estable y controlado.
+
+ESTADO:
+En ejecución
+
+[FECHA: 2025-12-14]
+
+CIERRE META DIARIA — DÍA 2
+
+OBJETIVO:
+Activar main.py como punto real de arranque del sistema AURA.
+
+ARCHIVOS:
+AURA/main.py
+AURA/core/core.py
+AURA/ui/ui.py
+
+RESULTADO:
+
+* main.py ejecuta correctamente como punto único de arranque.
+* core/core.py inicializa el estado base del sistema.
+* ui/ui.py abre una ventana gráfica local funcional.
+* Ejecución confirmada mediante `python main.py` sin errores en consola.
+
+ESTADO:
+Meta diaria completada con éxito.
+
+IMPACTO:
+
+* AURA ya arranca como aplicación local.
+* Flujo base core → ui validado.
+* Base estable para integrar voz, modelos y lógica progresiva.
+
+NOTA:
+Este cierre habilita el avance a la siguiente meta diaria de desarrollo funcional.
+
+META DIARIA — DÍA 3
+FECHA: 2025-12-14
+
+OBJETIVO ÚNICO:
+Integrar estado del sistema visible en la interfaz gráfica de AURA.
+
+ESTADOS DEFINIDOS:
+
+* Escuchando
+* Procesando
+* Respondiendo
+
+ALCANCE:
+
+* El estado se controla desde core/core.py.
+* La UI refleja el estado en tiempo real.
+* El estado puede cambiar dinámicamente.
+
+REGLAS:
+
+* Sin voz.
+* Sin modelos LLM.
+* Sin lógica avanzada.
+* Sin cambios de estructura.
+
+ENTREGABLE:
+
+* core/core.py actualizado.
+* ui/ui.py actualizado.
+
+CRITERIO DE ÉXITO:
+
+* El estado se muestra claramente en la UI.
+* Cambiar el estado desde core actualiza la UI.
+* Ejecución estable sin errores.
+
+ESTADO:
+En ejecución
+
+[FECHA: 2025-12-14]
+
+CIERRE META DIARIA — DÍA 3
+
+OBJETIVO:
+Integrar estado del sistema visible en la interfaz gráfica de AURA.
+
+ARCHIVOS:
+AURA/core/core.py
+AURA/ui/ui.py
+
+RESULTADO:
+
+* core controla el estado del sistema.
+* Estados definidos: Escuchando, Procesando, Respondiendo.
+* La UI refleja el estado en tiempo real.
+* Cambio de estados validado visualmente en ejecución.
+
+ESTADO:
+Meta diaria completada con éxito.
+
+IMPACTO:
+
+* AURA muestra estado operativo de forma clara.
+* Base preparada para integrar voz y procesos reales.
+
+NOTA:
+Este cierre habilita la siguiente meta diaria de desarrollo funcional.
+
 ----------------------------------------------------------------
 ANEXO — REGLA DE NOMBRADO Y ENTREGA DE CÓDIGO
 ----------------------------------------------------------------
