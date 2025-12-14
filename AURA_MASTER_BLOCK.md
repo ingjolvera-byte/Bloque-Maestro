@@ -623,8 +623,6 @@ No forman parte del criterio de “AURA TERMINADA”.
 Su implementación se realizará únicamente después del cierre formal del proyecto,
 o cuando el usuario lo solicite explícitamente.
 
-------------------------------------------------------------
-
 APLICACIÓN OPCIONAL 1 — CENTRO DE TAREAS Y PROYECTOS
 
 AURA puede:
@@ -637,8 +635,6 @@ AURA puede:
 OBJETIVO:
 Centralizar organización personal y empresarial.
 
-------------------------------------------------------------
-
 APLICACIÓN OPCIONAL 2 — ANALISTA DE DOCUMENTOS
 
 AURA puede:
@@ -649,8 +645,6 @@ AURA puede:
 
 OBJETIVO:
 Ahorro de tiempo y apoyo empresarial avanzado.
-
-------------------------------------------------------------
 
 APLICACIÓN OPCIONAL 3 — GENERADOR DE SOFTWARE ASISTIDO
 
@@ -663,8 +657,6 @@ AURA puede:
 OBJETIVO:
 Acelerar desarrollo de software sin reemplazar al usuario.
 
-------------------------------------------------------------
-
 APLICACIÓN OPCIONAL 4 — CENTRO DE COMUNICACIÓN
 
 AURA puede:
@@ -676,8 +668,6 @@ AURA puede:
 OBJETIVO:
 Reducir ruido y mejorar productividad.
 
-------------------------------------------------------------
-
 APLICACIÓN OPCIONAL 5 — PANEL DE SALUD DEL SISTEMA
 
 AURA puede:
@@ -687,8 +677,6 @@ AURA puede:
 
 OBJETIVO:
 Mantener el equipo en estado óptimo de forma visible.
-
-------------------------------------------------------------
 
 APLICACIÓN OPCIONAL 6 — GENERADOR DE CONTENIDO VISUAL
 
@@ -700,13 +688,92 @@ AURA puede:
 OBJETIVO:
 Apoyo creativo y de branding.
 
-------------------------------------------------------------
-
 APLICACIÓN OPCIONAL 7 — AUTOMATIZACIONES Y RUTINAS
 
 AURA puede:
 - Automatizar tareas repetitivas.
 - Ejecutar flujo
+
+META DIARIA — DÍA 1
+FECHA: 2025-12-14
+
+OBJETIVO ÚNICO:
+Revisión y refuerzo final de la estructura de carpetas del proyecto AURA.
+
+ALCANCE:
+
+* Verificar que todas las carpetas definidas en el Bloque Maestro existan.
+* Crear únicamente las carpetas que falten.
+* No mover, renombrar ni eliminar carpetas o archivos existentes.
+* No agregar código.
+
+ENTREGABLE:
+
+* Estructura de carpetas completa y alineada.
+* Confirmación de carpetas creadas (si aplica).
+
+CRITERIO DE ÉXITO:
+
+* La estructura coincide exactamente con la definida en el Bloque Maestro.
+* El proyecto queda listo para iniciar desarrollo de código en la siguiente meta diaria.
+
+ESTADO:
+En ejecución
+
+## EJECUCIÓN — VERIFICACIÓN DE ESTRUCTURA
+
+LISTA DEFINITIVA DE CARPETAS A VERIFICAR:
+
+AURA/
+├─ core/
+├─ ui/
+├─ voice/
+├─ files/
+├─ documents/
+├─ agenda/
+├─ system/
+├─ avatars/
+├─ updates/
+├─ memory/
+├─ models/
+│  ├─ llama3/
+│  └─ phi3/
+└─ config/
+
+ACCIONES:
+
+* Verificar existencia de cada carpeta.
+* Crear SOLO las que no existan.
+* No modificar contenido.
+* No agregar archivos.
+
+ESTADO ACTUAL:
+Verificación en curso.
+
+[FECHA: 2025-12-14]
+
+CIERRE META DIARIA — DÍA 1
+
+OBJETIVO:
+Revisión y refuerzo final de la estructura de carpetas del proyecto AURA.
+
+RESULTADO:
+
+* Todas las carpetas obligatorias existen.
+* Subcarpetas models/llama3 y models/phi3 confirmadas.
+* No se movieron, renombraron ni eliminaron archivos.
+* No se agregó código.
+
+ESTADO:
+Meta diaria completada con éxito.
+
+IMPACTO:
+
+* Estructura del proyecto cerrada y alineada.
+* Proyecto listo para iniciar desarrollo de código.
+
+NOTA:
+Este cierre habilita el inicio de metas de desarrollo funcional.
 
 ----------------------------------------------------------------
 ANEXO — REGLA DE NOMBRADO Y ENTREGA DE CÓDIGO
