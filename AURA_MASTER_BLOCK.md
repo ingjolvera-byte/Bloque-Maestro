@@ -552,6 +552,162 @@ Garantizar continuidad sin reprocesos.
 ESTADO:
 Regla activa.
 
+[FECHA: 2025-12-14]
+
+CAPACIDAD ADICIONAL — SALUD Y ESTADO DEL SISTEMA
+
+AURA DEBE:
+- Monitorear uso de CPU, RAM, GPU y disco.
+- Detectar temperaturas elevadas.
+- Detectar procesos con consumo anormal.
+- Evaluar el estado general del sistema.
+
+AURA NO DEBE:
+- Cerrar procesos sin autorización.
+- Modificar configuraciones críticas.
+- Ejecutar acciones destructivas automáticamente.
+
+COMPORTAMIENTO:
+- Notificar al usuario de manera clara.
+- Mostrar estado general del sistema:
+  Bueno / Regular / Atención requerida.
+
+ESTADO:
+Capacidad definida para implementación progresiva.
+
+[FECHA: 2025-12-14]
+
+CAPACIDAD ADICIONAL — DETECCIÓN DE DEGRADACIÓN
+
+AURA DEBE:
+- Comparar el rendimiento actual con el histórico.
+- Detectar degradaciones progresivas.
+- Alertar antes de que ocurra una falla.
+
+EJEMPLOS:
+- Arranque más lento.
+- Uso de memoria creciente.
+- Espacio en disco decreciente.
+
+AURA NO DEBE:
+- Realizar mantenimiento automático sin permiso.
+
+ESTADO:
+Capacidad preventiva activa.
+
+[FECHA: 2025-12-14]
+
+CAPACIDAD ADICIONAL — MANTENIMIENTO GUIADO
+
+AURA PUEDE:
+- Sugerir limpieza de temporales.
+- Sugerir revisión de programas de inicio.
+- Sugerir cierre de procesos innecesarios.
+
+AURA NO PUEDE:
+- Ejecutar mantenimiento sin confirmación.
+- Eliminar archivos sin autorización.
+
+OBJETIVO:
+Mantener el equipo en estado óptimo sin riesgos.
+
+ESTADO:
+Capacidad definida.
+
+[FECHA: 2025-12-14]
+
+CAPACIDADES OPCIONALES — APLICACIONES ADICIONALES DE AURA
+
+Las siguientes aplicaciones se consideran OPCIONALES.
+No forman parte del criterio de “AURA TERMINADA”.
+Su implementación se realizará únicamente después del cierre formal del proyecto,
+o cuando el usuario lo solicite explícitamente.
+
+------------------------------------------------------------
+
+APLICACIÓN OPCIONAL 1 — CENTRO DE TAREAS Y PROYECTOS
+
+AURA puede:
+- Gestionar listas de tareas.
+- Administrar proyectos.
+- Establecer prioridades.
+- Recordar pendientes de forma inteligente.
+- Integrarse con la agenda y la voz.
+
+OBJETIVO:
+Centralizar organización personal y empresarial.
+
+------------------------------------------------------------
+
+APLICACIÓN OPCIONAL 2 — ANALISTA DE DOCUMENTOS
+
+AURA puede:
+- Analizar contratos y documentos extensos.
+- Comparar versiones de documentos.
+- Detectar diferencias y riesgos.
+- Generar resúmenes ejecutivos.
+
+OBJETIVO:
+Ahorro de tiempo y apoyo empresarial avanzado.
+
+------------------------------------------------------------
+
+APLICACIÓN OPCIONAL 3 — GENERADOR DE SOFTWARE ASISTIDO
+
+AURA puede:
+- Crear estructuras base de proyectos.
+- Generar archivos iniciales de software.
+- Documentar código.
+- Apoyar en el desarrollo de aplicaciones internas.
+
+OBJETIVO:
+Acelerar desarrollo de software sin reemplazar al usuario.
+
+------------------------------------------------------------
+
+APLICACIÓN OPCIONAL 4 — CENTRO DE COMUNICACIÓN
+
+AURA puede:
+- Centralizar correos electrónicos.
+- Resumir conversaciones.
+- Redactar respuestas sugeridas.
+- Priorizar mensajes importantes.
+
+OBJETIVO:
+Reducir ruido y mejorar productividad.
+
+------------------------------------------------------------
+
+APLICACIÓN OPCIONAL 5 — PANEL DE SALUD DEL SISTEMA
+
+AURA puede:
+- Mostrar estado visual de CPU, RAM, GPU y disco.
+- Mostrar alertas del sistema.
+- Ofrecer recomendaciones de uso.
+
+OBJETIVO:
+Mantener el equipo en estado óptimo de forma visible.
+
+------------------------------------------------------------
+
+APLICACIÓN OPCIONAL 6 — GENERADOR DE CONTENIDO VISUAL
+
+AURA puede:
+- Generar portadas y material visual.
+- Apoyar en presentaciones.
+- Crear material empresarial básico.
+
+OBJETIVO:
+Apoyo creativo y de branding.
+
+------------------------------------------------------------
+
+APLICACIÓN OPCIONAL 7 — AUTOMATIZACIONES Y RUTINAS
+
+AURA puede:
+- Automatizar tareas repetitivas.
+- Ejecutar flujo
+
 ----------------------------------------------------------------
 ANEXO — REGLA DE NOMBRADO Y ENTREGA DE CÓDIGO
 ----------------------------------------------------------------
