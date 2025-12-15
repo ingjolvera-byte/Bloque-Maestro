@@ -1024,6 +1024,146 @@ Este código fue ejecutado y validado.
 No es ejemplo.
 No es pseudocódigo.
 
+BLOQUE MAESTRO — AVANCES CONFIRMADOS
+
+Fecha: 2025-09-15
+Lugar: Proyecto AURA / Entorno local Windows (PowerShell + venv activo)
+
+
+AVANCE 1 — TTS FUNCIONAL (VOZ)
+Se confirmó que el proyecto habla correctamente usando la voz de Windows.
+El problema de silencio se resolvió inicializando correctamente COM.
+La voz funciona de forma estable desde el entorno del proyecto.
+
+Archivos funcionales confirmados:
+- tts_ok.py
+- voice/windows_tts.py (versión con pythoncom.CoInitialize)
+
+Estado: FUNCIONAL Y CONGELADO
+No se vuelve a tocar.
+
+
+AVANCE 2 — STT FUNCIONAL (ESCUCHA)
+Se confirmó que el proyecto escucha y transcribe audio desde el micrófono.
+Whisper funciona correctamente.
+El texto reconocido se imprime en consola sin errores.
+
+Archivo funcional confirmado:
+- stt_ok.py
+
+Estado: FUNCIONAL Y CONGELADO
+No se vuelve a tocar.
+
+
+AVANCE 3 — INTEGRACIÓN STT + TTS
+La integración directa STT → TTS no quedó estable.
+El archivo stt_tts_ok.py no se considera funcional.
+Se decidió no subirlo al bloque maestro.
+
+Estado: NO CONGELADO / DESCARTADO POR AHORA
+
+
+AVANCE 4 — DECISIÓN DE ARQUITECTURA
+Se decidió reiniciar el desarrollo desde una base mínima.
+La base mínima válida es:
+- STT aislado
+- TTS aislado
+
+No se integran todavía:
+- core
+- UI
+- wake word
+- silencio inteligente
+- comandos
+
+
+BASE MÍNIMA ACTUAL DEL PROYECTO
+El proyecto puede hablar.
+El proyecto puede escuchar.
+Ambas capacidades están aisladas y comprobadas.
+
+BLOQUE MAESTRO — BASE MÍNIMA CONFIRMADA
+
+Fecha: 2025-09-15
+Lugar: Proyecto AURA / Entorno local Windows (PowerShell, venv activo)
+
+AVANCES CONFIRMADOS
+Se confirmó que el proyecto puede HABLAR mediante TTS usando la voz de Windows.
+Se confirmó que el proyecto puede ESCUCHAR y TRANSCRIBIR audio usando Whisper.
+Se resolvió el problema de silencio del TTS inicializando correctamente COM.
+Se decidió congelar una base mínima y no integrar aún core, UI, wake word, silencio ni comandos.
+La integración directa STT → TTS no quedó estable y se descarta por ahora.
+La base mínima válida del proyecto es STT aislado + TTS aislado.
+
+CODIGOS FUNCIONALES CONFIRMADOS
+
+Archivo: voice/windows_tts.py
+
+import win32com.client
+import pythoncom
+import threading
+
+class WindowsTTS:
+    def __init__(self):
+        self._lock = threading.Lock()
+        self._speaker = None
+
+    def _init_sapi(self):
+        pythoncom.CoInitialize()
+        self._speaker = win32com.client.Dispatch("SAPI.SpVoice")
+
+    def speak(self, text: str):
+        if not text:
+            return
+        with self._lock:
+            if self._speaker is None:
+                self._init_sapi()
+            self._speaker.Speak(text)
+
+
+Archivo: tts_ok.py
+
+from voice.windows_tts import WindowsTTS
+
+if __name__ == "__main__":
+    tts = WindowsTTS()
+    tts.speak("Base mínima confirmada. Estoy hablando desde el proyecto.")
+
+
+Archivo: stt_ok.py
+
+import sounddevice as sd
+import numpy as np
+import whisper
+import scipy.io.wavfile as wav
+
+SAMPLE_RATE = 16000
+DURATION = 4
+
+def main():
+    print("Escuchando. Habla ahora.")
+
+    audio = sd.rec(
+        int(DURATION * SAMPLE_RATE),
+        samplerate=SAMPLE_RATE,
+        channels=1,
+        dtype="float32"
+    )
+    sd.wait()
+
+    audio = np.squeeze(audio)
+    wav.write("stt_test.wav", SAMPLE_RATE, audio)
+
+    print("Transcribiendo.")
+    model = whisper.load_model("small")
+    result = model.transcribe("stt_test.wav", language="es", fp16=False)
+
+    text = result.get("text", "").strip()
+    print("Texto reconocido:", text)
+
+if __name__ == "__main__":
+    main()
+
 ----------------------------------------------------------------
 ANEXO — REGLA DE NOMBRADO Y ENTREGA DE CÓDIGO
 ----------------------------------------------------------------
