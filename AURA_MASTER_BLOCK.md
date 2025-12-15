@@ -909,7 +909,120 @@ IMPACTO:
 * Base preparada para integrar voz y procesos reales.
 
 NOTA:
-Este cierre habilita la siguiente meta diaria de desarrollo funcional.
+Este cierre habilita la siguiente meta diaria de desarrollo funcional
+
+[FECHA: 2025-12-14]
+
+ANEXO — CÓDIGO FUENTE FUNCIONAL BASE (DÍAS 2 Y 3)
+
+ARCHIVO:
+AURA/main.py
+
+CÓDIGO:
+from core.core import AuraCore
+from ui.ui import AuraUI
+
+
+def main():
+    core = AuraCore()
+    ui = AuraUI(core)
+    ui.run()
+
+
+if __name__ == "__main__":
+    main()
+
+
+ARCHIVO:
+AURA/core/core.py
+
+CÓDIGO:
+class AuraCore:
+    def __init__(self):
+        self._state = "Escuchando"
+        self._listeners = []
+
+    def get_status(self):
+        return self._state
+
+    def set_status(self, new_status: str):
+        if new_status != self._state:
+            self._state = new_status
+            self._notify()
+
+    def register_listener(self, callback):
+        if callback not in self._listeners:
+            self._listeners.append(callback)
+
+    def _notify(self):
+        for callback in self._listeners:
+            callback(self._state)
+
+
+ARCHIVO:
+AURA/ui/ui.py
+
+CÓDIGO:
+import tkinter as tk
+
+
+class AuraUI:
+    def __init__(self, core):
+        self.core = core
+        self.root = tk.Tk()
+        self.root.title("AURA")
+        self.root.geometry("600x400")
+        self.root.configure(bg="#0a0f1e")
+
+        self.status_var = tk.StringVar(value=self.core.get_status())
+        self.core.register_listener(self._on_status_change)
+
+        self._build_ui()
+        self._demo_cycle()
+
+    def _build_ui(self):
+        title = tk.Label(
+            self.root,
+            text="AURA",
+            fg="#00eaff",
+            bg="#0a0f1e",
+            font=("Segoe UI", 28, "bold")
+        )
+        title.pack(pady=40)
+
+        self.status_label = tk.Label(
+            self.root,
+            textvariable=self.status_var,
+            fg="#ffffff",
+            bg="#0a0f1e",
+            font=("Segoe UI", 14)
+        )
+        self.status_label.pack(pady=20)
+
+    def _on_status_change(self, new_status):
+        self.status_var.set(f"Estado: {new_status}")
+
+    def _demo_cycle(self):
+        sequence = ["Escuchando", "Procesando", "Respondiendo"]
+        current = self.core.get_status()
+
+        try:
+            index = sequence.index(current)
+            next_state = sequence[(index + 1) % len(sequence)]
+        except ValueError:
+            next_state = "Escuchando"
+
+        self.core.set_status(next_state)
+        self.root.after(2000, self._demo_cycle)
+
+    def run(self):
+        self.root.mainloop()
+
+
+NOTA:
+Este código fue ejecutado y validado.
+No es ejemplo.
+No es pseudocódigo.
 
 ----------------------------------------------------------------
 ANEXO — REGLA DE NOMBRADO Y ENTREGA DE CÓDIGO
