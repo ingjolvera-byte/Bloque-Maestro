@@ -184,6 +184,76 @@ La Fase 4 queda formalmente cerrada.
 Cualquier avance posterior pertenece a una nueva fase.
 
 ================================================================
+ANEXO — APERTURA DE FASE 5: INTEGRACIÓN DE MODELO IA (LLM LOCAL)
+================================================================
+
+FECHA DE APERTURA: 2025-12-15
+
+FASE ABIERTA:
+FASE 5 — INTEGRACIÓN DE MODELO IA (LLM LOCAL)
+
+OBJETIVO DE LA FASE:
+Dotar a AURA de capacidad de procesamiento lingüístico avanzado mediante
+un MODELO DE LENGUAJE LOCAL (LLM), manteniendo control total del sistema,
+sin perder estabilidad, previsibilidad ni autoridad del usuario.
+
+ROL DEL LLM EN AURA:
+El LLM actúa EXCLUSIVAMENTE como:
+- Motor de generación de lenguaje
+- Intérprete semántico del texto recibido
+- Asistente de razonamiento bajo demanda
+
+El LLM NO es:
+- Autoridad del sistema
+- Tomador de decisiones finales
+- Agente autónomo
+- Sustituto del core
+- Sustituto del usuario
+
+UBICACIÓN ARQUITECTÓNICA:
+- El LLM NO vive en el core
+- El LLM se integra como SUBSISTEMA EXTERNO
+- El core orquesta, el LLM responde
+- El core siempre mantiene control del flujo
+
+FLUJO CONTROLADO DE DATOS:
+STT → core → (llamada explícita) → LLM → core → TTS
+
+El LLM:
+- NO accede directamente a STT
+- NO accede directamente a TTS
+- NO accede a sistema ni archivos
+- NO persiste memoria por sí mismo
+
+PROHIBICIONES EXPLÍCITAS EN ESTA FASE:
+- No autonomía
+- No ejecución de acciones
+- No acceso directo al sistema
+- No modificación de estado sin autorización del core
+- No memoria propia persistente
+- No aprendizaje fuera de sesión
+
+PRINCIPIO DE CONTROL:
+- El core decide CUÁNDO llamar al LLM
+- El core decide QUÉ enviar al LLM
+- El core decide SI usar la respuesta
+- El core puede ignorar o descartar respuestas del LLM
+
+CRITERIOS DE ÉXITO DE LA FASE 5:
+La Fase 5 se considerará completada cuando:
+- Un LLM local esté integrado funcionalmente
+- El LLM genere respuestas coherentes bajo control del core
+- No exista impacto negativo en estabilidad
+- No exista deuda técnica
+- El sistema siga siendo reversible y auditable
+
+CONDICIÓN PARA AVANZAR:
+Ninguna implementación técnica se realizará fuera del marco de este anexo.
+Cualquier paso deberá respetar estrictamente lo aquí definido.
+
+FASE 5 ABIERTA.
+
+================================================================
 AUTORIDAD FINAL
 ================================================================
 El usuario manda.
