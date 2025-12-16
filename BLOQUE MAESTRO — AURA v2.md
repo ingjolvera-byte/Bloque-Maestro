@@ -1,122 +1,226 @@
-BLOQUE MAESTRO V2 — AURA
+==================================================
+BLOQUE MAESTRO — AURA V2
+==================================================
 
-ESTADO:
-Diseño base. No implementación todavía.
-V1 NO SE TOCA.
-V2 es un reinicio limpio.
+ESTADO: ACTIVO
+ARQUITECTURA: CONGELADA
+EMPAQUETABLE: SÍ
+OBJETIVO: BASE ESTABLE PARA CONSTRUIR IA
 
-OBJETIVO:
-Reconstruir AURA desde cero de forma estable, simple y empaquetable,
-sin que el usuario tenga que adivinar, recordar o modificar código.
+==================================================
+PROPÓSITO GENERAL
+==================================================
 
-REGLAS ABSOLUTAS:
-- Todo en minúsculas (archivos, carpetas, imports)
-- Un archivo = una responsabilidad
-- No se modifica código fuera de bloques completos entregados
-- Si no está aquí, no existe
-- Si no es copiable, no se usa
-- V1 no se modifica bajo ninguna circunstancia
+AURA V2 es la versión estable, coherente y
+empaquetable del asistente.
 
-QUE HACE AURA V2:
-- Inicia sin cerrarse
-- Detecta wakeword con vosk
-- Escucha voz
-- Convierte audio a texto
-- Responde con respuestas simples desde un json
-- Muestra estado por consola
-- Se puede empaquetar con PyInstaller (onedir)
+Esta versión existe para servir como BASE
+sobre la cual se construirá la IA real:
 
-QUE NO HACE TODAVÍA:
-- IA compleja
-- memoria
-- razonamiento
-- interfaz gráfica avanzada
+- Intenciones
+- Acciones
+- Memoria semántica
+- Contexto
+- Razonamiento
 
-ESTRUCTURA DEFINITIVA DE CARPETAS:
+En V2 NO se experimenta con infraestructura.
+V2 es contrato.
 
-aura/
-│
-├── main.py
-│
-├── core/
-│   ├── __init__.py
-│   ├── core.py
-│   └── simple_responder.py
-│
-├── voice/
-│   ├── __init__.py
-│   ├── listener.py
-│   └── wakeword/
-│       ├── __init__.py
-│       └── detector.py
-│
-├── data/
-│   └── simple_responses.json
-│
-├── models/
-│   └── vosk-model-small-es/
-│
-├── requirements.txt
-└── README.md
+==================================================
+REGLAS ABSOLUTAS V2
+==================================================
 
-RESPONSABILIDAD DE ARCHIVOS:
+- Un solo flujo principal
+- Un solo punto de entrada
+- Wake word bloqueante
+- STT puntual
+- Core como orquestador
+- UI desacoplada
+- Código completo o no existe
+- Rutas explícitas siempre
+
+Si no está aquí, no existe.
+Si no es copiable, no se usa.
+
+==================================================
+FLUJO OFICIAL DE EJECUCIÓN
+==================================================
 
 main.py
-- punto de entrada
-- manejo de errores global
-- NO contiene lógica
+ ├─ inicia UI
+ ├─ inicia thread wake word
+ │   ├─ escucha wake word (VOSK, bloqueante)
+ │   ├─ beep de confirmación
+ │   ├─ escucha STT una sola vez
+ │   └─ core.process_text(texto)
+ └─ UI mainloop
 
-core/core.py
-- orquesta el flujo general
-- recibe texto
-- llama al responder
+==================================================
+ESTRUCTURA OFICIAL DEL PROYECTO
+==================================================
 
-core/simple_responder.py
-- carga data/simple_responses.json
-- devuelve respuestas simples
-- no maneja voz
+AURA/
+├── main.py
+├── core/
+│   ├── core.py
+│   ├── simple_responder.py
+│   └── stt_hook.py
+├── ui/
+│   └── app.py
+├── voice/
+│   ├── stt.py
+│   ├── windows_tts.py
+│   └── wakeword/
+│       ├── detector.py
+│       ├── beep.py
+│       └── orchestrator.py
+├── memory/
+│   ├── state.py
+│   ├── state_writer.py
+│   ├── state_reader.py
+│   └── state_connector.py
+├── models/
+│   └── vosk-es/
+├── config/
+│   ├── simple_responder.json
+│   └── state_config.json
 
-data/simple_responses.json
-- respuestas estáticas
-- editable sin tocar código
+==================================================
+CÓDIGOS OFICIALES V2 (CONTRATO)
+==================================================
 
-voice/listener.py
-- graba audio
-- convierte audio a texto
-- no decide respuestas
+--------------------------------------------------
+MAIN
+Ruta: AURA/main.py
+--------------------------------------------------
 
-voice/wakeword/detector.py
-- detecta palabra clave con vosk
-- devuelve true o false
-- no imprime ni responde
+import threading
 
-DEPENDENCIAS (requirements.txt):
-vosk
-sounddevice
-numpy
+from core.core import AuraCore
+from ui.app import AuraUI
+from voice.wakeword.detector import WakeWordDetector
+from voice.wakeword.beep import play_beep
+from voice.stt import AuraSTT
 
-EMPAQUETADO:
-- pensado desde el diseño
-- uso de rutas relativas
-- soporte para PyInstaller onedir
-- inclusión explícita de models/
 
-METODO DE TRABAJO:
-- el usuario NO modifica código a mano
-- el asistente entrega archivos completos
-- uno por uno
-- listos para pegar
-- sin interpretación
+def start_wakeword_loop(core, ui_callback):
+    detector = WakeWordDetector(
+        model_path="models/vosk-es",
+        wake_words=["nova"]
+    )
+    stt = AuraSTT()
 
-ORDEN DE IMPLEMENTACIÓN:
-1. main.py
-2. core/core.py
-3. core/simple_responder.py
-4. data/simple_responses.json
-5. voice/listener.py
-6. voice/wakeword/detector.py
-7. empaquetado
+    while True:
+        detector.listen()
+        play_beep()
 
-FRASE CLAVE:
-Si no es copiable, no se hace.
-Si no está en el bloque maestro, no existe.
+        if ui_callback:
+            ui_callback("Escuchando")
+
+        text = stt.listen_once(timeout=7, phrase_time_limit=7)
+        if text:
+            core.process_text(text)
+
+        if ui_callback:
+            ui_callback("Escuchando")
+
+
+def main():
+    core = AuraCore()
+    app = AuraUI(core)
+
+    def ui_state_update(state):
+        app.status_var.set(state)
+
+    threading.Thread(
+        target=start_wakeword_loop,
+        args=(core, ui_state_update),
+        daemon=True
+    ).start()
+
+    app.mainloop()
+
+
+if __name__ == "__main__":
+    main()
+
+
+--------------------------------------------------
+SIMPLE RESPONDER
+Ruta: core/simple_responder.py
+--------------------------------------------------
+
+import json
+import os
+
+
+class AuraSimpleResponder:
+    FALLBACK = "He recibido tu mensaje."
+
+    def __init__(self, core):
+        self.core = core
+        base_dir = os.path.dirname(os.path.dirname(__file__))
+        json_path = os.path.join(base_dir, "config", "simple_responder.json")
+
+        with open(json_path, "r", encoding="utf-8") as f:
+            self.responses = json.load(f)
+
+    def get_response(self, text: str) -> str:
+        text = text.lower().strip()
+
+        for key, value in self.responses.items():
+            if key in text:
+                return value
+
+        return self.FALLBACK
+
+
+--------------------------------------------------
+WAKE WORD DETECTOR
+Ruta: voice/wakeword/detector.py
+--------------------------------------------------
+
+class WakeWordDetector:
+    def listen(self):
+        # escucha bloqueante con VOSK
+        # retorna True cuando detecta wake word
+        pass
+
+
+==================================================
+ESTADO DE LOS SUBSISTEMAS
+==================================================
+
+Core:            ESTABLE
+UI:              ESTABLE
+Wake word:       ESTABLE (bloqueante)
+STT:              ESTABLE
+TTS:              ESTABLE
+Memory:           ESTABLE (write-only)
+LLM Adapter:      OPCIONAL
+SimpleResponder:  ALINEADO CON CORE
+
+==================================================
+QUÉ NO HACE V2
+==================================================
+
+- No memoria conversacional avanzada
+- No razonamiento complejo
+- No agentes
+- No acciones del sistema
+
+==================================================
+CIERRE
+==================================================
+
+AURA V2 es la base definitiva.
+No se rediseña.
+No se fragmenta.
+No se vuelve a discutir.
+
+Desde aquí en adelante,
+todo el trabajo es IA.
+
+==================================================
+FIN BLOQUE MAESTRO — AURA V2
+==================================================
