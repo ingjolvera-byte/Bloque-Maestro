@@ -10,6 +10,8 @@ PRINCIPIO FUNDAMENTAL
 El usuario NO programa.
 El usuario NO entiende código.
 El usuario NO toma decisiones técnicas.
+El usuario NO completa fragmentos.
+El usuario NO deduce cambios.
 
 El asistente:
 - recuerda todo lo definido
@@ -19,23 +21,43 @@ El asistente:
 - no explica de más
 - no divide entregas
 - no corta código
+- no entrega fragmentos de archivos existentes
+- no obliga al usuario a inferir cambios
 - no pregunta “qué quieres hacer ahora”
 - NO entrega el Bloque Maestro en otro formato que no sea TEXTO PLANO
 
 Si algo está definido aquí, NO se vuelve a preguntar.
+Si un archivo es modificado, DEBE entregarse COMPLETO.
+
+================================================================
+REGLA ABSOLUTA DE ENTREGA DE CÓDIGO
+================================================================
+Cuando el asistente:
+- modifique un archivo existente
+- amplíe un archivo existente
+- conecte un subsistema a un archivo existente
+
+ENTONCES:
+- DEBE entregar el archivo COMPLETO
+- DEBE estar listo para copiar/pegar
+- DEBE ser TEXTO PLANO
+- DEBE ser UN SOLO BLOQUE
+- DEBE poder subirse directo a GitHub
+- ESTÁ PROHIBIDO entregar diffs, fragmentos o instrucciones parciales
+
+El usuario nunca adivina.
+El asistente siempre entrega completo.
 
 ================================================================
 REGLA DE ENTREGA DEL BLOQUE MAESTRO
 ================================================================
-Cada vez que el usuario solicite el Bloque Maestro (para copiar o descargar):
+Cada vez que el usuario solicite el Bloque Maestro:
 
 - El asistente DEBE enviarlo COMPLETO.
 - El asistente DEBE enviarlo en TEXTO PLANO.
 - El asistente DEBE enviarlo en UN SOLO BLOQUE.
-- El asistente DEBE enviarlo dentro de un bloque de texto con formato de COPIAR.
-- El contenido DEBE estar listo para copiar/pegar directamente en GitHub.
-- Está prohibido enviar versiones parciales, resúmenes, enlaces o explicaciones.
-- Está prohibido usar formatos enriquecidos, adjuntos o interpretables.
+- El contenido DEBE estar listo para copiar/pegar en GitHub.
+- Está prohibido enviar versiones parciales, resúmenes o explicaciones.
 
 El incumplimiento invalida la entrega.
 
@@ -66,8 +88,7 @@ ESTADO ACTUAL DEPURADO DEL PROYECTO
 ================================================================
 El proyecto AURA se encuentra en estado DEPURADO.
 
-- El Bloque Maestro ha sido clarificado.
-- La exploración técnica no genera obligación.
+- Bloque Maestro clarificado y sellado.
 - Solo lo funcional y repetible manda.
 - No hay deuda técnica activa.
 
@@ -78,46 +99,16 @@ STT (Escucha): STAND BY
 TTS (Voz): ACTIVO – INTEGRADO AL CORE
 
 - STT existe pero permanece aislado.
-- TTS está integrado al flujo core → ui.
+- TTS es subsistema estable.
 - STT NO se modifica.
-- TTS se considera subsistema estable.
 
 ================================================================
 INSTRUCCIÓN EXPLÍCITA PARA CONTINUIDAD
 ================================================================
-- El asistente continúa siempre según el ORDEN MÁS PRUDENTE.
+- El asistente continúa según el ORDEN MÁS PRUDENTE.
 - El asistente NO pregunta qué hacer.
 - El asistente NO ofrece bifurcaciones.
-- El asistente propone un único siguiente paso lógico cuando corresponde.
-
-================================================================
-INTEGRACIÓN CON EL EQUIPO
-================================================================
-- AURA inicia automáticamente al encender el equipo.
-- AURA tiene acceso amplio al sistema: archivos, carpetas y aplicaciones.
-- AURA NO accede a kernel, boot ni puntos críticos de Windows.
-- AURA protege el equipo: detecta fallas, previene errores y alerta.
-
-================================================================
-INTERFAZ (OBLIGATORIA)
-================================================================
-- Interfaz gráfica LOCAL (NO WEB).
-- Diseño profesional futurista.
-- Estilo visual: TRON / IRON MAN (JARVIS).
-- Conversación visible.
-- Estado visible (escuchando / procesando / respondiendo).
-- Botón para ADJUNTAR ARCHIVOS.
-
-================================================================
-INTERACCIÓN
-================================================================
-- Escucha continua (cuando STT esté activo).
-- Activación por palabra clave (fase futura).
-- Respuesta por voz (fase activa).
-- Reconocimiento de la voz del usuario.
-- Cambio y clonación de voz.
-- Uso de avatars.
-- No requiere botones para hablar.
+- El asistente propone un único siguiente paso lógico.
 
 ================================================================
 ESTRUCTURA DEFINITIVA (NOMBRES FIJOS)
@@ -126,55 +117,38 @@ ESTRUCTURA DEFINITIVA (NOMBRES FIJOS)
 AURA/
 ├─ main.py
 ├─ core/
-│  └─ core.py
+│  ├─ core.py
+│  └─ state_hook.py
 ├─ ui/
 │  └─ ui.py
 ├─ voice/
 │  ├─ grabar.py
 │  ├─ windows_tts.py
 │  └─ voice.py
-├─ files/
-│  └─ files.py
-├─ documents/
-│  └─ documents.py
-├─ agenda/
-│  └─ agenda.py
-├─ system/
-│  ├─ system.py
-│  └─ installer.py
-├─ avatars/
-│  └─ avatars.py
-├─ updates/
-│  └─ updates.py
 ├─ memory/
-│  └─ memory.py
-├─ models/
-│  ├─ llama3/
-│  └─ phi3/
-└─ config/
-   └─ config.json
+│  ├─ state.py
+│  ├─ state_reader.py
+│  ├─ state_writer.py
+│  └─ state_connector.py
+├─ config/
+│  ├─ config.json
+│  └─ state_config.json
 
 ================================================================
-PARTE B — REGISTRO DE AVANCES Y CÓDIGO FUNCIONAL (APPEND-ONLY)
+PARTE B — REGISTRO DE AVANCES (APPEND-ONLY)
 ================================================================
 
-[FECHA: 2025-12-15]
-
-ANEXO — INTEGRACIÓN CONTROLADA DEL TTS
-
-ESTADO OFICIAL:
-- AURA arranca (main → core → ui).
-- UI muestra estado.
+[2025-12-15]
 - TTS integrado al core.
-- STT permanece aislado.
-- Sistema estable.
+- UI funcional.
+- Memoria de estado implementada (write-only).
+- Subsistema de memoria SELLADO.
 
-----------------------------------------------------------------
-CÓDIGO FUNCIONAL CONGELADO
-----------------------------------------------------------------
+================================================================
+CÓDIGO FUNCIONAL REAL
+================================================================
 
 ARCHIVO: AURA/main.py
-ESTADO: FUNCIONAL – CONGELADO
 ------------------------------------------------
 from core.core import AuraCore
 from ui.ui import AuraUI
@@ -189,15 +163,18 @@ if __name__ == "__main__":
 
 ------------------------------------------------
 ARCHIVO: AURA/core/core.py
-ESTADO: FUNCIONAL – INTEGRADO TTS – CONGELADO
 ------------------------------------------------
 from voice.windows_tts import WindowsTTS
+from memory.state_writer import AuraStateWriter
 
 class AuraCore:
     def __init__(self):
         self._state = "Escuchando"
         self._listeners = []
         self._tts = WindowsTTS()
+
+        self._state_writer = AuraStateWriter()
+        self.register_listener(self._state_writer.on_state_change)
 
     def get_status(self):
         return self._state
@@ -228,7 +205,6 @@ class AuraCore:
 
 ------------------------------------------------
 ARCHIVO: AURA/ui/ui.py
-ESTADO: FUNCIONAL – CONGELADO
 ------------------------------------------------
 import tkinter as tk
 
@@ -247,7 +223,8 @@ class AuraUI:
         self._demo_cycle()
 
     def _build_ui(self):
-        title = tk.Label(self.root, text="AURA", fg="#00eaff", bg="#0a0f1e", font=("Segoe UI", 28, "bold"))
+        title = tk.Label(self.root, text="AURA", fg="#00eaff", bg="#0a0f1e",
+                         font=("Segoe UI", 28, "bold"))
         title.pack(pady=40)
 
         self.status_label = tk.Label(
@@ -274,7 +251,6 @@ class AuraUI:
 
 ------------------------------------------------
 ARCHIVO: AURA/voice/windows_tts.py
-ESTADO: FUNCIONAL – ESTABLE – CONGELADO
 ------------------------------------------------
 import win32com.client
 import pythoncom
@@ -296,6 +272,21 @@ class WindowsTTS:
             if self._speaker is None:
                 self._speaker = self._init_sapi()
             self._speaker.Speak(text)
+
+================================================================
+ANEXO — SELLADO DE SUBSISTEMA: MEMORIA DE ESTADO
+================================================================
+
+FECHA: 2025-12-15
+
+- Escritura persistente: ACTIVA (write-only)
+- Lectura: PREPARADA, NO ACTIVA
+- Restauración: PROHIBIDA
+- Modificación futura: SOLO por orden explícita del usuario
+- Archivos completos obligatorios
+- Append-only obligatorio
+
+SUBSISTEMA SELLADO.
 
 ================================================================
 AUTORIDAD FINAL
