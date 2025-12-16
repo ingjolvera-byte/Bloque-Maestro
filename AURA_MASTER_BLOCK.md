@@ -2,6 +2,7 @@ PROYECTO: AURA
 TIPO: BLOQUE MAESTRO ABSOLUTO
 ESTADO: DEFINITIVO – APPEND-ONLY – NO INTERPRETABLE
 FECHA CREACIÓN: 2025-12-13
+ACTUALIZACIÓN: 2025-12-15
 
 ================================================================
 PRINCIPIO FUNDAMENTAL
@@ -18,19 +19,23 @@ El asistente:
 - no explica de más
 - no divide entregas
 - no corta código
+- no pregunta “qué quieres hacer ahora”
+- NO entrega el Bloque Maestro en otro formato que no sea TEXTO PLANO
 
 Si algo está definido aquí, NO se vuelve a preguntar.
 
 ================================================================
 REGLA DE ENTREGA DEL BLOQUE MAESTRO
 ================================================================
-Cada vez que el usuario solicite el Bloque Maestro:
+Cada vez que el usuario solicite el Bloque Maestro (para copiar o descargar):
 
 - El asistente DEBE enviarlo COMPLETO.
 - El asistente DEBE enviarlo en TEXTO PLANO.
 - El asistente DEBE enviarlo en UN SOLO BLOQUE.
-- El contenido DEBE estar listo para copiar/pegar en GitHub.
-- Está prohibido enviar versiones parciales, resúmenes o explicaciones.
+- El asistente DEBE enviarlo dentro de un bloque de texto con formato de COPIAR.
+- El contenido DEBE estar listo para copiar/pegar directamente en GitHub.
+- Está prohibido enviar versiones parciales, resúmenes, enlaces o explicaciones.
+- Está prohibido usar formatos enriquecidos, adjuntos o interpretables.
 
 El incumplimiento invalida la entrega.
 
@@ -70,28 +75,20 @@ El proyecto AURA se encuentra en estado DEPURADO.
 DECISIÓN OPERATIVA ACTUAL
 ================================================================
 STT (Escucha): STAND BY
-TTS (Voz): STAND BY (SE RETOMA MAÑANA)
+TTS (Voz): ACTIVO – INTEGRADO AL CORE
 
-- STT y TTS existen.
-- STT y TTS funcionan de forma AISLADA.
-- NO están integrados a core ni UI.
-- NO se modifican hoy.
-- NO se eliminan.
+- STT existe pero permanece aislado.
+- TTS está integrado al flujo core → ui.
+- STT NO se modifica.
+- TTS se considera subsistema estable.
 
 ================================================================
 INSTRUCCIÓN EXPLÍCITA PARA CONTINUIDAD
 ================================================================
-La siguiente sesión de trabajo (chat nuevo) iniciará con:
-
-OBJETIVO ÚNICO:
-Reactivar y trabajar la VOZ (TTS) de AURA de forma controlada,
-apoyándose en el Bloque Maestro DEPURADO.
-
-CONDICIONES:
-- Se parte del Bloque Maestro limpio.
-- No se arrastran intentos fallidos.
-- No se documenta nada que no sea estable.
-- La voz se trabaja como prioridad inicial.
+- El asistente continúa siempre según el ORDEN MÁS PRUDENTE.
+- El asistente NO pregunta qué hacer.
+- El asistente NO ofrece bifurcaciones.
+- El asistente propone un único siguiente paso lógico cuando corresponde.
 
 ================================================================
 INTEGRACIÓN CON EL EQUIPO
@@ -116,7 +113,7 @@ INTERACCIÓN
 ================================================================
 - Escucha continua (cuando STT esté activo).
 - Activación por palabra clave (fase futura).
-- Respuesta por voz (fase activa a partir de la próxima sesión).
+- Respuesta por voz (fase activa).
 - Reconocimiento de la voz del usuario.
 - Cambio y clonación de voz.
 - Uso de avatars.
@@ -163,14 +160,14 @@ PARTE B — REGISTRO DE AVANCES Y CÓDIGO FUNCIONAL (APPEND-ONLY)
 
 [FECHA: 2025-12-15]
 
-ANEXO — DEPURACIÓN FORMAL + CÓDIGO FUNCIONAL CONGELADO
+ANEXO — INTEGRACIÓN CONTROLADA DEL TTS
 
-ESTADO ACTUAL OFICIAL:
+ESTADO OFICIAL:
 - AURA arranca (main → core → ui).
 - UI muestra estado.
-- TTS aislado funcional (tts_ok.py).
-- STT aislado funcional (stt_ok.py).
-- Nada más está activo.
+- TTS integrado al core.
+- STT permanece aislado.
+- Sistema estable.
 
 ----------------------------------------------------------------
 CÓDIGO FUNCIONAL CONGELADO
@@ -192,12 +189,15 @@ if __name__ == "__main__":
 
 ------------------------------------------------
 ARCHIVO: AURA/core/core.py
-ESTADO: FUNCIONAL – CONGELADO
+ESTADO: FUNCIONAL – INTEGRADO TTS – CONGELADO
 ------------------------------------------------
+from voice.windows_tts import WindowsTTS
+
 class AuraCore:
     def __init__(self):
         self._state = "Escuchando"
         self._listeners = []
+        self._tts = WindowsTTS()
 
     def get_status(self):
         return self._state
@@ -206,6 +206,17 @@ class AuraCore:
         if new_status != self._state:
             self._state = new_status
             self._notify()
+            self._speak_status(new_status)
+
+    def _speak_status(self, status):
+        frases = {
+            "Escuchando": "Estoy escuchando.",
+            "Procesando": "Procesando información.",
+            "Respondiendo": "Aquí está mi respuesta."
+        }
+        texto = frases.get(status)
+        if texto:
+            self._tts.speak(texto)
 
     def register_listener(self, callback):
         if callback not in self._listeners:
@@ -239,7 +250,13 @@ class AuraUI:
         title = tk.Label(self.root, text="AURA", fg="#00eaff", bg="#0a0f1e", font=("Segoe UI", 28, "bold"))
         title.pack(pady=40)
 
-        self.status_label = tk.Label(self.root, textvariable=self.status_var, fg="#ffffff", bg="#0a0f1e", font=("Segoe UI", 14))
+        self.status_label = tk.Label(
+            self.root,
+            textvariable=self.status_var,
+            fg="#ffffff",
+            bg="#0a0f1e",
+            font=("Segoe UI", 14)
+        )
         self.status_label.pack(pady=20)
 
     def _on_status_change(self, new_status):
@@ -257,7 +274,7 @@ class AuraUI:
 
 ------------------------------------------------
 ARCHIVO: AURA/voice/windows_tts.py
-ESTADO: FUNCIONAL – CONGELADO
+ESTADO: FUNCIONAL – ESTABLE – CONGELADO
 ------------------------------------------------
 import win32com.client
 import pythoncom
@@ -270,50 +287,15 @@ class WindowsTTS:
 
     def _init_sapi(self):
         pythoncom.CoInitialize()
-        self._speaker = win32com.client.Dispatch("SAPI.SpVoice")
+        return win32com.client.Dispatch("SAPI.SpVoice")
 
     def speak(self, text):
         if not text:
             return
         with self._lock:
             if self._speaker is None:
-                self._init_sapi()
+                self._speaker = self._init_sapi()
             self._speaker.Speak(text)
-
-------------------------------------------------
-ARCHIVO: AURA/tts_ok.py
-ESTADO: FUNCIONAL – CONGELADO
-------------------------------------------------
-from voice.windows_tts import WindowsTTS
-
-if __name__ == "__main__":
-    tts = WindowsTTS()
-    tts.speak("Base mínima confirmada. Estoy hablando desde el proyecto.")
-
-------------------------------------------------
-ARCHIVO: AURA/stt_ok.py
-ESTADO: FUNCIONAL – CONGELADO
-------------------------------------------------
-import sounddevice as sd
-import numpy as np
-import whisper
-import scipy.io.wavfile as wav
-
-SAMPLE_RATE = 16000
-DURATION = 4
-
-def main():
-    print("Escuchando. Habla ahora.")
-    audio = sd.rec(int(DURATION * SAMPLE_RATE), samplerate=SAMPLE_RATE, channels=1, dtype="float32")
-    sd.wait()
-    audio = np.squeeze(audio)
-    wav.write("stt_test.wav", SAMPLE_RATE, audio)
-    model = whisper.load_model("small")
-    result = model.transcribe("stt_test.wav", language="es", fp16=False)
-    print("Texto reconocido:", result.get("text", "").strip())
-
-if __name__ == "__main__":
-    main()
 
 ================================================================
 AUTORIDAD FINAL
