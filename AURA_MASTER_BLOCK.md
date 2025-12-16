@@ -691,6 +691,58 @@ solo bajo orden explícita del usuario.
 FASE 5.6 DEFINIDA.
 
 ================================================================
+ANEXO — CIERRE DE FASE 5 (DUMMY): INTEGRACIÓN LLM SIMULADA
+================================================================
+
+FECHA DE CIERRE: 2025-12-15
+
+FASE CERRADA:
+FASE 5 — INTEGRACIÓN DE MODELO IA (LLM) — MODO DUMMY
+
+ALCANCE DEL CIERRE:
+La Fase 5 queda cerrada en su modalidad DUMMY tras haberse cumplido
+de forma completa y verificable los siguientes hitos:
+
+- Diseño completo de la Fase 5 (5.1 → 5.6)
+- Definición del rol, límites y prohibiciones del LLM
+- Diseño del adaptador LLM como capa aislada
+- Implementación del adaptador LLM en modo DUMMY
+- Respuesta simulada controlada del LLM
+- Integración del adaptador con el core
+- Decisión controlada del core:
+  - prioridad a reglas deterministas (Fase 4)
+  - escalado al LLM solo cuando corresponde
+- Flujo completo validado:
+  STT → core → adaptador LLM → core → TTS
+- Ciclo de estados intacto y estable
+- Sistema completamente funcional sin IA real
+
+ESTADO DEL LLM EN ESTE CIERRE:
+- LLM REAL: NO INTEGRADO
+- LLM DUMMY: ACTIVO Y CONTROLADO
+- Dependencia del LLM: NULA
+- Reversibilidad: TOTAL
+
+GARANTÍAS TRAS EL CIERRE:
+- El core mantiene autoridad absoluta
+- El sistema no depende del LLM
+- El fallo del LLM no degrada AURA
+- No existe deuda técnica
+- La arquitectura queda preparada para LLM real
+
+PROHIBICIONES A PARTIR DE ESTE CIERRE:
+- No se amplía la lógica dummy
+- No se simula inteligencia adicional
+- No se introduce aprendizaje
+- No se integra un LLM real fuera de una nueva fase
+
+CONDICIÓN PARA AVANZAR:
+La integración de un LLM REAL deberá realizarse en una
+NUEVA FASE explícita, documentada y cerrada de forma independiente.
+
+FASE 5 (DUMMY) CERRADA.
+
+================================================================
 AUTORIDAD FINAL
 ================================================================
 El usuario manda.
