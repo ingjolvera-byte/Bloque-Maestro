@@ -1,5 +1,3 @@
-AURA_MASTER_BLOCK.md
-
 PROYECTO: AURA
 TIPO: BLOQUE MAESTRO ABSOLUTO
 ESTADO: DEFINITIVO – APPEND-ONLY – NO INTERPRETABLE
@@ -59,6 +57,43 @@ AURA NO es:
 - curso de programación
 
 ================================================================
+ESTADO ACTUAL DEPURADO DEL PROYECTO
+================================================================
+El proyecto AURA se encuentra en estado DEPURADO.
+
+- El Bloque Maestro ha sido clarificado.
+- La exploración técnica no genera obligación.
+- Solo lo funcional y repetible manda.
+- No hay deuda técnica activa.
+
+================================================================
+DECISIÓN OPERATIVA ACTUAL
+================================================================
+STT (Escucha): STAND BY
+TTS (Voz): STAND BY (SE RETOMA MAÑANA)
+
+- STT y TTS existen.
+- STT y TTS funcionan de forma AISLADA.
+- NO están integrados a core ni UI.
+- NO se modifican hoy.
+- NO se eliminan.
+
+================================================================
+INSTRUCCIÓN EXPLÍCITA PARA CONTINUIDAD
+================================================================
+La siguiente sesión de trabajo (chat nuevo) iniciará con:
+
+OBJETIVO ÚNICO:
+Reactivar y trabajar la VOZ (TTS) de AURA de forma controlada,
+apoyándose en el Bloque Maestro DEPURADO.
+
+CONDICIONES:
+- Se parte del Bloque Maestro limpio.
+- No se arrastran intentos fallidos.
+- No se documenta nada que no sea estable.
+- La voz se trabaja como prioridad inicial.
+
+================================================================
 INTEGRACIÓN CON EL EQUIPO
 ================================================================
 - AURA inicia automáticamente al encender el equipo.
@@ -79,864 +114,86 @@ INTERFAZ (OBLIGATORIA)
 ================================================================
 INTERACCIÓN
 ================================================================
-- Escucha continua.
-- Activación por palabra clave.
-- Respuesta por voz.
+- Escucha continua (cuando STT esté activo).
+- Activación por palabra clave (fase futura).
+- Respuesta por voz (fase activa a partir de la próxima sesión).
 - Reconocimiento de la voz del usuario.
 - Cambio y clonación de voz.
 - Uso de avatars.
 - No requiere botones para hablar.
 
 ================================================================
-ARCHIVOS Y DOCUMENTOS
-================================================================
-AURA puede:
-- adjuntar archivos por botón
-- buscar archivos por voz
-- usar archivos adjuntos
-- leer, resumir, modificar y crear archivos
-
-Tipos:
-- contratos
-- políticas
-- reglamentos
-- manuales
-- procesos
-- procedimientos
-- revistas
-- trípticos
-- folletos
-- documentos empresariales
-
-================================================================
-AGENDA
-================================================================
-AURA puede:
-- leer correos
-- gestionar correos
-- guardar contactos
-- recordar eventos
-- avisar compromisos
-- actuar como agenda parlante
-
-================================================================
-ACTUALIZACIÓN
-================================================================
-- AURA puede actualizarse sola.
-- Sin romper lo existente.
-- Sin intervención técnica del usuario.
-- Sin reiniciar el proyecto.
-
-================================================================
-ESTADO BASE DEL PROYECTO
-================================================================
-- Existe carpeta local con pruebas funcionales.
-- El entorno YA funciona.
-- No se borra nada.
-- No se reinicia nada.
-- No se reestructura nada.
-
-Todo avance parte de lo existente.
-
-================================================================
-DEFINICIÓN DE AVANCE REAL
-================================================================
-Un avance SOLO cuenta si:
-- se ejecuta
-- es visible
-- es usable
-- ahorra tiempo real
-
-NO cuentan:
-- documentación
-- arquitectura
-- teoría
-- explicaciones
-- planes futuros
-
-================================================================
-PROHIBICIONES ABSOLUTAS DEL ASISTENTE
-================================================================
-PROHIBIDO:
-- pedir información ya definida
-- dividir el bloque maestro
-- reinterpretar reglas
-- proponer alternativas
-- cambiar prioridades
-- ampliar alcance
-- explicar programación
-- usar lenguaje técnico
-- cortar código
-- fragmentar entregas
-
-================================================================
 ESTRUCTURA DEFINITIVA (NOMBRES FIJOS)
 ================================================================
 
 AURA/
-├─ main.py                  # Punto único de arranque (aún puede existir como stub)
-│
+├─ main.py
 ├─ core/
-│  └─ core.py               # Orquestación lógica (no UI, no voz)
-│
+│  └─ core.py
 ├─ ui/
-│  └─ ui.py                 # Interfaz gráfica local (ventana principal)
-│
+│  └─ ui.py
 ├─ voice/
-│  ├─ grabar.py             # Captura de audio (ya existe)
-│  ├─ windows_tts.py        # TTS nativo Windows (ya existe)
-│  └─ voice.py              # Coordinador de voz (a crear después)
-│
+│  ├─ grabar.py
+│  ├─ windows_tts.py
+│  └─ voice.py
 ├─ files/
-│  └─ files.py              # Adjuntar/buscar archivos del usuario
-│
+│  └─ files.py
 ├─ documents/
-│  └─ documents.py          # Generación de documentos empresariales
-│
+│  └─ documents.py
 ├─ agenda/
-│  └─ agenda.py             # Correos, contactos, recordatorios
-│
+│  └─ agenda.py
 ├─ system/
-│  ├─ system.py             # Monitoreo HW/SO, detección upgrades
-│  └─ installer.py          # Lógica de instalación final (fase final)
-│
+│  ├─ system.py
+│  └─ installer.py
 ├─ avatars/
-│  └─ avatars.py            # Avatar e identidad visual
-│
+│  └─ avatars.py
 ├─ updates/
-│  └─ updates.py            # Actualizaciones y empaquetado (fase final)
-│
+│  └─ updates.py
 ├─ memory/
-│  └─ memory.py             # Memoria, inventarios, eventos
-│
-├─ models/
-│  ├─ llama3/               # Modelos LLaMA (ya existen)
-│  └─ phi3/                 # Modelos Phi-3 (ya existen)
-│
-└─ config/
-   └─ config.json           # Configuración general (ya existe)
-
-
-Los nombres no se cambian.
-
-================================================================
-PARTE B — REGISTRO DE AVANCES Y CÓDIGO FUNCIONAL (APPEND-ONLY)
-================================================================
-Reglas:
-- Esta sección SOLO crece.
-- No se edita lo anterior.
-- No se borra nada.
-- Cada entrada es un anexo.
-
-Formato de entrada:
-[FECHA: YYYY-MM-DD]
-
-ARCHIVO:
-ruta/archivo.py
-
-UBICACIÓN:
-ruta/
-
-DESCRIPCIÓN:
-Qué hace.
-
-ESTADO:
-Funcional | En pruebas
-
-CAMBIOS:
-Nuevo | Modificado
-
-NOTA:
-Restricciones si aplican.
-
-[FECHA: 2025-12-13]
-
-INVENTARIO DEL EQUIPO — HARDWARE Y SISTEMA
-
-NOMBRE DEL EQUIPO:
-JARVIS
-
-FABRICANTE / MODELO:
-ASUS TUF Gaming A15 FA507NU
-
-SISTEMA OPERATIVO:
-Microsoft Windows 11 Home (x64)
-
-CPU:
-AMD Ryzen (AMD64 Family 25) ~2.5 GHz
-
-MEMORIA RAM:
-16 GB (15.6 GB)
-
-VIRTUALIZACIÓN:
-Habilitada (hipervisor detectado)
-
-ESTADO GENERAL:
-Equipo apto para IA local, voz continua, OCR e interfaz gráfica.
-Base válida para el desarrollo de AURA.
-
-NOTA:
-Este inventario se considera definitivo. No volver a solicitar datos del equipo.
-
-[FECHA: 2025-12-13]
-
-INVENTARIO DEL EQUIPO — GPU
-
-GPU:
-NVIDIA GeForce RTX 4050 (Laptop)
-
-VRAM:
-6 GB (6141 MiB)
-
-DRIVER NVIDIA:
-555.97
-
-CUDA:
-Versión 12.5
-
-ESTADO:
-Operativa, sin procesos activos al momento del registro.
-
-USO PREVISTO:
-- Aceleración de modelos LLM locales (GGUF).
-- Aceleración de Whisper (STT).
-- Procesamiento de visión y tareas de IA.
-
-NOTA:
-Este inventario de GPU se considera definitivo.
-No volver a solicitar datos de GPU.
-
-[FECHA: 2025-12-13]
-
-INVENTARIO DEL ENTORNO — PYTHON Y EDITOR
-
-PYTHON:
-Versión instalada: Python 3.11.6
-Estado: Operativo y en uso
-
-EDITOR DE CÓDIGO:
-Visual Studio Code (VS Code)
-Versión: 1.107.0
-Arquitectura: x64
-
-CONSOLA DE TRABAJO:
-Windows PowerShell
-
-ESTADO GENERAL:
-Entorno de desarrollo completo y funcional.
-No volver a solicitar verificación de Python ni editor.
-
-[FECHA: 2025-12-13]
-
-CAPACIDAD ADICIONAL — DETECCIÓN DE CAMBIOS DE HARDWARE O EQUIPO
-
-AURA DEBE:
-- Detectar cambios en el hardware del equipo:
-  CPU, RAM, GPU, VRAM, disco y sistema operativo.
-- Comparar el estado actual contra el inventario base registrado.
-- Detectar si se ejecuta en un equipo diferente al original.
-
-AURA NO DEBE:
-- Reconfigurarse automáticamente.
-- Tomar decisiones sin autorización.
-- Modificar parámetros internos por sí sola.
-
-COMPORTAMIENTO:
-- Notificar claramente al usuario cualquier cambio detectado.
-- Registrar el evento como aviso informativo.
-- Esperar instrucciones del usuario.
-
-ESTADO:
-Capacidad definida para implementación futura.
-
-[FECHA: 2025-12-13]
-
-CAPACIDAD FINAL — EMPAQUETADO, INSTALACIÓN Y DETECCIÓN DE USUARIO
-
-AURA DEBE:
-- Empaquetarse como aplicación instalable final.
-- Instalarse por defecto en:
-  C:\Archivos de Programa\AURA\
-- Ejecutarse con permisos adecuados del sistema.
-- Detectar automáticamente el perfil del usuario activo.
-- Detectar rutas estándar del usuario:
-  Documentos, Escritorio, Descargas.
-
-AURA NO DEBE:
-- Solicitar rutas manuales al usuario.
-- Asumir nombres fijos de usuario.
-- Acceder a carpetas del sistema no autorizadas.
-
-COMPORTAMIENTO:
-- Adaptarse automáticamente al entorno del usuario.
-- Mantener compatibilidad al cambiar de equipo.
-- Notificar cualquier problema de permisos.
-
-ESTADO:
-Capacidad definida para implementación en fase final del proyecto.
-
-[FECHA: 2025-12-13]
-
-REFUERZO DE ESTRUCTURA — ALINEACIÓN DE CARPETAS Y ARCHIVOS
-
-OBJETIVO:
-Confirmar y alinear la estructura del proyecto AURA sin modificar código existente.
-
-ESTRUCTURA CONFIRMADA:
-- main.py: punto único de arranque.
-- core/: orquestación lógica.
-- ui/: interfaz gráfica local.
-- voice/: captura de audio y TTS (incluye archivos existentes).
-- files/: manejo de archivos del usuario.
-- documents/: generación de documentos empresariales.
-- agenda/: correos, contactos y recordatorios.
-- system/: monitoreo del sistema, detección de upgrades y lógica de instalación.
-- avatars/: identidad visual y avatar.
-- updates/: actualizaciones y empaquetado final.
-- memory/: memoria e inventarios.
-- models/: almacenamiento de modelos LLM existentes.
-- config/: configuración general del sistema.
-
-REGLAS:
-- No mover ni renombrar archivos existentes.
-- Crear carpetas vacías solo si no existen.
-- No agregar código en esta fase.
-
-ESTADO:
-Estructura reforzada y lista para iniciar desarrollo de código.
-
-[FECHA: 2025-12-13]
-
-REGLA DE CONECTIVIDAD — ACCESO A INTERNET CON AISLAMIENTO LOCAL
-
-AURA PUEDE:
-- Acceder a internet.
-- Consultar APIs externas.
-- Descargar información pública.
-- Verificar actualizaciones y versiones.
-- Consumir servicios online necesarios para su funcionamiento.
-
-AURA NO PUEDE:
-- Enviar información del equipo al exterior.
-- Transmitir archivos locales.
-- Transmitir documentos del usuario.
-- Transmitir audio, imágenes o capturas.
-- Transmitir datos personales o del sistema.
-- Compartir inventarios, configuraciones o estados internos.
-
-PRINCIPIO:
-El acceso a internet es solo para ENTRADA de información.
-La información del equipo es estrictamente LOCAL.
-
-COMPORTAMIENTO:
-- Cualquier intento de salida de datos debe ser bloqueado.
-- El usuario debe ser notificado si se detecta una violación.
-
-ESTADO:
-Regla de seguridad obligatoria.
-
-[FECHA: 2025-12-13]
-
-ACUERDO DE TRABAJO — COMPLETAR ESTRUCTURA DE CARPETAS
-
-Se establece que:
-
-- El día LUNES se realizará la revisión final de la estructura del proyecto AURA.
-- En esa fecha se agregarán únicamente las carpetas y subcarpetas que hagan falta.
-- No se moverán ni renombrarán carpetas existentes.
-- No se eliminará ningún archivo.
-- No se agregará código en esta fase.
-- Las carpetas nuevas se crearán vacías, solo como estructura base.
-
-OBJETIVO:
-Dejar la estructura del proyecto completa y alineada antes de iniciar el desarrollo de código.
-
-ESTADO:
-Acuerdo activo y obligatorio.
-
-[FECHA: 2025-12-13]
-
-ACUERDO OPERATIVO — TRABAJO DIARIO POR METAS (8 HORAS)
-
-Se establece que el desarrollo de AURA se realizará bajo el siguiente esquema:
-
-- El trabajo se divide en METAS DIARIAS.
-- Cada meta diaria corresponde a aproximadamente 8 horas de trabajo.
-- Cada día tiene UNA sola meta clara y medible.
-- Cada meta diaria debe producir un resultado funcional y visible.
-- El resultado del día se entrega como archivos finales descargables.
-- El usuario no edita ni modifica código entregado.
-
-CRITERIO DE AVANCE:
-- Un día cuenta como completado solo si la meta diaria se cumple.
-- Si la meta se completa antes de tiempo, se puede avanzar parcialmente en la meta del día siguiente.
-- Si la meta no se cumple, no se avanza al siguiente día hasta corregir.
-
-OBJETIVO:
-Reducir el tiempo total del proyecto sin perder estabilidad ni calidad.
-
-ESTADO:
-Acuerdo activo y obligatorio para todo el desarrollo de AURA.
-
-[FECHA: 2025-12-13]
-
-CRITERIO DE TERMINACIÓN — DEFINICIÓN DE AURA TERMINADA
-
-AURA se considera TERMINADA cuando cumple:
-
-- Arranca automáticamente con el sistema.
-- Responde a texto y voz de forma estable.
-- Tiene interfaz gráfica local funcional.
-- Puede trabajar con archivos del usuario.
-- Puede generar documentos empresariales.
-- Tiene agenda básica operativa.
-- Detecta cambios de hardware o equipo.
-- Tiene acceso a internet con aislamiento local.
-- Está empaquetada e instalada en:
-  C:\Archivos de Programa\AURA\
-
-Una vez cumplidos estos puntos:
-- El proyecto AURA se considera FINALIZADO.
-- Todo desarrollo posterior se considera MEJORA, no requisito.
-
-ESTADO:
-Criterio de cierre definitivo.
-
-[FECHA: 2025-12-13]
-
-PROTOCOLO DE BLOQUEO — MANEJO DE ERRORES
-
-Si durante una meta diaria ocurre un bloqueo técnico:
-
-- Se permite usar hasta el 30% del tiempo del día para corregir.
-- Si el bloqueo persiste:
-  - Se documenta brevemente.
-  - Se redefine la meta para el día siguiente.
-- No se cancela el proyecto por un solo bloqueo.
-
-OBJETIVO:
-Evitar estancamiento y frustración.
-
-ESTADO:
-Protocolo activo.
-
-[FECHA: 2025-12-13]
-
-CONGELACIÓN DE ALCANCE — CONTROL DE NUEVAS IDEAS
-
-Se establece que:
-
-- No se agregan nuevas capacidades al alcance base durante la construcción.
-- Las ideas nuevas se anotan pero no se implementan.
-- Las nuevas ideas se evalúan solo después de declarar AURA TERMINADA.
-
-OBJETIVO:
-Garantizar finalización del proyecto sin retrasos.
-
-ESTADO:
-Congelación activa hasta cierre del proyecto.
-
-[FECHA: 2025-12-13]
-
-REGLA DE CONTINUIDAD — PAUSAS Y REANUDACIÓN
-
-- El proyecto puede pausarse sin perder validez.
-- Al reanudar:
-  - Se continúa desde la última meta completada.
-  - No se reinicia el proyecto.
-  - No se rehacen inventarios.
-
-OBJETIVO:
-Garantizar continuidad sin reprocesos.
-
-ESTADO:
-Regla activa.
-
-[FECHA: 2025-12-14]
-
-CAPACIDAD ADICIONAL — SALUD Y ESTADO DEL SISTEMA
-
-AURA DEBE:
-- Monitorear uso de CPU, RAM, GPU y disco.
-- Detectar temperaturas elevadas.
-- Detectar procesos con consumo anormal.
-- Evaluar el estado general del sistema.
-
-AURA NO DEBE:
-- Cerrar procesos sin autorización.
-- Modificar configuraciones críticas.
-- Ejecutar acciones destructivas automáticamente.
-
-COMPORTAMIENTO:
-- Notificar al usuario de manera clara.
-- Mostrar estado general del sistema:
-  Bueno / Regular / Atención requerida.
-
-ESTADO:
-Capacidad definida para implementación progresiva.
-
-[FECHA: 2025-12-14]
-
-CAPACIDAD ADICIONAL — DETECCIÓN DE DEGRADACIÓN
-
-AURA DEBE:
-- Comparar el rendimiento actual con el histórico.
-- Detectar degradaciones progresivas.
-- Alertar antes de que ocurra una falla.
-
-EJEMPLOS:
-- Arranque más lento.
-- Uso de memoria creciente.
-- Espacio en disco decreciente.
-
-AURA NO DEBE:
-- Realizar mantenimiento automático sin permiso.
-
-ESTADO:
-Capacidad preventiva activa.
-
-[FECHA: 2025-12-14]
-
-CAPACIDAD ADICIONAL — MANTENIMIENTO GUIADO
-
-AURA PUEDE:
-- Sugerir limpieza de temporales.
-- Sugerir revisión de programas de inicio.
-- Sugerir cierre de procesos innecesarios.
-
-AURA NO PUEDE:
-- Ejecutar mantenimiento sin confirmación.
-- Eliminar archivos sin autorización.
-
-OBJETIVO:
-Mantener el equipo en estado óptimo sin riesgos.
-
-ESTADO:
-Capacidad definida.
-
-[FECHA: 2025-12-14]
-
-CAPACIDADES OPCIONALES — APLICACIONES ADICIONALES DE AURA
-
-Las siguientes aplicaciones se consideran OPCIONALES.
-No forman parte del criterio de “AURA TERMINADA”.
-Su implementación se realizará únicamente después del cierre formal del proyecto,
-o cuando el usuario lo solicite explícitamente.
-
-APLICACIÓN OPCIONAL 1 — CENTRO DE TAREAS Y PROYECTOS
-
-AURA puede:
-- Gestionar listas de tareas.
-- Administrar proyectos.
-- Establecer prioridades.
-- Recordar pendientes de forma inteligente.
-- Integrarse con la agenda y la voz.
-
-OBJETIVO:
-Centralizar organización personal y empresarial.
-
-APLICACIÓN OPCIONAL 2 — ANALISTA DE DOCUMENTOS
-
-AURA puede:
-- Analizar contratos y documentos extensos.
-- Comparar versiones de documentos.
-- Detectar diferencias y riesgos.
-- Generar resúmenes ejecutivos.
-
-OBJETIVO:
-Ahorro de tiempo y apoyo empresarial avanzado.
-
-APLICACIÓN OPCIONAL 3 — GENERADOR DE SOFTWARE ASISTIDO
-
-AURA puede:
-- Crear estructuras base de proyectos.
-- Generar archivos iniciales de software.
-- Documentar código.
-- Apoyar en el desarrollo de aplicaciones internas.
-
-OBJETIVO:
-Acelerar desarrollo de software sin reemplazar al usuario.
-
-APLICACIÓN OPCIONAL 4 — CENTRO DE COMUNICACIÓN
-
-AURA puede:
-- Centralizar correos electrónicos.
-- Resumir conversaciones.
-- Redactar respuestas sugeridas.
-- Priorizar mensajes importantes.
-
-OBJETIVO:
-Reducir ruido y mejorar productividad.
-
-APLICACIÓN OPCIONAL 5 — PANEL DE SALUD DEL SISTEMA
-
-AURA puede:
-- Mostrar estado visual de CPU, RAM, GPU y disco.
-- Mostrar alertas del sistema.
-- Ofrecer recomendaciones de uso.
-
-OBJETIVO:
-Mantener el equipo en estado óptimo de forma visible.
-
-APLICACIÓN OPCIONAL 6 — GENERADOR DE CONTENIDO VISUAL
-
-AURA puede:
-- Generar portadas y material visual.
-- Apoyar en presentaciones.
-- Crear material empresarial básico.
-
-OBJETIVO:
-Apoyo creativo y de branding.
-
-APLICACIÓN OPCIONAL 7 — AUTOMATIZACIONES Y RUTINAS
-
-AURA puede:
-- Automatizar tareas repetitivas.
-- Ejecutar flujo
-
-META DIARIA — DÍA 1
-FECHA: 2025-12-14
-
-OBJETIVO ÚNICO:
-Revisión y refuerzo final de la estructura de carpetas del proyecto AURA.
-
-ALCANCE:
-
-* Verificar que todas las carpetas definidas en el Bloque Maestro existan.
-* Crear únicamente las carpetas que falten.
-* No mover, renombrar ni eliminar carpetas o archivos existentes.
-* No agregar código.
-
-ENTREGABLE:
-
-* Estructura de carpetas completa y alineada.
-* Confirmación de carpetas creadas (si aplica).
-
-CRITERIO DE ÉXITO:
-
-* La estructura coincide exactamente con la definida en el Bloque Maestro.
-* El proyecto queda listo para iniciar desarrollo de código en la siguiente meta diaria.
-
-ESTADO:
-En ejecución
-
-## EJECUCIÓN — VERIFICACIÓN DE ESTRUCTURA
-
-LISTA DEFINITIVA DE CARPETAS A VERIFICAR:
-
-AURA/
-├─ core/
-├─ ui/
-├─ voice/
-├─ files/
-├─ documents/
-├─ agenda/
-├─ system/
-├─ avatars/
-├─ updates/
-├─ memory/
+│  └─ memory.py
 ├─ models/
 │  ├─ llama3/
 │  └─ phi3/
 └─ config/
+   └─ config.json
 
-ACCIONES:
+================================================================
+PARTE B — REGISTRO DE AVANCES Y CÓDIGO FUNCIONAL (APPEND-ONLY)
+================================================================
 
-* Verificar existencia de cada carpeta.
-* Crear SOLO las que no existan.
-* No modificar contenido.
-* No agregar archivos.
+[FECHA: 2025-12-15]
 
-ESTADO ACTUAL:
-Verificación en curso.
+ANEXO — DEPURACIÓN FORMAL + CÓDIGO FUNCIONAL CONGELADO
 
-[FECHA: 2025-12-14]
+ESTADO ACTUAL OFICIAL:
+- AURA arranca (main → core → ui).
+- UI muestra estado.
+- TTS aislado funcional (tts_ok.py).
+- STT aislado funcional (stt_ok.py).
+- Nada más está activo.
 
-CIERRE META DIARIA — DÍA 1
+----------------------------------------------------------------
+CÓDIGO FUNCIONAL CONGELADO
+----------------------------------------------------------------
 
-OBJETIVO:
-Revisión y refuerzo final de la estructura de carpetas del proyecto AURA.
-
-RESULTADO:
-
-* Todas las carpetas obligatorias existen.
-* Subcarpetas models/llama3 y models/phi3 confirmadas.
-* No se movieron, renombraron ni eliminaron archivos.
-* No se agregó código.
-
-ESTADO:
-Meta diaria completada con éxito.
-
-IMPACTO:
-
-* Estructura del proyecto cerrada y alineada.
-* Proyecto listo para iniciar desarrollo de código.
-
-NOTA:
-Este cierre habilita el inicio de metas de desarrollo funcional.
-
-META DIARIA — DÍA 2
-FECHA: 2025-12-14
-
-OBJETIVO ÚNICO:
-Activar main.py como punto real de arranque del sistema AURA.
-
-ALCANCE:
-
-* main.py debe ejecutar AURA.
-* Conectar main.py con core/core.py.
-* Conectar main.py con ui/ui.py.
-* Mostrar ventana gráfica local funcional.
-
-REGLAS:
-
-* Sin voz.
-* Sin modelos LLM.
-* Sin lógica avanzada.
-* Sin agenda.
-* Sin archivos.
-* Sin cambios de estructura.
-
-ENTREGABLE:
-
-* main.py funcional.
-* ui/ui.py funcional.
-* core/core.py funcional.
-
-CRITERIO DE ÉXITO:
-
-* Ejecutar `python main.py` abre una ventana local.
-* No hay errores en consola.
-* Flujo estable y controlado.
-
-ESTADO:
-En ejecución
-
-[FECHA: 2025-12-14]
-
-CIERRE META DIARIA — DÍA 2
-
-OBJETIVO:
-Activar main.py como punto real de arranque del sistema AURA.
-
-ARCHIVOS:
-AURA/main.py
-AURA/core/core.py
-AURA/ui/ui.py
-
-RESULTADO:
-
-* main.py ejecuta correctamente como punto único de arranque.
-* core/core.py inicializa el estado base del sistema.
-* ui/ui.py abre una ventana gráfica local funcional.
-* Ejecución confirmada mediante `python main.py` sin errores en consola.
-
-ESTADO:
-Meta diaria completada con éxito.
-
-IMPACTO:
-
-* AURA ya arranca como aplicación local.
-* Flujo base core → ui validado.
-* Base estable para integrar voz, modelos y lógica progresiva.
-
-NOTA:
-Este cierre habilita el avance a la siguiente meta diaria de desarrollo funcional.
-
-META DIARIA — DÍA 3
-FECHA: 2025-12-14
-
-OBJETIVO ÚNICO:
-Integrar estado del sistema visible en la interfaz gráfica de AURA.
-
-ESTADOS DEFINIDOS:
-
-* Escuchando
-* Procesando
-* Respondiendo
-
-ALCANCE:
-
-* El estado se controla desde core/core.py.
-* La UI refleja el estado en tiempo real.
-* El estado puede cambiar dinámicamente.
-
-REGLAS:
-
-* Sin voz.
-* Sin modelos LLM.
-* Sin lógica avanzada.
-* Sin cambios de estructura.
-
-ENTREGABLE:
-
-* core/core.py actualizado.
-* ui/ui.py actualizado.
-
-CRITERIO DE ÉXITO:
-
-* El estado se muestra claramente en la UI.
-* Cambiar el estado desde core actualiza la UI.
-* Ejecución estable sin errores.
-
-ESTADO:
-En ejecución
-
-[FECHA: 2025-12-14]
-
-CIERRE META DIARIA — DÍA 3
-
-OBJETIVO:
-Integrar estado del sistema visible en la interfaz gráfica de AURA.
-
-ARCHIVOS:
-AURA/core/core.py
-AURA/ui/ui.py
-
-RESULTADO:
-
-* core controla el estado del sistema.
-* Estados definidos: Escuchando, Procesando, Respondiendo.
-* La UI refleja el estado en tiempo real.
-* Cambio de estados validado visualmente en ejecución.
-
-ESTADO:
-Meta diaria completada con éxito.
-
-IMPACTO:
-
-* AURA muestra estado operativo de forma clara.
-* Base preparada para integrar voz y procesos reales.
-
-NOTA:
-Este cierre habilita la siguiente meta diaria de desarrollo funcional
-
-[FECHA: 2025-12-14]
-
-ANEXO — CÓDIGO FUENTE FUNCIONAL BASE (DÍAS 2 Y 3)
-
-ARCHIVO:
-AURA/main.py
-
-CÓDIGO:
+ARCHIVO: AURA/main.py
+ESTADO: FUNCIONAL – CONGELADO
+------------------------------------------------
 from core.core import AuraCore
 from ui.ui import AuraUI
-
 
 def main():
     core = AuraCore()
     ui = AuraUI(core)
     ui.run()
 
-
 if __name__ == "__main__":
     main()
 
-
-ARCHIVO:
-AURA/core/core.py
-
-CÓDIGO:
+------------------------------------------------
+ARCHIVO: AURA/core/core.py
+ESTADO: FUNCIONAL – CONGELADO
+------------------------------------------------
 class AuraCore:
     def __init__(self):
         self._state = "Escuchando"
@@ -945,7 +202,7 @@ class AuraCore:
     def get_status(self):
         return self._state
 
-    def set_status(self, new_status: str):
+    def set_status(self, new_status):
         if new_status != self._state:
             self._state = new_status
             self._notify()
@@ -958,13 +215,11 @@ class AuraCore:
         for callback in self._listeners:
             callback(self._state)
 
-
-ARCHIVO:
-AURA/ui/ui.py
-
-CÓDIGO:
+------------------------------------------------
+ARCHIVO: AURA/ui/ui.py
+ESTADO: FUNCIONAL – CONGELADO
+------------------------------------------------
 import tkinter as tk
-
 
 class AuraUI:
     def __init__(self, core):
@@ -981,22 +236,10 @@ class AuraUI:
         self._demo_cycle()
 
     def _build_ui(self):
-        title = tk.Label(
-            self.root,
-            text="AURA",
-            fg="#00eaff",
-            bg="#0a0f1e",
-            font=("Segoe UI", 28, "bold")
-        )
+        title = tk.Label(self.root, text="AURA", fg="#00eaff", bg="#0a0f1e", font=("Segoe UI", 28, "bold"))
         title.pack(pady=40)
 
-        self.status_label = tk.Label(
-            self.root,
-            textvariable=self.status_var,
-            fg="#ffffff",
-            bg="#0a0f1e",
-            font=("Segoe UI", 14)
-        )
+        self.status_label = tk.Label(self.root, textvariable=self.status_var, fg="#ffffff", bg="#0a0f1e", font=("Segoe UI", 14))
         self.status_label.pack(pady=20)
 
     def _on_status_change(self, new_status):
@@ -1005,100 +248,17 @@ class AuraUI:
     def _demo_cycle(self):
         sequence = ["Escuchando", "Procesando", "Respondiendo"]
         current = self.core.get_status()
-
-        try:
-            index = sequence.index(current)
-            next_state = sequence[(index + 1) % len(sequence)]
-        except ValueError:
-            next_state = "Escuchando"
-
+        next_state = sequence[(sequence.index(current) + 1) % len(sequence)]
         self.core.set_status(next_state)
         self.root.after(2000, self._demo_cycle)
 
     def run(self):
         self.root.mainloop()
 
-
-NOTA:
-Este código fue ejecutado y validado.
-No es ejemplo.
-No es pseudocódigo.
-
-BLOQUE MAESTRO — AVANCES CONFIRMADOS
-
-Fecha: 2025-09-15
-Lugar: Proyecto AURA / Entorno local Windows (PowerShell + venv activo)
-
-
-AVANCE 1 — TTS FUNCIONAL (VOZ)
-Se confirmó que el proyecto habla correctamente usando la voz de Windows.
-El problema de silencio se resolvió inicializando correctamente COM.
-La voz funciona de forma estable desde el entorno del proyecto.
-
-Archivos funcionales confirmados:
-- tts_ok.py
-- voice/windows_tts.py (versión con pythoncom.CoInitialize)
-
-Estado: FUNCIONAL Y CONGELADO
-No se vuelve a tocar.
-
-
-AVANCE 2 — STT FUNCIONAL (ESCUCHA)
-Se confirmó que el proyecto escucha y transcribe audio desde el micrófono.
-Whisper funciona correctamente.
-El texto reconocido se imprime en consola sin errores.
-
-Archivo funcional confirmado:
-- stt_ok.py
-
-Estado: FUNCIONAL Y CONGELADO
-No se vuelve a tocar.
-
-
-AVANCE 3 — INTEGRACIÓN STT + TTS
-La integración directa STT → TTS no quedó estable.
-El archivo stt_tts_ok.py no se considera funcional.
-Se decidió no subirlo al bloque maestro.
-
-Estado: NO CONGELADO / DESCARTADO POR AHORA
-
-
-AVANCE 4 — DECISIÓN DE ARQUITECTURA
-Se decidió reiniciar el desarrollo desde una base mínima.
-La base mínima válida es:
-- STT aislado
-- TTS aislado
-
-No se integran todavía:
-- core
-- UI
-- wake word
-- silencio inteligente
-- comandos
-
-
-BASE MÍNIMA ACTUAL DEL PROYECTO
-El proyecto puede hablar.
-El proyecto puede escuchar.
-Ambas capacidades están aisladas y comprobadas.
-
-BLOQUE MAESTRO — BASE MÍNIMA CONFIRMADA
-
-Fecha: 2025-09-15
-Lugar: Proyecto AURA / Entorno local Windows (PowerShell, venv activo)
-
-AVANCES CONFIRMADOS
-Se confirmó que el proyecto puede HABLAR mediante TTS usando la voz de Windows.
-Se confirmó que el proyecto puede ESCUCHAR y TRANSCRIBIR audio usando Whisper.
-Se resolvió el problema de silencio del TTS inicializando correctamente COM.
-Se decidió congelar una base mínima y no integrar aún core, UI, wake word, silencio ni comandos.
-La integración directa STT → TTS no quedó estable y se descarta por ahora.
-La base mínima válida del proyecto es STT aislado + TTS aislado.
-
-CODIGOS FUNCIONALES CONFIRMADOS
-
-Archivo: voice/windows_tts.py
-
+------------------------------------------------
+ARCHIVO: AURA/voice/windows_tts.py
+ESTADO: FUNCIONAL – CONGELADO
+------------------------------------------------
 import win32com.client
 import pythoncom
 import threading
@@ -1112,7 +272,7 @@ class WindowsTTS:
         pythoncom.CoInitialize()
         self._speaker = win32com.client.Dispatch("SAPI.SpVoice")
 
-    def speak(self, text: str):
+    def speak(self, text):
         if not text:
             return
         with self._lock:
@@ -1120,18 +280,20 @@ class WindowsTTS:
                 self._init_sapi()
             self._speaker.Speak(text)
 
-
-Archivo: tts_ok.py
-
+------------------------------------------------
+ARCHIVO: AURA/tts_ok.py
+ESTADO: FUNCIONAL – CONGELADO
+------------------------------------------------
 from voice.windows_tts import WindowsTTS
 
 if __name__ == "__main__":
     tts = WindowsTTS()
     tts.speak("Base mínima confirmada. Estoy hablando desde el proyecto.")
 
-
-Archivo: stt_ok.py
-
+------------------------------------------------
+ARCHIVO: AURA/stt_ok.py
+ESTADO: FUNCIONAL – CONGELADO
+------------------------------------------------
 import sounddevice as sd
 import numpy as np
 import whisper
@@ -1142,52 +304,16 @@ DURATION = 4
 
 def main():
     print("Escuchando. Habla ahora.")
-
-    audio = sd.rec(
-        int(DURATION * SAMPLE_RATE),
-        samplerate=SAMPLE_RATE,
-        channels=1,
-        dtype="float32"
-    )
+    audio = sd.rec(int(DURATION * SAMPLE_RATE), samplerate=SAMPLE_RATE, channels=1, dtype="float32")
     sd.wait()
-
     audio = np.squeeze(audio)
     wav.write("stt_test.wav", SAMPLE_RATE, audio)
-
-    print("Transcribiendo.")
     model = whisper.load_model("small")
     result = model.transcribe("stt_test.wav", language="es", fp16=False)
-
-    text = result.get("text", "").strip()
-    print("Texto reconocido:", text)
+    print("Texto reconocido:", result.get("text", "").strip())
 
 if __name__ == "__main__":
     main()
-
-----------------------------------------------------------------
-ANEXO — REGLA DE NOMBRADO Y ENTREGA DE CÓDIGO
-----------------------------------------------------------------
-El asistente DEBE:
-- Entregar siempre los códigos con su NOMBRE FINAL DEFINITIVO.
-- No usar nombres temporales ni de ejemplo.
-- No pedir al usuario que renombre archivos.
-- No dividir código solicitado como archivo único.
-
-Todo archivo entregado:
-- Se descarga.
-- Se coloca directamente en su ruta indicada.
-- Funciona sin modificaciones de nombre.
-
-El incumplimiento invalida la entrega.
-
-----------------------------------------------------------------
-ANEXO — PLAN DE ARRANQUE
-----------------------------------------------------------------
-- El proyecto continúa usando la estructura existente.
-- No se desarrolla código de la IA antes de reforzar estructura.
-- El refuerzo de estructura se realizará el LUNES.
-- A partir del lunes se registrarán los avances por anexos.
-- Una vez cerrada la estructura, se inicia el desarrollo de códigos.
 
 ================================================================
 AUTORIDAD FINAL
@@ -1196,4 +322,4 @@ El usuario manda.
 El asistente obedece.
 Este archivo es la ÚNICA fuente de verdad.
 
-FIN DEL ARCHIVO
+FIN DEL BLOQUE MAESTRO
