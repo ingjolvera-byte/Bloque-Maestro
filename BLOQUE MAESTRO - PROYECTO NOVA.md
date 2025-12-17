@@ -1,322 +1,232 @@
-🧠 BLOQUE MAESTRO — PROYECTO NOVA
+# 🧠 BLOQUE MAESTRO — PROYECTO NOVA (UNIFICADO Y DEFINITIVO)
 
-ESTADO GENERAL
+> Este documento reemplaza cualquier versión anterior del Bloque Maestro.
+> Es la **única fuente de verdad** del Proyecto NOVA.
+
+---
+
+## 1️⃣ ESTADO GENERAL
 
 Proyecto: NOVA
 Tipo: IA local (Personal + Empresa)
 Sistema: Windows
-Fuente de verdad: Este Bloque Maestro
-Regla suprema: Lo funcional NO se toca
+Usuario: Empleado + Copropietario
+Perfil cognitivo considerado: **TDAH**
+
+Regla suprema:
+
+> **Lo funcional NO se toca.**
 
 ---
 
-⚠️ SECCIÓN CRÍTICA — CÓMO DEBE USARSE ESTE BLOQUE (LECTURA OBLIGATORIA)
+## 2️⃣ NATURALEZA DEL BLOQUE MAESTRO
 
-Este documento NO es solo documentación.
-Este documento ES el contrato, la memoria y la única referencia válida del proyecto.
+Este documento:
 
-Reglas absolutas de uso
+* NO es documentación
+* NO es una guía
+* NO es una referencia parcial
 
-1. Este archivo es indivisible
+Este documento **ES**:
 
-No se separa
+* Contrato técnico
+* Memoria viva del sistema
+* Marco de decisión
+* Límite de crecimiento
 
-No se resume
-
-No se reescribe por secciones
-
-Se copia y pega COMPLETO
-
-
-2. Todo lo importante debe vivir aquí
-
-Decisiones técnicas
-
-Código funcional FINAL
-
-Cambios válidos
-
-Reglas corregidas
-Si algo NO está aquí, no existe.
-
-
-3. Código funcional
-
-Siempre existe UN SOLO CÓDIGO VÁLIDO por fase
-
-No se aplican parches incrementales
-
-Todo cambio implica reemplazo completo
-
-
-4. Actualización
-
-El bloque se actualiza, no se versiona
-
-Solo existe la última versión funcional
-
-
-5. Fases
-
-Estado: Iniciada / En progreso / Funcional / Congelada
-
-Una fase congelada NO se toca
-
-
-6. Progresión
-
-No se saltan fases
-
-No se avanza sin comprender el comportamiento
-
-Una fase se congela solo si es estable y entendida
-
-
-7. Instrucciones operativas
-
-UN solo objetivo por mensaje
-
-Nunca mezclar diseño, debugging u optimización
-
-Si hay confusión, se detiene el avance
-
-
-8. Regla anti-confusión
-
-Comportamientos esperados NO se tratan como errores
-
-Primero se explica, luego se decide
+Si algo no está aquí, **no existe**.
 
 ---
 
-🧠 Regla de Decisión Única (NUEVA)
+## 3️⃣ REGLAS ABSOLUTAS DE USO
 
-NOVA NO debe presentar listas de opciones al usuario.
+1. **Indivisible**
+   Se copia, edita y guarda **completo**.
+
+2. **Una sola verdad**
+   Solo existe una versión válida: la última funcional.
+
+3. **Un solo código válido por fase**
+   No hay parches, no hay mezclas.
+
+4. **Congelación estricta**
+   Una fase congelada no se toca.
+
+5. **Progresión obligatoria**
+   No se saltan fases.
+
+6. **Un objetivo por mensaje**
+   Sin mezclar diseño, debug u optimización.
+
+7. **Regla anti-confusión**
+   Primero se explica el comportamiento, luego se decide.
+
+---
+
+## 4️⃣ REGLA DE DECISIÓN ÚNICA
+
+NOVA **NO** ofrece listas de opciones.
 
 Comportamiento esperado:
 
-Analiza el contexto
+* Analiza
+* Decide
+* Ejecuta
 
-Determina la mejor solución
+Excepciones únicas:
 
-La propone como decisión FINAL
+* Riesgo de seguridad
+* Acción destructiva
+* Modificación sensible del sistema
 
-La implementa directamente
-
-
-Excepciones:
-
-Riesgo de seguridad
-
-Acción destructiva
-
-Modificación sensible del sistema
-En esos casos se solicita confirmación, no alternativas.
-
-
-Si no hay una mejor solución clara, NOVA debe detenerse y explicar la ambigüedad.
-
+En esos casos se pide **confirmación**, no alternativas.
 
 ---
 
-ENTORNO DEL EQUIPO
+## 5️⃣ PRINCIPIOS DE DISEÑO (TDAH-AWARE)
 
-Sistema Operativo:
+NOVA existe para:
 
-Windows 11 (64 bits)
+* Reducir carga cognitiva
+* Eliminar micro-decisiones
+* Priorizar sin preguntar
+* Devolver el foco sin fricción
 
+NOVA **no**:
 
-Hardware:
-
-CPU: AMD Ryzen 5 7535HS
-
-RAM: 16 GB (plan: 40 → 64 GB)
-
-GPU: Integrada
-
-Audio: Micrófono USB + Auriculares
-
-
-Python:
-
-Versión: 3.11.x
-
-Entorno: .venv
-
-Empaquetado: PyInstaller
-
+* Satura
+* Interrumpe sin motivo
+* Exige atención constante
 
 ---
 
-ESTRUCTURA DEL PROYECTO
+## 6️⃣ ENTORNO TÉCNICO
 
-D:\aura
-├── .venv
-└── models\
+Sistema Operativo: Windows 11 x64
+Python: 3.11.x (aislado)
+Inference: CPU (offline-first)
 
+Hardware base:
 
----
-
-MODELOS IA
-
-models
-├── llama3
-│   └── Meta-Llama-3.1-8B-Instruct-Q4_0.gguf
-└── vosk-es\
-
-Modelo principal:
-
-LLaMA 3.1 8B GGUF
-
-Offline-first
-
+* Ryzen 5 7535HS
+* 16 GB RAM (64 GB planificado)
+* GPU integrada
 
 ---
 
-CONECTIVIDAD
+## 7️⃣ MODELOS
 
-Modo: Offline principal
+Modelo cognitivo principal:
 
-Internet: Permitido
+* Meta-LLaMA 3.1 8B Instruct (GGUF)
 
-Sin telemetría
+STT:
 
-Sin exfiltración
+* VOSK (offline)
 
+TTS:
 
----
-
-SEGURIDAD
-
-Permisos: Administrador
-
-Sin modificar registro crítico
-
-Acciones sensibles requieren confirmación
-
+* pyttsx3 (SAPI5)
 
 ---
 
-INTERFAZ
+## 8️⃣ INTERACCIÓN
 
-Tipo: Aplicación nativa Windows
-
-Permitido:
-
-Consola (actual)
-
-GUI nativa (futuro)
-
-
-Prohibido:
-
-Web
-
-Navegador
-
-Servidores locales
-
-
+* Activación por voz: **Wake word “NOVA”**
+* Sin botón de hablar
+* Conversación natural
+* Silencios respetados
 
 ---
 
-ARRANQUE AUTOMÁTICO (DEFINIDO, NO IMPLEMENTADO)
+## 9️⃣ ROLES
 
-NOVA podrá iniciar con Windows
+NOVA distingue contexto:
 
-No activo por defecto
+**Rol empleado:**
 
-Requiere confirmación
+* Ejecución clara
+* Priorización operativa
 
-Métodos permitidos:
+**Rol copropietario:**
 
-Carpeta de inicio del usuario
+* Evaluación estratégica
+* Análisis de riesgo
 
-
-Se implementará en fases posteriores
-
-
+Nunca mezcla roles sin razón.
 
 ---
 
-FASES DEL PROYECTO
+## 🔟 ESTRUCTURA DE FASES (ORDEN AJUSTADO TDAH-AWARE)
 
-1. FASE 1 — Núcleo Cerebral
+### 🔹 BLOQUE A — EXISTENCIA + SOPORTE COGNITIVO
 
+1. FASE 1 — Núcleo Cerebral *(Funcional → Congelada)*
+2. FASE 2 — Voz *(En progreso)*
+3. FASE 3 — Memoria
+4. FASE 4 — Interfaz Windows
 
-2. FASE 2 — Voz
+### 🔹 BLOQUE B — CONFIANZA Y CONTROL
 
-
-3. FASE 3 — Interfaz Windows
-
-
-4. FASE 4 — Memoria
-
-
-5. FASE 5 — Acceso al Sistema
-
-
+5. FASE 5 — Acceso Controlado al Sistema
 6. FASE 6 — Integraciones
-
-
 7. FASE 7 — Auto-actualización
 
+### 🔹 BLOQUE C — INTELIGENCIA
 
-8. FASE 8 — Empaquetado
+8. FASE 8 — Criterio y Juicio
+9. FASE 9 — Contexto Continuo Multi-Proyecto
+10. FASE 10 — Comprensión Profunda de Contenido
 
+### 🔹 BLOQUE D — ADAPTACIÓN HUMANA
 
+11. FASE 11 — Aprendizaje del Usuario (TDAH-aware)
+12. FASE 12 — Inteligencia de Interacción
 
----
+### 🔹 BLOQUE E — ORQUESTACIÓN
 
-🔹 FASE 1 — NÚCLEO CEREBRAL
+13. FASE 13 — Autocontrol y Límites Internos
+14. FASE 14 — Orquestación Inteligente (Vida + Empresa)
 
-Estado: Funcional → Congelada
+### 🔹 BLOQUE F — CIERRE
 
-(Código funcional intacto, no modificado)
-
-
----
-
-🔹 FASE 2 — VOZ
-
-Estado: En progreso (DESCONGELADA)
-
-Objetivo
-
-Interacción por voz completamente offline, natural y sin botones.
-
-Alcance
-
-Incluye:
-
-STT offline (VOSK)
-
-Wake word: “NOVA”
-
-Conversación continua
-
-TTS con pyttsx3
-
-
-Excluye:
-
-UI gráfica avanzada
-
-Acciones de sistema
-
-
-Comportamiento
-
-NOVA escucha pasivamente
-
-Solo responde tras oír “NOVA”
-
-No hay botón de hablar
-
-No hay menús hablados
-
-
+15. FASE 15 — Empaquetado, Instalación y Distribución
 
 ---
 
-DEFINICIÓN FUTURA
+## 1️⃣1️⃣ FASE FINAL — EMPAQUETADO
+
+Ruta final obligatoria:
+
+```
+C:\Archivos de programa\NOVA\
+```
+
+Requisitos:
+
+* Instalador gráfico (.exe)
+* Permisos de administrador
+* Instalación y desinstalación limpias
+* Sin dependencia de entorno de desarrollo
+
+---
+
+## 1️⃣2️⃣ PROPÓSITO FINAL
+
+NOVA no es una app.
+
+Es:
+
+* Segunda mente
+* Soporte cognitivo
+* Asistente estratégico
+* Infraestructura personal y empresarial
+
+---
+
+> **NOVA no hace lo que dices.
+> NOVA hace lo que necesitas.**
+
+---
+
+### ✅ FIN DEL BLOQUE MAESTRO DEFINITIVO
