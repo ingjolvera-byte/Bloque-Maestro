@@ -1,215 +1,92 @@
-# 🧠 BLOQUE MAESTRO — PROYECTO NOVA
-(Unificado, ordenado y funcional)
+BLOQUE MAESTRO – PROYECTO NOVA
+ESTADO REAL CONSOLIDADO
 
-Este documento es la ÚNICA fuente de verdad del Proyecto NOVA.
-Si algo no está aquí, no existe.
+NOVA es un proyecto de asistente/IA cuyo objetivo principal es la utilidad real y el control. No es un demo visual, no es un showcase gráfico, no es un experimento estético. Primero debe funcionar correctamente, después (y solo después) puede mejorarse la apariencia.
 
-────────────────────────────────────────────────────────
+DECISIÓN CERRADA Y NO NEGOCIABLE
+La interfaz gráfica queda congelada. No se vuelve a tocar diseño, colores, fondos, animaciones ni layout. No se hacen pruebas visuales, no se experimenta con estilos, no se vuelve a discutir UI.
 
-## 1️⃣ IDENTIDAD DEL PROYECTO
+ESTADO ACTUAL DE LA INTERFAZ
+La interfaz es simple y funcional.
+Fondo negro sólido.
+Sin imágenes.
+Sin animaciones.
+Sin efectos visuales.
 
-Proyecto: NOVA  
-Naturaleza: IA local (personal + empresa)  
-Sistema operativo objetivo: Windows  
-Modo de operación: Offline-first  
-Usuario: Empleado + Copropietario  
-Perfil cognitivo considerado: TDAH  
+Estructura actual de la UI:
+– Título “NOVA” centrado, color azul sobrio.
+– Mensaje del sistema: “NOVA en línea. ¿En qué te ayudo?”
+Este mensaje es texto plano, no parece input ni caja editable.
+– Área de respuestas:
+Columna central ancha, con márgenes laterales fijos aproximados de 5 centímetros.
+Respuestas legibles, flujo vertical natural, sin cajas innecesarias.
+– Área de escritura:
+Ubicada abajo.
+Discreta.
+Claramente identificada como acción del usuario.
 
-Regla suprema:
-LO FUNCIONAL NO SE TOCA.
+NO EXISTE en la UI actual:
+– Fondo animado
+– Hologramas
+– HUD
+– Sci-fi
+– Dashboards
+– Layouts complejos
 
-────────────────────────────────────────────────────────
+ESTRUCTURA DE ARCHIVOS ACTUAL
+Existe un solo archivo activo de interfaz:
+interfaz/ui_chat_nova.py
 
-## 2️⃣ NATURALEZA DEL BLOQUE MAESTRO
+Archivos eliminados y que no deben volver:
+ui_main.py
+background.py
+console.py
+cualquier archivo experimental anterior
 
-Este documento NO es:
-- Documentación
-- Manual de usuario
-- Guía técnica
+COMPORTAMIENTO ACTUAL
+El usuario escribe un mensaje.
+El mensaje se muestra.
+NOVA responde con texto placeholder.
+Scroll natural.
+No hay IA real conectada todavía.
 
-Este documento ES:
-- Contrato técnico
-- Marco único de decisión
-- Memoria viva del sistema
-- Límite explícito de crecimiento
+Esto es una base funcional, no un producto final.
 
-Nada gobierna al Bloque Maestro.
+ERRORES IDENTIFICADOS QUE NO SE DEBEN REPETIR
+Diseñar UI sin funcionalidad detrás.
+Iterar estética sin criterio cerrado.
+Confundir concepto con implementación.
+Probar múltiples estilos sin objetivo.
+Agregar animaciones o efectos sin necesidad funcional.
 
-────────────────────────────────────────────────────────
+REGLA DE ORO DEL PROYECTO
+NOVA primero piensa, luego habla, y al final se maquilla.
+Si algo no aporta función, no entra.
 
-## 3️⃣ REGLAS ABSOLUTAS DE USO
+FASES DE TRABAJO
+Permitido a partir de ahora:
+Conectar IA real (local o API).
+Manejo de historial.
+Guardado de conversaciones.
+Procesamiento de adjuntos.
+Comandos.
+Memoria.
+Lógica de decisión.
 
-1. El Bloque Maestro es indivisible  
-2. Solo existe una versión válida  
-3. No se saltan fases  
-4. Una fase cerrada no se modifica  
-5. Un objetivo por mensaje  
-6. Primero comportamiento, luego código  
-7. El chat decide, el código implementa  
+Prohibido por ahora:
+Volver a tocar layout.
+Rediseñar la UI.
+Cambiar colores.
+Probar fondos o animaciones.
 
-────────────────────────────────────────────────────────
+ESTADO FINAL ACTUAL
+UI: congelada.
+Lógica: pendiente.
+IA real: pendiente.
+Producto: en construcción.
+Diseño avanzado: pospuesto.
 
-## 4️⃣ REGLA DE DECISIÓN ÚNICA
-
-NOVA:
-- Analiza
-- Decide
-- Ejecuta
-
-Solo se pide confirmación si hay:
-- Riesgo de seguridad
-- Acción destructiva
-- Cambio estructural crítico
-
-────────────────────────────────────────────────────────
-
-## 5️⃣ PRINCIPIOS DE DISEÑO (TDAH-AWARE)
-
-NOVA existe para:
-- Reducir carga cognitiva
-- Eliminar micro-decisiones
-- Mantener foco
-
-NOVA NO:
-- Satura
-- Interrumpe
-- Complica
-
-────────────────────────────────────────────────────────
-
-## 6️⃣ ENTORNO TÉCNICO BASE
-
-Sistema: Windows 11 x64  
-Python: 3.11.x  
-Inferencia: CPU  
-Modo: Offline-first  
-
-Hardware base:
-- Ryzen 5 7535HS
-- 16 GB RAM (64 GB planificado)
-- GPU integrada
-
-────────────────────────────────────────────────────────
-
-## 7️⃣ MODELOS Y MOTORES
-
-Modelo cognitivo:
-- Meta-LLaMA 3.1 8B Instruct (GGUF)
-
-Voz:
-- TTS: pyttsx3 (SAPI5)
-- Sin escucha continua
-- Sin wake word
-
-────────────────────────────────────────────────────────
-
-## 8️⃣ INTERACCIÓN HUMANA
-
-- Interacción principal: texto
-- Voz: solo salida
-- Sin escucha permanente
-- Silencios respetados
-
-────────────────────────────────────────────────────────
-
-## 9️⃣ ROLES OPERATIVOS
-
-Rol Empleado:
-- Ejecución clara
-- Prioridad operativa
-
-Rol Copropietario:
-- Evaluación estratégica
-- Análisis de riesgo
-
-NOVA no mezcla roles sin motivo explícito.
-
-────────────────────────────────────────────────────────
-
-## 🔟 ESTRUCTURA DE FASES (ORDEN OBLIGATORIO)
-
-FASE 1 — Núcleo cerebral (CERRADA)  
-FASE 2 — Voz (CERRADA PARCIAL)  
-FASE 3 — Memoria (IMPLEMENTADA)  
-FASE 4 — Interfaz Windows  
-FASE 5 — Acceso al sistema  
-FASE 6 — Integraciones  
-FASE 7 — Auto-actualización  
-FASE 8 — Criterio y juicio  
-FASE 9 — Contexto continuo  
-FASE 10 — Comprensión profunda  
-FASE 11 — Aprendizaje del usuario  
-FASE 12 — Inteligencia de interacción  
-FASE 13 — Autocontrol  
-FASE 14 — Orquestación total  
-FASE 15 — Empaquetado final  
-
-────────────────────────────────────────────────────────
-
-## 1️⃣1️⃣ REGLA DE ESTRUCTURA DE CARPETAS
-
-- Las carpetas NO se crean por adelantado
-- Cada carpeta se crea SOLO cuando inicia su fase
-- Cada fase corresponde a UNA carpeta funcional
-- El nombre de la carpeta es el nombre lógico de la capacidad
-
-Ejemplos:
-- voice
-- memoria
-- interfaz
-
-Si una fase no tiene carpeta:
-ESA FASE NO EXISTE.
-
-────────────────────────────────────────────────────────
-
-## 1️⃣2️⃣ REGLA DE CÓDIGO
-
-- El nombre del archivo ES el nombre del módulo
-- No se usan nombres largos
-- No se usan sufijos como “fase”, “implementación”, “v2”
-- El código va donde pertenece, no donde estorba
-
-Ejemplo correcto:
-memoria/memory.py
-
-────────────────────────────────────────────────────────
-
-## 1️⃣3️⃣ REGLA DE IMPLEMENTACIÓN POR FASE
-
-Cada fase sigue ESTE orden, sin excepción:
-
-1. Se define el comportamiento
-2. El usuario valida
-3. El diseño se congela
-4. Se implementa de inmediato
-5. Se conecta al núcleo si aplica
-
-No se avanza sin implementación terminada.
-
-────────────────────────────────────────────────────────
-
-## 1️⃣4️⃣ CAPACIDADES LATENTES
-
-Clonación de voz y avatares:
-- Existen
-- No se implementan ahora
-- Serán desarrolladas por NOVA
-- Solo cuando esté 100% funcional
-- Solo bajo orden explícita del usuario
-
-────────────────────────────────────────────────────────
-
-## 1️⃣5️⃣ PROPÓSITO FINAL
-
-NOVA no es una app.
-
-NOVA es:
-- Segunda mente
-- Soporte cognitivo
-- Infraestructura personal y empresarial
-
-NOVA no hace lo que dices.
-NOVA hace lo que necesitas.
-
-FIN DEL BLOQUE MAESTRO
+CIERRE
+Este bloque es la fuente única de verdad del proyecto.
+Si algo no está escrito aquí, no existe.
+Cualquier avance futuro debe respetar este bloque y no contradecir decisiones cerradas.
