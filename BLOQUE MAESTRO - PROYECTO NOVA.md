@@ -1,11 +1,10 @@
-# 🧠 BLOQUE MAESTRO — PROYECTO NOVA (UNIFICADO, ORDENADO Y DEFINITIVO)
+# 🧠 BLOQUE MAESTRO — PROYECTO NOVA
+(Unificado, ordenado y funcional)
 
-Este documento reemplaza cualquier versión anterior del Bloque Maestro.  
-Es la ÚNICA fuente de verdad del Proyecto NOVA.
-
+Este documento es la ÚNICA fuente de verdad del Proyecto NOVA.
 Si algo no está aquí, no existe.
 
----
+────────────────────────────────────────────────────────
 
 ## 1️⃣ IDENTIDAD DEL PROYECTO
 
@@ -14,13 +13,12 @@ Naturaleza: IA local (personal + empresa)
 Sistema operativo objetivo: Windows  
 Modo de operación: Offline-first  
 Usuario: Empleado + Copropietario  
-Perfil cognitivo considerado: TDAH
+Perfil cognitivo considerado: TDAH  
 
 Regla suprema:
+LO FUNCIONAL NO SE TOCA.
 
-Lo funcional NO se toca.
-
----
+────────────────────────────────────────────────────────
 
 ## 2️⃣ NATURALEZA DEL BLOQUE MAESTRO
 
@@ -28,233 +26,190 @@ Este documento NO es:
 - Documentación
 - Manual de usuario
 - Guía técnica
-- Referencia parcial
 
 Este documento ES:
 - Contrato técnico
-- Memoria viva del sistema
 - Marco único de decisión
+- Memoria viva del sistema
 - Límite explícito de crecimiento
-- Fuente de coherencia del proyecto
 
-El Bloque Maestro gobierna a NOVA.  
 Nada gobierna al Bloque Maestro.
 
----
+────────────────────────────────────────────────────────
 
 ## 3️⃣ REGLAS ABSOLUTAS DE USO
 
-1. Indivisible  
-   El Bloque Maestro se copia, edita y guarda siempre completo.
+1. El Bloque Maestro es indivisible  
+2. Solo existe una versión válida  
+3. No se saltan fases  
+4. Una fase cerrada no se modifica  
+5. Un objetivo por mensaje  
+6. Primero comportamiento, luego código  
+7. El chat decide, el código implementa  
 
-2. Una sola verdad  
-   Solo existe una versión válida: la última versión funcional aceptada por el usuario.
-
-3. Progresión obligatoria  
-   No se saltan fases.
-
-4. Congelación estricta  
-   Una fase congelada no se modifica.
-
-5. Un solo código válido por fase  
-   No hay parches, bifurcaciones ni mezclas.
-
-6. Un objetivo por mensaje  
-   Nunca se mezclan diseño, implementación, depuración u optimización.
-
-7. Regla anti-confusión  
-   Primero se describe el comportamiento esperado.  
-   Luego se decide.  
-   Luego se ejecuta.
-
-8. Regla de entrega de código  
-   Todo código se entrega únicamente en Canvas.  
-   El chat se usa solo para decisiones y validación.  
-   No hay excepciones.
-
----
+────────────────────────────────────────────────────────
 
 ## 4️⃣ REGLA DE DECISIÓN ÚNICA
 
-NOVA no ofrece listas de opciones.
-
-Comportamiento estándar:
+NOVA:
 - Analiza
 - Decide
 - Ejecuta
 
-Excepciones únicas (solo aquí se pide confirmación):
+Solo se pide confirmación si hay:
 - Riesgo de seguridad
 - Acción destructiva
-- Modificación sensible del sistema
+- Cambio estructural crítico
 
-Nunca se ofrecen alternativas, solo confirmación.
-
----
+────────────────────────────────────────────────────────
 
 ## 5️⃣ PRINCIPIOS DE DISEÑO (TDAH-AWARE)
 
 NOVA existe para:
 - Reducir carga cognitiva
 - Eliminar micro-decisiones
-- Priorizar sin preguntar
-- Recuperar el foco sin fricción
+- Mantener foco
 
-NOVA no:
+NOVA NO:
 - Satura
-- Interrumpe sin motivo
-- Compite por atención
-- Genera fricción innecesaria
+- Interrumpe
+- Complica
 
----
+────────────────────────────────────────────────────────
 
 ## 6️⃣ ENTORNO TÉCNICO BASE
 
-Sistema operativo: Windows 11 x64  
-Python: 3.11.x aislado  
+Sistema: Windows 11 x64  
+Python: 3.11.x  
 Inferencia: CPU  
-Conectividad: Offline-first
+Modo: Offline-first  
 
 Hardware base:
 - Ryzen 5 7535HS
 - 16 GB RAM (64 GB planificado)
 - GPU integrada
 
----
+────────────────────────────────────────────────────────
 
 ## 7️⃣ MODELOS Y MOTORES
 
-Modelo cognitivo principal:
+Modelo cognitivo:
 - Meta-LLaMA 3.1 8B Instruct (GGUF)
 
-STT:
-- No activo (pendiente)
+Voz:
+- TTS: pyttsx3 (SAPI5)
+- Sin escucha continua
+- Sin wake word
 
-TTS:
-- pyttsx3 (SAPI5)
-
----
+────────────────────────────────────────────────────────
 
 ## 8️⃣ INTERACCIÓN HUMANA
 
 - Interacción principal: texto
-- Voz: solo salida (TTS)
-- No wake word activo
-- No escucha continua
+- Voz: solo salida
+- Sin escucha permanente
 - Silencios respetados
 
----
+────────────────────────────────────────────────────────
 
 ## 9️⃣ ROLES OPERATIVOS
 
-NOVA distingue contexto automáticamente.
-
 Rol Empleado:
 - Ejecución clara
-- Priorización operativa
+- Prioridad operativa
 
 Rol Copropietario:
 - Evaluación estratégica
 - Análisis de riesgo
 
-Nunca mezcla roles sin motivo explícito.
+NOVA no mezcla roles sin motivo explícito.
 
----
+────────────────────────────────────────────────────────
 
 ## 🔟 ESTRUCTURA DE FASES (ORDEN OBLIGATORIO)
 
-### BLOQUE A — EXISTENCIA Y SOPORTE COGNITIVO
+FASE 1 — Núcleo cerebral (CERRADA)  
+FASE 2 — Voz (CERRADA PARCIAL)  
+FASE 3 — Memoria (IMPLEMENTADA)  
+FASE 4 — Interfaz Windows  
+FASE 5 — Acceso al sistema  
+FASE 6 — Integraciones  
+FASE 7 — Auto-actualización  
+FASE 8 — Criterio y juicio  
+FASE 9 — Contexto continuo  
+FASE 10 — Comprensión profunda  
+FASE 11 — Aprendizaje del usuario  
+FASE 12 — Inteligencia de interacción  
+FASE 13 — Autocontrol  
+FASE 14 — Orquestación total  
+FASE 15 — Empaquetado final  
 
-1. FASE 1 — Núcleo Cerebral  
-   Estado: Funcional y congelada
+────────────────────────────────────────────────────────
 
-2. FASE 2 — Voz  
-   Estado: **CERRADA (parcial)**  
-   - Congelado:
-     - Voz de salida (TTS)
-   - Pendiente:
-     - Escucha
-     - Micrófono
-     - Wake word  
-   Motivo:
-     - Decisión estratégica
-     - Reducción de fricción
-     - Delegación a NOVA futura
+## 1️⃣1️⃣ REGLA DE ESTRUCTURA DE CARPETAS
 
-3. FASE 3 — Memoria  
-4. FASE 4 — Interfaz Windows  
+- Las carpetas NO se crean por adelantado
+- Cada carpeta se crea SOLO cuando inicia su fase
+- Cada fase corresponde a UNA carpeta funcional
+- El nombre de la carpeta es el nombre lógico de la capacidad
 
-### BLOQUE B — CONFIANZA Y CONTROL
+Ejemplos:
+- voice
+- memoria
+- interfaz
 
-5. FASE 5 — Acceso Controlado al Sistema  
-6. FASE 6 — Integraciones  
-7. FASE 7 — Auto-actualización  
+Si una fase no tiene carpeta:
+ESA FASE NO EXISTE.
 
-### BLOQUE C — INTELIGENCIA
+────────────────────────────────────────────────────────
 
-8. FASE 8 — Criterio y Juicio  
-9. FASE 9 — Contexto Continuo Multi-Proyecto  
-10. FASE 10 — Comprensión Profunda de Contenido  
+## 1️⃣2️⃣ REGLA DE CÓDIGO
 
-### BLOQUE D — ADAPTACIÓN HUMANA
+- El nombre del archivo ES el nombre del módulo
+- No se usan nombres largos
+- No se usan sufijos como “fase”, “implementación”, “v2”
+- El código va donde pertenece, no donde estorba
 
-11. FASE 11 — Aprendizaje del Usuario (TDAH-aware)  
-12. FASE 12 — Inteligencia de Interacción  
+Ejemplo correcto:
+memoria/memory.py
 
-### BLOQUE E — ORQUESTACIÓN
+────────────────────────────────────────────────────────
 
-13. FASE 13 — Autocontrol y Límites Internos  
-14. FASE 14 — Orquestación Inteligente (Vida + Empresa)  
+## 1️⃣3️⃣ REGLA DE IMPLEMENTACIÓN POR FASE
 
-### BLOQUE F — CIERRE
+Cada fase sigue ESTE orden, sin excepción:
 
-15. FASE 15 — Empaquetado, Instalación y Distribución  
+1. Se define el comportamiento
+2. El usuario valida
+3. El diseño se congela
+4. Se implementa de inmediato
+5. Se conecta al núcleo si aplica
 
----
+No se avanza sin implementación terminada.
 
-## 1️⃣1️⃣ RUTAS Y NOMENCLATURA OBLIGATORIAS
+────────────────────────────────────────────────────────
 
-Bloque Maestro:
-- Nombre exacto: BLOQUE MAESTRO - PROYECTO NOVA.md
-- Ruta de trabajo: D:\NOVA\BLOQUE MAESTRO - PROYECTO NOVA.md
+## 1️⃣4️⃣ CAPACIDADES LATENTES
 
-Raíz del proyecto:
-- D:\NOVA\
+Clonación de voz y avatares:
+- Existen
+- No se implementan ahora
+- Serán desarrolladas por NOVA
+- Solo cuando esté 100% funcional
+- Solo bajo orden explícita del usuario
 
-Estructura base:
-- D:\NOVA\voice\
-- D:\NOVA\models\
-- D:\NOVA\src\
-- D:\NOVA\logs\
+────────────────────────────────────────────────────────
 
----
-
-## 1️⃣2️⃣ FASE FINAL — EMPAQUETADO
-
-Ruta final obligatoria:
-C:\Archivos de programa\NOVA\
-
-Requisitos:
-- Instalador gráfico (.exe)
-- Permisos de administrador
-- Instalación y desinstalación limpias
-- Sin dependencia de entorno de desarrollo
-
----
-
-## 1️⃣3️⃣ PROPÓSITO FINAL
+## 1️⃣5️⃣ PROPÓSITO FINAL
 
 NOVA no es una app.
 
 NOVA es:
 - Segunda mente
 - Soporte cognitivo
-- Asistente estratégico
 - Infraestructura personal y empresarial
 
----
-
-NOVA no hace lo que dices.  
+NOVA no hace lo que dices.
 NOVA hace lo que necesitas.
 
 FIN DEL BLOQUE MAESTRO
