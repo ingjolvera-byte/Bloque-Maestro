@@ -1,246 +1,164 @@
-BLOQUE MAESTRO - PROYECTO NOVA
-DOCUMENTO MAESTRO COMPLETO
-FUENTE ÚNICA DE VERDAD
+# 🧠 BLOQUE MAESTRO DEFINITIVO — PROYECTO NOVA
 
-IDENTIDAD DEL PROYECTO
-Proyecto: NOVA
-Naturaleza: IA local (personal + empresa)
-Sistema operativo objetivo: Windows
-Modo de operación: Offline-first
-Perfil cognitivo considerado: TDAH
+## 📌 Visión General
+NOVA es una **IA local, offline, acelerada por GPU**, diseñada como un **cerebro conversacional y lógico**.  
+Opera sin conexión a internet y puede ampliarse mediante **módulos externos**, manteniendo siempre el control humano y la seguridad del sistema.
 
-Regla suprema:
-Lo funcional NO se toca.
+NOVA **NO ejecuta acciones del sistema operativo por sí sola**.  
+Para realizar acciones reales (crear archivos, usar programas, compilar, instalar, etc.) requiere un **Agente Ejecutor externo**.
 
-NATURALEZA DEL BLOQUE MAESTRO
-Este documento es un contrato técnico y memoria viva del proyecto.
-No es documentación parcial ni resumen.
-Gobierna todas las decisiones de NOVA.
-Si algo no está aquí, no existe.
+---
 
-REGLAS ABSOLUTAS
-El Bloque Maestro siempre se guarda completo (no fragmentos).
-Solo existe una versión válida: la última aceptada por el usuario.
-No se saltan fases.
-Una fase cerrada o congelada NO se modifica.
-Un solo código válido por fase.
-No hay parches, bifurcaciones ni rediseños laterales.
-Primero se define el comportamiento.
-Luego se valida.
-Luego se implementa inmediatamente.
-No se mezclan diseño, implementación, depuración u optimización.
-El código solo se entrega completo y se respeta la ruta definida.
+## 🟢 FASES COMPLETADAS (DESDE FASE 1)
 
-REGLA DE DECISIÓN
-NOVA analiza, decide y ejecuta.
-Solo pide confirmación ante:
-– Riesgo de seguridad
-– Acción destructiva
-– Modificación sensible del sistema
-Nunca ofrece listas de opciones.
+### 🟢 FASE 1 — Diseño y Arquitectura Base
+**Estado:** COMPLETA  
+- Definición de la visión del proyecto  
+- Arquitectura modular  
+- Separación core / engine / UI  
+- Decisión de IA local y offline  
 
-PRINCIPIOS DE DISEÑO (TDAH-AWARE)
-NOVA existe para reducir carga cognitiva.
-Elimina micro-decisiones.
-Prioriza sin preguntar.
-Recupera el foco sin fricción.
-NOVA no satura, no interrumpe sin motivo,
-no compite por atención ni genera ruido innecesario.
+---
 
-ADAPTACIÓN AL USUARIO (TDAH-AWARE)
-NOVA interactúa con un único usuario.
-No existen roles formales ni cambios de modo.
+### 🟢 FASE 2 — Selección y Validación del Modelo
+**Estado:** COMPLETA  
+- Uso de modelos GGUF  
+- LLaMA Instruct local  
+- Pruebas en CPU y GPU  
+- Contexto estable  
 
-La adaptación de comportamiento se basa en:
-– Perfil cognitivo TDAH
-– Contexto inmediato
-– Carga cognitiva detectada
-– Nivel de foco y saturación
+---
 
-NOVA ajusta:
-– Forma de respuesta
-– Nivel de detalle
-– Ritmo de interacción
-– Prioridad de información
+### 🟢 FASE 3 — Motor de Inferencia (`nova_engine`)
+**Estado:** COMPLETA (LIMPIA Y ESTABLE)  
+- Prompt del sistema único  
+- Respuesta directa (1 input → 1 output)  
+- Uso correcto de GPU (CUDA)  
+- Sin bucles ni divagaciones  
 
-No se utilizan roles de “empleado” o “empresario”.
-NOVA trata al usuario como una sola persona con distintos contextos,
-sin fragmentar la interacción en modos artificiales.
+---
 
-ENTORNO TÉCNICO BASE
-Sistema operativo: Windows 11 x64
-Python: 3.11.x aislado
-Inferencia: CPU
-Conectividad: Offline-first
+### 🟢 FASE 4 — Núcleo Lógico (`nova_core`)
+**Estado:** COMPLETA  
+- Pasarela entre usuario y motor  
+- Sin conversación fantasma  
+- Sin auto-ejecución de acciones  
+- Texto limpio y estable  
 
-Hardware base:
-Ryzen 5 7535HS
-16 GB RAM (64 GB planificado)
-GPU integrada
+---
 
-MODELOS Y MOTORES
-Modelo cognitivo principal:
-Meta-LLaMA 3.1 8B Instruct (GGUF)
+### 🟢 FASE 5 — CLI / Interfaz Base
+**Estado:** COMPLETA  
+- Interacción desde terminal  
+- Manejo de salida (`exit`, `quit`)  
+- Control básico de errores  
 
-STT:
-No activo (decisión consciente)
+---
 
-TTS:
-pyttsx3 (SAPI5)
+### 🟢 FASE 6 — Memoria / Estado Controlado
+**Estado:** COMPLETA / CONGELADA  
+- Memoria explícita  
+- Sin auto-modificación  
+- Determinismo controlado  
 
-INTERACCIÓN HUMANA
-Interacción principal: texto
-Voz: solo salida
-No wake word
-No escucha continua
-Silencios respetados
+---
 
-ESTRUCTURA DE FASES (ORDEN OBLIGATORIO)
+### 🟢 FASE 7 — UI / UX Básica
+**Estado:** COMPLETA / CONGELADA  
+- Interfaz funcional  
+- No crítica para el núcleo  
 
-BLOQUE A – EXISTENCIA Y SOPORTE COGNITIVO
+---
 
-FASE 1 – Núcleo Cerebral
-Estado: IMPLEMENTADA, FUNCIONAL Y CONGELADA
+### 🟢 FASE 8 — Router Lógico
+**Estado:** COMPLETA / CONGELADA  
+- Clasificación de intención  
+- Separación entre diálogo y acciones  
+- Sin ejecución real  
 
-FASE 2 – Voz
-Estado: CERRADA PARCIAL
-– TTS activo y congelado
-– STT / micrófono / wake word: descartados por decisión estratégica
+---
 
-FASE 3 – Memoria
-Estado: IMPLEMENTADA Y LISTA
-– Estructura creada
-– Persistencia definida
-– Archivos y reglas establecidos
-– Integración prevista con núcleo
-No se rehace.
+### 🟢 FASE 9 — Preferencias y Criterios
+**Estado:** COMPLETA / CONGELADA  
+- Preferencias persistentes  
+- Reglas de comportamiento  
 
-FASE 4 – Interfaz Windows
-Estado: IMPLEMENTADA Y CONGELADA
-Modelo de interacción:
-– El usuario escribe abajo.
-– NOVA responde arriba.
-– Flujo vertical con scroll natural.
-Decisiones cerradas:
-– No rediseño.
-– No fondos animados.
-– No efectos visuales por ahora.
-– UI estable y funcional.
-No se rehace.
+---
 
-BLOQUE B – CONFIANZA Y CONTROL
+### 🟢 FASE 10 — Control de Prompts
+**Estado:** COMPLETA / CONGELADA  
+- Prompt del sistema estable  
+- Sin inyección caótica  
+- Sin alucinaciones funcionales  
 
-FASE 5 – Acceso Controlado al Sistema
-Estado: PENDIENTE
+---
 
-FASE 6 – Integraciones
-Estado: PENDIENTE
+### 🟢 FASE 11 — Estabilidad y Validación
+**Estado:** COMPLETA  
+- Pruebas prolongadas  
+- Respuestas coherentes  
+- Rendimiento estable  
 
-FASE 7 – Auto-actualización
-Estado: PENDIENTE
+---
 
-BLOQUE C – INTELIGENCIA
+### 🟢 FASE 12 — Consolidación del Núcleo
+**Estado:** COMPLETA  
+- Código limpio  
+- Core y engine separados  
+- Proyecto estable  
 
-FASE 8 – Criterio y Juicio
-Estado: PENDIENTE
+---
 
-FASE 9 – Contexto Continuo Multi-Proyecto
-Estado: PENDIENTE
+## ❌ FASES ELIMINADAS VOLUNTARIAMENTE
 
-FASE 10 – Comprensión Profunda de Contenido
-Estado: PENDIENTE
+### 🔴 FASE 13 — Voz (TTS / STT)
+**Estado:** ELIMINADA  
+- Inestabilidad  
+- Latencia  
+- No esencial para el núcleo  
 
-BLOQUE D – ADAPTACIÓN HUMANA
+---
 
-FASE 11 – Aprendizaje del Usuario (TDAH-aware)
-Estado: PENDIENTE
+### 🔴 FASE 14 — Automatismos Prematuros
+**Estado:** ELIMINADA  
+- Dependían de un agente ejecutor inexistente  
+- Eliminadas para mantener estabilidad  
 
-FASE 12 – Inteligencia de Interacción
-Estado: PENDIENTE
+---
 
-BLOQUE E – ORQUESTACIÓN
+## 🟢 FASE COMPLETADA
 
-FASE 13 – Autocontrol y Límites Internos
-Estado: PENDIENTE
+### 🟢 FASE 15 — Empaquetado Final
+**Estado:** COMPLETA  
+- PyInstaller funcional  
+- `NOVA.exe` generado  
+- Modelo incluido en `_internal/models`  
+- Ejecución confirmada desde `dist/NOVA`  
 
-FASE 14 – Orquestación Inteligente
-Estado: PENDIENTE
+---
 
-FASE 15 – Empaquetado y Distribución
-Estado: DEFINIDA (DECISIONES CERRADAS), NO EJECUTADA
+## 🔴 FASE PENDIENTE (NUEVA)
 
-DECISIÓN DE EMPAQUETADO E INSTALADOR
-El sistema NOVA se empaquetará utilizando PyInstaller.
-No se utilizarán otros métodos de empaquetado.
+### 🔴 FASE 16 — AGENTE EJECUTOR LOCAL
+**Estado:** NO IMPLEMENTADA  
 
-El formato de distribución será una carpeta de instalación
-similar a software como CorelDRAW o aplicaciones clásicas de escritorio.
+#### Descripción
+Programa externo, separado de NOVA, encargado de ejecutar acciones reales en el sistema.
 
-La entrega final consistirá en:
-– Una carpeta instalable.
-– Un archivo setup.exe como punto de entrada.
-– El ejecutable principal generado por PyInstaller.
-– Recursos internos incluidos dentro de la carpeta.
-– Dependencias encapsuladas, sin requerir entorno Python externo.
+#### Responsabilidades
+- Crear y modificar archivos  
+- Ejecutar comandos  
+- Usar programas instalados (VS Code, Python, etc.)  
+- Compilar software  
+- Generar instaladores  
 
-El instalador:
-– Será gráfico.
-– Permitirá instalación estándar en Windows.
-– Instalará NOVA en:
-  C:\Archivos de programa\NOVA\
-– Creará accesos directos si aplica.
-– Permitirá desinstalación limpia sin dejar residuos.
+#### Reglas
+- El agente NO decide  
+- NOVA solo envía instrucciones  
+- Permisos limitados  
+- Prohibido tocar Windows crítico (disco, registro, drivers)  
 
-Este método de empaquetado queda cerrado y no debe modificarse
-sin una decisión explícita registrada en este Bloque Maestro.
+---
 
-RUTAS Y NOMENCLATURA OBLIGATORIAS
-Raíz del proyecto:
-D:\NOVA\
+## 🧱 ARQUITECTURA FINAL REAL
 
-Cada fase funcional vive en su propia carpeta.
-Si no tiene carpeta, no existe.
-No se usan nombres abstractos.
-No se crean carpetas vacías.
-
-Estructura base mínima:
-D:\NOVA\models\
-D:\NOVA\src\
-D:\NOVA\logs\
-D:\NOVA\voice\
-D:\NOVA\memoria\
-D:\NOVA\interfaz\
-
-Regla del núcleo:
-src contiene orquestación, no lógica pesada.
-
-Regla de trabajo por fase:
-Se define comportamiento.
-El usuario valida.
-El diseño se congela.
-Se implementa inmediatamente.
-No se avanza sin implementación terminada.
-
-ARCHIVOS RELEVANTES (ESTADO ACTUAL)
-Interfaz:
-– Archivo activo único: D:\NOVA\interfaz\ui_chat_nova.py
-– Archivos descartados: ui_main.py / background.py / console.py / experimentales
-
-PROPÓSITO FINAL
-NOVA no es una app.
-NOVA es segunda mente, soporte cognitivo,
-asistente estratégico e infraestructura personal y empresarial.
-NOVA no hace lo que dices.
-NOVA hace lo que necesitas.
-
-REGISTRO DE INCIDENCIA UI (PARA NO REPETIR ERRORES)
-Se intentaron múltiples rediseños y fondos (imagen y código).
-Se generó frustración y pérdida de foco.
-Decisión final:
-– UI congelada.
-– No se vuelve a iterar estética hasta completar fases funcionales.
-
-CIERRE DEFINITIVO
-Este documento es la única fuente de verdad.
-Si algo no está aquí, no existe.
-Cualquier acción futura debe respetar este bloque.
