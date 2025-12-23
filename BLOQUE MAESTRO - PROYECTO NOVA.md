@@ -1,164 +1,270 @@
-# 🧠 BLOQUE MAESTRO DEFINITIVO — PROYECTO NOVA
+# BLOQUE MAESTRO — PROYECTO NOVA
+Estado congelado y validado (incluye NOVA EXECUTOR)
 
-## 📌 Visión General
-NOVA es una **IA local, offline, acelerada por GPU**, diseñada como un **cerebro conversacional y lógico**.  
-Opera sin conexión a internet y puede ampliarse mediante **módulos externos**, manteniendo siempre el control humano y la seguridad del sistema.
+## VISIÓN GENERAL
 
-NOVA **NO ejecuta acciones del sistema operativo por sí sola**.  
-Para realizar acciones reales (crear archivos, usar programas, compilar, instalar, etc.) requiere un **Agente Ejecutor externo**.
+NOVA es una IA local (offline por defecto) diseñada para que el usuario dé órdenes en lenguaje natural y la IA ejecute acciones reales, sin exigir conocimientos técnicos, rutas, imports ni edición manual de código.
 
----
+El usuario NO es constructor.  
+El usuario es operador.
 
-## 🟢 FASES COMPLETADAS (DESDE FASE 1)
+NOVA está compuesto por tres capas claras:
 
-### 🟢 FASE 1 — Diseño y Arquitectura Base
-**Estado:** COMPLETA  
-- Definición de la visión del proyecto  
-- Arquitectura modular  
-- Separación core / engine / UI  
-- Decisión de IA local y offline  
+1. Interfaz (UI)  
+2. Cerebro (NOVA Brain – decisión y lógica)  
+3. Ejecutor (NOVA Executor – ejecución real y controlada)
 
----
+El Executor NO es opcional conceptualmente, solo está **no integrado aún**.
 
-### 🟢 FASE 2 — Selección y Validación del Modelo
-**Estado:** COMPLETA  
-- Uso de modelos GGUF  
-- LLaMA Instruct local  
-- Pruebas en CPU y GPU  
-- Contexto estable  
+## PRINCIPIOS FUNDAMENTALES (NO NEGOCIABLES)
 
----
+1. El core no se rompe  
+2. Nada se adivina  
+3. Nada se toca parcialmente  
+4. Nada se activa sin permiso explícito  
+5. Todo cambio es aislado  
+6. Un archivo por paso  
+7. Código completo o nada  
+8. El usuario manda, NOVA ejecuta  
+9. Primero estabilidad, luego capacidades  
+10. Offline primero, online solo bajo orden  
 
-### 🟢 FASE 3 — Motor de Inferencia (`nova_engine`)
-**Estado:** COMPLETA (LIMPIA Y ESTABLE)  
-- Prompt del sistema único  
-- Respuesta directa (1 input → 1 output)  
-- Uso correcto de GPU (CUDA)  
-- Sin bucles ni divagaciones  
+## REGLAS DE TRABAJO ACTIVAS
 
----
+REGLA MAESTRA ACTIVA
 
-### 🟢 FASE 4 — Núcleo Lógico (`nova_core`)
-**Estado:** COMPLETA  
-- Pasarela entre usuario y motor  
-- Sin conversación fantasma  
-- Sin auto-ejecución de acciones  
-- Texto limpio y estable  
+NO se modifican archivos existentes del core.
 
----
+Cualquier desarrollo nuevo:
+- se hace en archivos nuevos
+- no se importa
+- no se ejecuta
+- no se integra
 
-### 🟢 FASE 5 — CLI / Interfaz Base
-**Estado:** COMPLETA  
-- Interacción desde terminal  
-- Manejo de salida (`exit`, `quit`)  
-- Control básico de errores  
+hasta que el usuario lo autorice explícitamente.
 
----
+Si una funcionalidad rompe esta regla, se cancela.
 
-### 🟢 FASE 6 — Memoria / Estado Controlado
-**Estado:** COMPLETA / CONGELADA  
-- Memoria explícita  
-- Sin auto-modificación  
-- Determinismo controlado  
+## ESTRUCTURA REAL DEL PROYECTO (CONFIRMADA Y FUTURA)
 
----
+Ruta base del proyecto:
+D:\NOVA\
 
-### 🟢 FASE 7 — UI / UX Básica
-**Estado:** COMPLETA / CONGELADA  
-- Interfaz funcional  
-- No crítica para el núcleo  
+Estructura completa del sistema:
 
----
+- NOVA_IA
+  - nova_brain.py (CORE – ESTABLE)
+  - system_actions.py (ACCIONES LÓGICAS – ESTABLE)
+  - memory.py / memory_manager.py (MEMORIA – ESTABLE)
+  - env (entorno virtual)
+  - STATUS.md (estado congelado)
+  - interfaz
+    - ui_chat_nova.py (INTERFAZ – ESTABLE)
 
-### 🟢 FASE 8 — Router Lógico
-**Estado:** COMPLETA / CONGELADA  
-- Clasificación de intención  
-- Separación entre diálogo y acciones  
-- Sin ejecución real  
+  - modules (MÓDULOS AISLADOS – NO INTEGRADOS)
+    - hardware
+      - detect.py
+    - dependencies
+      - installer.py
+    - translate
+      - engine.py
+      - models
+      - status.json
+      - README.md
+    - voice
+      - tts.py
+      - stt.py
+      - config.json
+      - README.md
 
----
+  - NOVA_EXECUTOR (NO INTEGRADO – PIEZA CLAVE)
+    - nova_executor.py
+    - task_schema.json
+    - policies.json
+    - queue.json
+    - state.json
+    - logs
+    - README.md
 
-### 🟢 FASE 9 — Preferencias y Criterios
-**Estado:** COMPLETA / CONGELADA  
-- Preferencias persistentes  
-- Reglas de comportamiento  
+Ruta de trabajo del usuario (salida de proyectos):
 
----
+- C:\Users\ingjo\OneDrive\Documentos
+  - NOVA_Proyectos
+    - App_YYYYMMDD_HHMMSS
+    - Chatbot_YYYYMMDD_HHMMSS
+    - Web_YYYYMMDD_HHMMSS
 
-### 🟢 FASE 10 — Control de Prompts
-**Estado:** COMPLETA / CONGELADA  
-- Prompt del sistema estable  
-- Sin inyección caótica  
-- Sin alucinaciones funcionales  
+## RUTA DE TRABAJO DEL USUARIO (CRÍTICA)
 
----
+Todos los proyectos creados por NOVA van ÚNICAMENTE en:
 
-### 🟢 FASE 11 — Estabilidad y Validación
-**Estado:** COMPLETA  
-- Pruebas prolongadas  
-- Respuestas coherentes  
-- Rendimiento estable  
+C:\Users\ingjo\OneDrive\Documentos\NOVA_Proyectos
 
----
+Nunca en:
+- Documents genérico
+- D:\
+- rutas relativas
+- carpetas del sistema
 
-### 🟢 FASE 12 — Consolidación del Núcleo
-**Estado:** COMPLETA  
-- Código limpio  
-- Core y engine separados  
-- Proyecto estable  
+Esta ruta es sagrada.
 
----
+## ESTADO ACTUAL (CHECKPOINT)
 
-## ❌ FASES ELIMINADAS VOLUNTARIAMENTE
+Estado confirmado:
+- Sistema funcional
+- Rutas correctas
+- Memoria conectada
+- Interfaz usable
+- Usuario en control
+- Cambios congelados
+- Executor definido pero no integrado
 
-### 🔴 FASE 13 — Voz (TTS / STT)
-**Estado:** ELIMINADA  
-- Inestabilidad  
-- Latencia  
-- No esencial para el núcleo  
+Este es un checkpoint válido.
+Todo avance futuro parte desde aquí.
 
----
+## FUNCIONALIDADES CONFIRMADAS (YA FUNCIONAN)
 
-### 🔴 FASE 14 — Automatismos Prematuros
-**Estado:** ELIMINADA  
-- Dependían de un agente ejecutor inexistente  
-- Eliminadas para mantener estabilidad  
+CREACIÓN DE SOFTWARE (G)
 
----
+NOVA puede crear:
+- Apps
+- Chatbots
+- Páginas web
 
-## 🟢 FASE COMPLETADA
+Mediante órdenes naturales, sin pedir rutas ni detalles técnicos.
 
-### 🟢 FASE 15 — Empaquetado Final
-**Estado:** COMPLETA  
-- PyInstaller funcional  
-- `NOVA.exe` generado  
-- Modelo incluido en `_internal/models`  
-- Ejecución confirmada desde `dist/NOVA`  
+LECTURA Y EDICIÓN BÁSICA (H)
 
----
+NOVA puede:
+- Recibir archivos adjuntos
+- Leerlos
+- Analizarlos
+- Proponer cambios
+- Aplicarlos solo con confirmación explícita
 
-## 🔴 FASE PENDIENTE (NUEVA)
+EMPAQUETADO BÁSICO (F)
 
-### 🔴 FASE 16 — AGENTE EJECUTOR LOCAL
-**Estado:** NO IMPLEMENTADA  
+- Estructuras limpias
+- Preparación para entrega
+- No destructivo
+- No toca nada fuera de Documentos
 
-#### Descripción
-Programa externo, separado de NOVA, encargado de ejecutar acciones reales en el sistema.
+MEMORIA PERSISTENTE REAL (D)
 
-#### Responsabilidades
-- Crear y modificar archivos  
-- Ejecutar comandos  
-- Usar programas instalados (VS Code, Python, etc.)  
-- Compilar software  
-- Generar instaladores  
+- Guarda preferencias del usuario
+- Guarda historial básico
+- Guarda proyectos creados
+- Persiste entre ejecuciones
 
-#### Reglas
-- El agente NO decide  
-- NOVA solo envía instrucciones  
-- Permisos limitados  
-- Prohibido tocar Windows crítico (disco, registro, drivers)  
+## NOVA EXECUTOR — DEFINICIÓN FORMAL
 
----
+NOVA EXECUTOR es el componente encargado de ejecutar acciones reales del sistema de forma segura y controlada.
 
-## 🧱 ARQUITECTURA FINAL REAL
+El Executor:
+- NO decide
+- NO conversa
+- NO improvisa
+- SOLO ejecuta tareas permitidas
 
+El Executor recibe tareas estructuradas (JSON) desde el Brain.
+
+Flujo lógico previsto:
+Usuario → UI → Brain → Tarea estructurada → Executor → Resultado → UI
+
+## POLÍTICAS DEL EXECUTOR
+
+El Executor trabaja únicamente con una allowlist explícita.
+
+Permitido:
+- Crear archivos y carpetas dentro de NOVA_Proyectos
+- Leer y escribir solo en rutas autorizadas
+- Empaquetar proyectos
+- Instalar dependencias dentro del env
+- Detectar hardware (solo lectura)
+
+Bloqueado SIEMPRE:
+- Sistema operativo
+- Registro
+- Program Files
+- Windows
+- Acciones destructivas
+- Ejecución arbitraria
+
+Todo lo no permitido se rechaza.
+
+## FUNCIONALIDADES APROBADAS PERO AISLADAS
+
+Estas capacidades se implementarán a través del Executor:
+
+- Detección automática de hardware
+- Instalación automática de dependencias
+- Traducción offline
+- Voz (hablar y escuchar)
+
+Ninguna toca el core.
+
+## TRADUCCIÓN OFFLINE — CONDICIONES ACEPTADAS
+
+La traducción offline está aprobada únicamente bajo estas condiciones:
+
+1. No toca nova_brain.py  
+2. No se importa al arrancar  
+3. No bloquea la interfaz  
+4. Vive en módulo dedicado  
+5. Se activa solo con orden explícita  
+6. Dependencias solo con confirmación  
+7. Modelos se descargan una vez  
+8. Idioma inicial: Inglés → Español  
+9. No traduce código sin permiso  
+10. Si falla, no miente  
+11. Se puede desactivar  
+
+## VOZ (HABLAR Y ESCUCHAR)
+
+La voz está aprobada como concepto, pero NO integrada.
+
+- Dependencia aparte
+- Control total del usuario
+- Nunca automática
+
+Estado actual:
+VOZ CONGELADA
+
+## FILOSOFÍA DE DISEÑO
+
+NOVA no debe:
+- adivinar
+- asumir
+- improvisar
+- ejecutar sin permiso
+
+NOVA debe:
+- preguntar
+- ejecutar exactamente
+- confirmar
+- fallar de forma visible
+- mantenerse estable
+
+## PRÓXIMOS PASOS (NO ACTIVOS)
+
+A elección del usuario:
+- Integrar NOVA EXECUTOR
+- Software real guiado (G+)
+- Edición avanzada (H+)
+- Empaquetado avanzado (F+)
+- Traducción offline
+- Voz
+
+Nada se inicia sin confirmación explícita.
+
+## FRASE DE CONTROL
+
+Si en algún momento se propone:
+modifica este archivo existente
+
+La respuesta correcta es:
+NO. Bloque maestro activo.
+
+FIN DEL BLOQUE MAESTRO  
+Estado CONGELADO  
+Documento oficial del proyecto NOVA (incluye NOVA EXECUTOR)
