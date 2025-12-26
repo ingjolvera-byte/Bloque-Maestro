@@ -1,179 +1,292 @@
-BLOQUE MAESTRO v3.1  
-PROYECTO NOVA IA  
-IA PREMIUM + GUI CORPORATIVA + INTERNET CONTROLADO  
+# BLOQUE MAESTRO UNIFICADO v3.1-U
 
-Versión: v3.1  
-Estado: CONGELADO ABSOLUTO  
-Dependencia: BLOQUE MAESTRO v2 (NÚCLEO)  
-Fecha: 2025-12-26  
+## PROYECTO NOVA IA
 
-1. PRINCIPIO SUPREMO
+IA OFFLINE (LLAMA) + GUI CORPORATIVA + INTERNET CONTROLADO
 
-El Bloque Maestro v2 no se modifica.  
-Todo lo definido en este documento se construye por encima del núcleo congelado.  
-Si una decisión requiere romper el núcleo, no se implementa.  
+Estado: **CONGELADO ABSOLUTO**
+Fecha: 2025-12-26
+Dependencia base: Bloque Maestro v2 (NÚCLEO INMUTABLE)
 
-2. OBJETIVO GLOBAL
+---
 
-El objetivo de esta fase es convertir NOVA en un producto de nivel empresa multimillonaria antes del empaquetado.  
-Esto incluye una IA de alto nivel, una interfaz gráfica corporativa premium y acceso a internet controlado.  
-No incluye distribución, licenciamiento ni monetización.  
+## 1. PRINCIPIO SUPREMO
 
-3. POLÍTICA DE INTERNET
+* El **Núcleo v2 no se modifica**.
+* Todo lo definido aquí se construye **encima** del núcleo.
+* Si una decisión rompe el núcleo, **no se implementa**.
+* Este documento sustituye y unifica todos los bloques anteriores.
 
-NOVA tiene acceso a internet de forma limitada, explícita y controlada.  
+---
 
-Usos permitidos del acceso a internet:  
-- Búsquedas de información pública  
-- Descarga de archivos  
-- Actualización del propio sistema  
-- Verificación de versiones  
-- Consulta de documentación  
+## 2. OBJETIVO GLOBAL
 
-Usos prohibidos del acceso a internet:  
-- Telemetría silenciosa  
-- Envío de datos privados sin consentimiento explícito  
-- Dependencia central de APIs externas  
-- Ejecución remota de código  
-- Conexiones persistentes no solicitadas  
+Convertir NOVA en un **producto enterprise real**, previo a empaquetado:
 
-Reglas obligatorias del acceso a internet:  
-- Todo acceso a internet pasa por un módulo dedicado  
-- Todo acceso queda registrado  
-- El usuario puede desactivar completamente el acceso a internet  
-- La IA no decide por sí sola usar internet  
-- Internet es una herramienta auxiliar, no una dependencia  
+* IA offline de alto nivel (LLAMA)
+* Arquitectura cognitiva gobernante
+* CLI profesional
+* GUI corporativa premium (fase posterior)
+* Acceso a internet **limitado, explícito y auditable**
 
-4. CONCEPTO DE IA
+No incluye:
 
-NOVA no es un chatbot.  
-NOVA es un sistema cognitivo híbrido que combina procesamiento local con acceso a red controlado.  
-Los modelos de lenguaje no gobiernan el sistema.  
-La arquitectura gobierna a los modelos.  
+* Monetización
+* Licenciamiento
+* Distribución
 
-5. ARQUITECTURA COGNITIVA
+---
 
-La arquitectura cognitiva de NOVA se compone de capas lógicas independientes.  
-Cada capa es reemplazable, testeable y no tiene efectos colaterales sobre las demás.  
+## 3. CONCEPTO FUNDAMENTAL
 
-El flujo cognitivo es el siguiente, descrito de forma secuencial:  
-El sistema recibe la entrada del usuario.  
-La entrada es interpretada para extraer intención y contexto.  
-Se realiza una planificación estratégica de la acción.  
-Un router cognitivo decide el camino de ejecución.  
-La acción se ejecuta a través del núcleo o mediante la capa de internet.  
-El resultado se transforma en una respuesta humana de nivel premium.  
+* NOVA **no es un chatbot**.
+* NOVA es un **sistema cognitivo híbrido**.
+* El **cerebro es offline**.
+* Internet es **auxiliar**, nunca central.
+* Los modelos **no gobiernan**: la arquitectura gobierna.
 
-6. CAPAS DE IA
+---
 
-Interpreter:  
-Analiza la intención real del usuario.  
-Extrae contexto relevante.  
-Detecta si la solicitud requiere acceso a internet.  
-No ejecuta acciones.  
+## 4. CEREBRO OFFLINE (IA)
 
-Planner:  
-Decide la estrategia a seguir.  
-Evalúa riesgos.  
-Decide si se usa solo el núcleo, si se requiere internet o si se debe pedir confirmación al usuario.  
+### Modelo base
 
-Router Cognitivo:  
-Enruta las decisiones tomadas por el planner.  
-No ejecuta lógica pesada ni acciones directas.  
+* Familia: **LLAMA**
+* Ejecución: **local / offline**
+* Backend: `llama.cpp`
 
-Executor:  
-Ejecuta acciones usando NovaExecutor.  
-No razona ni decide.  
-Solo ejecuta lo que se le indica.  
+### Identidad lógica (inmutable)
 
-Internet Layer:  
-Realiza búsquedas, descargas y actualizaciones.  
-Opera bajo reglas de seguridad estrictas.  
-Todo acceso es auditable.  
+```
+brain.llama.primary
+```
 
-Responder:  
-Convierte los resultados en lenguaje humano.  
-Mantiene un tono profesional y corporativo.  
-Evita respuestas genéricas o informales.  
+### Resolución física actual
 
-7. MODELOS DE IA
+```
+D:\NOVA\NOVA_IA\models\llama3\Llama3.1-8B_Instruct-q4.gguf
+```
 
-Los modelos locales son la base del sistema.  
-Los modelos remotos son opcionales y nunca obligatorios.  
-La selección de modelos depende de la tarea.  
-Existen mecanismos de fallback definidos.  
-Nunca existe una dependencia única de un solo modelo.  
+Reglas:
 
-8. MEMORIA INTELIGENTE
+* El sistema **nunca referencia modelos por filename**.
+* El filename es intercambiable.
+* El ID lógico es estable.
 
-El sistema maneja tres tipos de memoria:  
-Memoria de sesión, volátil y temporal.  
-Memoria persistente, selectiva y controlada por el usuario.  
-Memoria técnica, relacionada con el estado del sistema.  
+---
 
-Reglas de memoria:  
-No toda la información se guarda.  
-El usuario controla qué se persiste.  
-El acceso a internet no guarda datos sin permiso explícito.  
+## 5. POLÍTICA DE INTERNET
 
-9. GUI CORPORATIVA PREMIUM
+Internet:
 
-La interfaz gráfica debe transmitir la sensación de software interno de una empresa Fortune 100.  
+* No es dependencia
+* No es automática
+* No es silenciosa
 
-Principios visuales obligatorios:  
-Minimalismo ejecutivo.  
-Tipografía profesional.  
-Paleta de colores sobria.  
-Animaciones sutiles.  
-Jerarquía visual clara.  
-Ausencia total de apariencia de script o prototipo.  
+### Usos permitidos
 
-Funciones mínimas de la GUI:  
-Consola inteligente.  
-Historial navegable.  
-Estados visibles del sistema: pensando, ejecutando, consultando internet.  
-Panel de contexto.  
-Panel de memoria.  
-Panel de control de red con activación y desactivación de internet.  
-Configuración avanzada.  
-Visualización clara de logs.  
+* Búsquedas públicas
+* Descarga de archivos
+* Verificación de versiones
+* Consulta de documentación
 
-Tecnología permitida para la GUI:  
-PySide o Qt.  
-WebView local con HTML, CSS y JavaScript offline.  
-Arquitectura híbrida.  
+### Usos prohibidos
 
-Tecnología descartada:  
-Tkinter básico.  
-Estilos por defecto.  
-Widgets genéricos.  
+* Telemetría
+* Envío de datos sin permiso
+* Ejecución remota
+* Conexiones persistentes
 
-La GUI consume la IA.  
-La GUI no gobierna la IA.  
+### Reglas obligatorias
 
-10. REGLAS DE INTEGRACIÓN
+* Módulo dedicado
+* Logging completo
+* Consentimiento explícito
+* Usuario puede aislar totalmente el sistema
 
-El núcleo v2 no se modifica.  
-El acceso a internet solo se realiza mediante módulos dedicados.  
-La IA debe pedir permiso antes de usar la red.  
-Todo acceso queda registrado.  
-El usuario puede aislar completamente a NOVA.  
+---
 
-11. ORDEN OBLIGATORIO DE TRABAJO
+## 6. ARQUITECTURA COGNITIVA (CAPAS)
 
-Primero se diseña la arquitectura de IA.  
-Después se implementa la IA en CLI.  
-Luego se integra la capa de internet.  
-Posteriormente se diseña la GUI premium.  
-Después se implementa la GUI.  
-Finalmente se empaqueta el producto.  
+Capas definidas y cerradas:
 
-Cambiar este orden rompe el producto.  
+1. Interpreter
+2. Planner
+3. Router Cognitivo
+4. Executor
+5. Internet Layer
+6. Responder
 
-12. CIERRE DEFINITIVO
+Cada capa:
 
-Este Bloque Maestro define a NOVA como un sistema cognitivo real, un asistente local serio y un producto empresarial con acceso a internet controlado y arquitectura profesional.  
+* Tiene contrato formal
+* Es reemplazable
+* No tiene efectos colaterales
 
-Cualquier cambio futuro requiere un Bloque Maestro v4 y documentación explícita.  
+---
 
-FIN DEL BLOQUE MAESTRO v3.1
+## 7. MÁQUINA DE ESTADOS GLOBAL
+
+Estados válidos:
+
+* IDLE
+* INTERPRETING
+* PLANNING
+* ROUTING
+* INTERNET_PENDING
+* INTERNET_EXECUTING
+* EXECUTING
+* RESPONDING
+* ERROR
+
+Transiciones explícitas.
+Transiciones implícitas: **prohibidas**.
+
+---
+
+## 8. POLÍTICA DE DECISIÓN DE INTERNET
+
+Gobernada por el **Planner** mediante tabla cerrada:
+
+Variables:
+
+* requires_internet
+* system_isolation
+* permission_mode
+* risk_level
+
+Resultados posibles:
+
+* CORE_ONLY
+* INTERNET_REQUIRED
+* CONFIRMATION_REQUIRED
+* BLOCKED
+
+No existe escalado automático de permisos.
+
+---
+
+## 9. MEMORIA
+
+### Tipos
+
+1. Memoria de sesión (volátil)
+2. Memoria persistente (controlada por usuario)
+3. Memoria técnica del sistema
+
+Reglas:
+
+* No hay auto-guardado
+* No hay persistencia implícita
+* Usuario controla qué se guarda
+
+---
+
+## 10. LOGGING Y AUDITORÍA
+
+Tipos de log:
+
+* Cognitivo
+* Ejecución
+* Internet
+* Memoria
+
+Formato:
+
+* Estructurado
+* Local
+* Auditable
+* Sin envío externo
+
+---
+
+## 11. ORDEN OBLIGATORIO DE TRABAJO
+
+1. Arquitectura de IA (COMPLETADO)
+2. Implementación CLI (EN CURSO)
+3. Integración de Internet
+4. Diseño GUI premium
+5. Implementación GUI
+6. Empaquetado
+
+Cambiar el orden **rompe el producto**.
+
+---
+
+## 12. ESTRUCTURA OFICIAL DEL PROYECTO
+
+Raíz fija:
+
+```
+D:\NOVA\NOVA_IA\
+```
+
+Estructura actual:
+
+```
+D:\NOVA\NOVA_IA\
+├─ cli\
+│  ├─ __init__.py
+│  ├─ main.py
+│  ├─ cli_loop.py
+│  └─ cli_commands.py
+│
+├─ core\
+│  ├─ __init__.py
+│  ├─ enums.py
+│  └─ state_machine.py
+│
+├─ models\
+│  ├─ __init__.py
+│  ├─ base_model.py
+│  ├─ llama_cpp_model.py
+│  ├─ model_manager.py
+│  └─ llama3\
+│     └─ Llama3.1-8B_Instruct-q4.gguf
+│
+├─ memory\
+│  ├─ __init__.py
+│  ├─ session_memory.py
+│  ├─ persistent_memory.py
+│  └─ system_memory.py
+│
+├─ logging\
+│  ├─ __init__.py
+│  └─ audit_logger.py
+│
+└─ main.py
+```
+
+---
+
+## 13. CLI (EN CURSO)
+
+Principios:
+
+* Determinista
+* Observable
+* Sin magia
+
+Comandos base:
+
+* status
+* load brain
+* unload brain
+* run
+* exit
+
+Estados visibles al usuario.
+
+---
+
+## 14. REGLA DE CONTINUIDAD
+
+* Este documento es la **única fuente de verdad**.
+* Cualquier cambio requiere:
+
+  * Nuevo bloque maestro versionado
+  * Documentación explícita
+
+---
+
+## FIN DEL BLOQUE MAESTRO UNIFICADO v3.1-U
